@@ -36,5 +36,10 @@ public class Level_2_Manager : MonoBehaviour
             Application.Quit();
 #endif
         }
+
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            BulletManager.GetInstance().ShootBullet(Vector2.zero,Vector2.up,1f);
+        }
     }
 }

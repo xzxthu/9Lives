@@ -61,16 +61,27 @@
     <Compile Include="Assets\Scripts\Tests\IKTest.cs" />
     <Compile Include="Assets\Scripts\RoofTop.cs" />
     <Compile Include="Assets\Scripts\Skin.cs" />
-    <Compile Include="Assets\Scripts\ButtonControl.cs" />
-    <Compile Include="Assets\Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\Prototype\ButtonControl.cs" />
+    <Compile Include="Assets\Scripts\Prototype\LevelManager.cs" />
     <Compile Include="Assets\Scripts\EffectAnimating.cs" />
     <Compile Include="Assets\Scripts\CatAnimationEvents.cs" />
     <Compile Include="Assets\Scripts\FootIK.cs" />
-    <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
-    <Compile Include="Assets\Scripts\GroundController.cs" />
+    <Compile Include="Assets\Scripts\Prototype\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Prototype\GroundController.cs" />
     <Compile Include="Assets\Scripts\CatMoveController.cs" />
-    <Compile Include="Assets\Scripts\CatController.cs" />
+    <Compile Include="Assets\Scripts\Prototype\CatController.cs" />
+    <Compile Include="Assets\Scripts\Base\BaseManager.cs" />
+    <Compile Include="Assets\Scripts\Base\Event\INotificationCenter.cs" />
+    <Compile Include="Assets\Scripts\Base\Mono\MonoManager.cs" />
+    <Compile Include="Assets\Scripts\Base\Mono\MonoController.cs" />
+    <Compile Include="Assets\Scripts\Base\Observer\Observer.cs" />
+    <Compile Include="Assets\Scripts\Base\Pool\Pool.cs" />
+    <Compile Include="Assets\Scripts\Base\Pool\PoolManager.cs" />
+    <Compile Include="Assets\Scripts\Base\Res\ResManager.cs" />
+    <Compile Include="Assets\Scripts\Base\UI\BasePanel.cs" />
+    <Compile Include="Assets\Scripts\Base\UI\UIManager.cs" />
+    <Compile Include="Assets\Scripts\BulletManager.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -613,6 +624,10 @@
       <Project>{6C922E69-2C18-7776-D714-2E9AC2D5D1DE}</Project>
       <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Cinemachine.csproj">
+      <Project>{35B6D465-6941-A9AD-E8AE-0A5F7D789306}</Project>
+      <Name>Cinemachine</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
       <Project>{BDC370A5-09C5-35A0-7222-EF52C2F304F4}</Project>
       <Name>Unity.2D.Animation.Runtime</Name>
@@ -633,9 +648,17 @@
       <Project>{3DB1FB3D-B637-BED6-83DC-5C44FF2E197F}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.2D.IK.Editor.csproj">
+      <Project>{D1EA090D-064C-8D6C-8361-1BF57AFB455D}</Project>
+      <Name>Unity.2D.IK.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.2D.Path.Editor.csproj">
       <Project>{21FCC383-E856-D03E-F1D3-D653DDE524FA}</Project>
       <Name>Unity.2D.Path.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
+      <Project>{34A570E7-A864-EDA3-E550-6863AA120D04}</Project>
+      <Name>Unity.2D.IK.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{64592B6F-1761-418E-B384-29C8B6F69C30}</Project>
@@ -693,6 +716,10 @@
       <Project>{CCB377AD-E1E9-A829-C032-37DBAAC8C3A7}</Project>
       <Name>Unity.2D.Animation.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
+      <Project>{6EAD341F-B0F8-6203-9343-FA999D498958}</Project>
+      <Name>com.unity.cinemachine.editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{E829D0EF-E46F-D165-410A-C0D507D9FCA1}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
@@ -716,22 +743,6 @@
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{EEE27146-5DD1-9A96-CF99-7CB039FF85FB}</Project>
       <Name>UnityEditor.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Cinemachine.csproj">
-      <Project>{35B6D465-6941-A9AD-E8AE-0A5F7D789306}</Project>
-      <Name>Cinemachine</Name>
-    </ProjectReference>
-    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
-      <Project>{6EAD341F-B0F8-6203-9343-FA999D498958}</Project>
-      <Name>com.unity.cinemachine.editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Editor.csproj">
-      <Project>{D1EA090D-064C-8D6C-8361-1BF57AFB455D}</Project>
-      <Name>Unity.2D.IK.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
-      <Project>{34A570E7-A864-EDA3-E550-6863AA120D04}</Project>
-      <Name>Unity.2D.IK.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

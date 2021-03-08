@@ -55,10 +55,6 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Behaviours\CinemachineVirtualCamera.cs" />
-    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Behaviours\CinemachineBrain.cs" />
-    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Behaviours\CinemachinePipeline.cs" />
-    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Components\CinemachineFramingTransposer.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Behaviours\CinemachineStateDrivenCamera.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Core\AxisState.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Behaviours\CinemachineFollowZoom.cs" />
@@ -81,6 +77,7 @@
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Core\CameraState.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Timeline\CinemachineTrack.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Core\SplineHelpers.cs" />
+    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Components\CinemachineFramingTransposer.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Components\CinemachinePOV.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Components\CinemachineOrbitalTransposer.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Helpers\CinemachineTriggerAction.cs" />
@@ -88,6 +85,7 @@
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Behaviours\CinemachineDollyCart.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Core\CinemachinePropertyAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Components\CinemachineTrackedDolly.cs" />
+    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Behaviours\CinemachinePipeline.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Behaviours\CinemachinePath.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Core\CinemachineBlend.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Core\ICinemachineCamera.cs" />
@@ -107,6 +105,7 @@
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Timeline\CinemachineShot.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Behaviours\CinemachineConfiner.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Helpers\CinemachineTouchInputMapper.cs" />
+    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Behaviours\CinemachineVirtualCamera.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\AssemblyInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Core\GaussianFilter.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Impulse\CinemachineIndependentImpulseListener.cs" />
@@ -129,6 +128,7 @@
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Core\UnityVectorExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Core\CinemachineInputAxisDriver.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Behaviours\CinemachinePixelPerfect.cs" />
+    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Behaviours\CinemachineBrain.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Components\CinemachineHardLockToTarget.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Components\CinemachineBasicMultiChannelPerlin.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.3\Runtime\Behaviours\CinemachineClearShot.cs" />
