@@ -8,6 +8,11 @@ public class Level_2_Manager : MonoBehaviour
     public int nowGround = 0; //0为没有
     public bool isHanging;
 
+    public bool isHurted;
+    public Vector2 hurtDir = Vector2.left;
+    public float hurtForce = 4f;
+    public float hurtTime = 0.5f;
+
 
     public static Level_2_Manager instance;
 
@@ -23,6 +28,9 @@ public class Level_2_Manager : MonoBehaviour
         {
             instance = this;
         }
+
+        BulletManager.GetInstance();
+        MusicManager.GetInstance();
     }
 
     private void Update()
@@ -39,7 +47,13 @@ public class Level_2_Manager : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.F))
         {
-            BulletManager.GetInstance().ShootBullet(Vector2.zero,Vector2.up,1f);
+            BulletManager.GetInstance().ShootBullet(GameObject.FindWithTag("Player").transform.position + Vector3.right * 4f + Vector3.up * 0.5f,
+                Vector2.left, 5f);
+
         }
+
+
     }
+
+
 }

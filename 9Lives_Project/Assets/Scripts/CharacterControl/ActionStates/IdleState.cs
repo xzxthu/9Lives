@@ -39,6 +39,12 @@ public class IdleState : ActorState
         PlayAnimation();
         PlayerActor.instance.CheckAutoDown();
 
+        if(Level_2_Manager.instance.isHurted)
+        {
+            PlayerActor.instance.TransState(ActorStateType.Hurted);
+            return;
+        }
+
         if (!Mathf.Approximately(PlayerActor.instance.moveInput,0) && PlayerActor.instance.isGround)
         {
             PlayerActor.instance.TransState(ActorStateType.Run);

@@ -32,6 +32,12 @@ public class JumpState : ActorState
         PlayerActor.instance.UpdateInActor();
         PlayAnimation();
 
+        if (Level_2_Manager.instance.isHurted)
+        {
+            PlayerActor.instance.TransState(ActorStateType.Hurted);
+            return;
+        }
+
         if (PlayerActor.instance.isGround)
         {
             PlayerActor.instance.TransState(ActorStateType.Idle);
@@ -60,6 +66,19 @@ public class JumpState : ActorState
 
     private void CalculateSpeed()
     {
+
+        if (PlayerActor.instance.moveInput * PlayerActor.instance.recordMoveInput < 0)
+        {
+            PlayerActor.instance.isTurnAround = true;
+            PlayerActor.instance.rigid.velocity = new Vector2(-PlayerActor.instance.rigid.velocity.x, PlayerActor.instance.rigid.velocity.y);
+        }
+        else
+        {
+            PlayerActor.instance.isTurnAround = false;
+        }
+
+        PlayerActor.instance.recordMoveInput = PlayerActor.instance.moveInput; //record for calculate turning
+
         if (!Mathf.Approximately(PlayerActor.instance.moveInput, 0))//Accelerate
         {
             if (Input.GetAxis("Vertical") > 0.5f) //press "up" in air
@@ -71,14 +90,16 @@ public class JumpState : ActorState
                 PlayerActor.instance.speed = PlayerActor.instance.maxRunSpeed;
             }
             PlayerActor.instance.rigid.velocity =
-                new Vector2(PlayerActor.instance.moveInput * PlayerActor.instance.speed,
+                new Vector2(PlayerActor.instance.recordMoveInput * PlayerActor.instance.speed,
                 PlayerActor.instance.rigid.velocity.y);
         }
         else//Decelerate
         {
+            
+
             if (PlayerActor.instance.speed > 0)
             {
-                if (Input.GetAxis("Vertical") > 0.5f) //Accelerate
+                if (Input.GetAxis("Vertical") > 0.5f) //Decelerate
                 {
                     PlayerActor.instance.speed -= Time.fixedDeltaTime * PlayerActor.instance.decelerateInAir * 2;
                 }
@@ -93,8 +114,9 @@ public class JumpState : ActorState
                 PlayerActor.instance.recordMoveInput = 0;
             }
 
+
             PlayerActor.instance.rigid.velocity =
-                new Vector2(PlayerActor.instance.recordMoveInput * PlayerActor.instance.speed,
+                new Vector2(((PlayerActor.instance.rigid.velocity.x>0)? 1f:-1f) * PlayerActor.instance.speed,
                 PlayerActor.instance.rigid.velocity.y);
         }
     }

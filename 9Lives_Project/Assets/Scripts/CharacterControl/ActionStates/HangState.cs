@@ -44,6 +44,12 @@ public class HangState : ActorState
 
     public override void FixedUpdate()
     {
+        if (Level_2_Manager.instance.isHurted)
+        {
+            PlayerActor.instance.TransState(ActorStateType.Hurted);
+            return;
+        }
+
         if (!Level_2_Manager.instance.isHanging)
         {
             PlayerActor.instance.TransState(ActorStateType.Idle);
@@ -60,7 +66,7 @@ public class HangState : ActorState
     {
         _actor = null;
         // add animation control here
-
+        Level_2_Manager.instance.isHanging = false;
         //Debug.Log("HangState Exit");
     }
 

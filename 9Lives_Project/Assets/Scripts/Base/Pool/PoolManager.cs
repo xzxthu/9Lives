@@ -17,7 +17,7 @@ public class PoolData
     {
         parent = new GameObject(obj.name);
         parent.transform.SetParent(pool.transform);
-        poolList = new List<GameObject>() { obj };
+        poolList = new List<GameObject>();
         PushObject(obj);
     }
 
@@ -59,6 +59,7 @@ public class PoolManager : BaseManager<PoolManager>
     /// </summary>
     public void GetObject(string name,UnityAction<GameObject> callback)
     {
+        //Debug.Log("Get");
         if(dicPool.ContainsKey(name) && dicPool[name].poolList.Count > 0)
         {
             callback(dicPool[name].GetObject());
@@ -80,6 +81,8 @@ public class PoolManager : BaseManager<PoolManager>
     /// </summary>
     public void PushObject(string name, GameObject obj)    
     {
+
+        //Debug.Log("Push");
         if (poolObj == null)
         {
             // poolObj = new GameObject("Pool");

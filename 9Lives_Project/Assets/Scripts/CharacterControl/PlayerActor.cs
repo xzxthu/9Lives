@@ -40,14 +40,13 @@ public class PlayerActor : Actor
     [HideInInspector] public bool isTurnAround = false;
     [HideInInspector] public bool isJumpClimbSuccess = false;
     [HideInInspector] public bool isHoriz = false;
-    [HideInInspector] public bool isHanging = false;
     [HideInInspector] public bool isPressSpace = false;
 
     // references of components
     [HideInInspector] public Animator anim;
     [HideInInspector] public Transform catTransform;
     [HideInInspector] public Rigidbody2D rigid;
-
+    [HideInInspector] public CapsuleCollider2D colli;
 
     // singleton
     public static PlayerActor instance;
@@ -64,6 +63,7 @@ public class PlayerActor : Actor
             anim = GetComponentInChildren<Animator>();
         }
         rigid = GetComponent<Rigidbody2D>();
+        colli = GetComponent<CapsuleCollider2D>();
         horizontal = transform.localScale.x;  
 
         if (instance != null)
@@ -86,6 +86,7 @@ public class PlayerActor : Actor
         _actorStateDic[ActorStateType.Run] = new RunState();
         _actorStateDic[ActorStateType.Jump] = new JumpState();
         _actorStateDic[ActorStateType.Hang] = new HangState();
+        _actorStateDic[ActorStateType.Hurted] = new HurtedState();
     }
 
     protected override void InitCurState()
@@ -123,34 +124,41 @@ public class PlayerActor : Actor
     {
         float updateFeetX = (Left_BackLeg.position.x + Right_BackLeg.position.x) * 0.5f;
         feetPos.position = new Vector3(updateFeetX, feetPos.position.y, feetPos.position.z); //根据后脚位置更新
+        if(isGround&&moveInput!=0)
+        {
+            colli.offset = new Vector2(-2,1);
+            return;
+        }
+
+        colli.offset = new Vector2(0, 1);
     }
+
 
     public void CheckAutoDown()
     {
-        if (!isLeftHandCatch && !isRightHandCatch && isGround && rigid.velocity.y == 0 && !anim.GetBool("isJumping")) //平的时候手出地面范围了，无输入的时候不判定
+        if (!isLeftHandCatch && !isRightHandCatch && isGround && rigid.velocity.y == 0 ) //平的时候手出地面范围了，无输入的时候不判定
         {
-            if (moveInput != 0)
+
+            float offsetX = (transform.position.x - Left_Leg.position.x) * 
+                (rigid.velocity.x==0f ? 0f:1f); //有输入时检测移到后脚
+            Vector3 offset = new Vector3(offsetX, 0.5f, 0);
+            //Debug.Log(offset.x);
+
+            //offset = Vector3.zero;
+            Ray2D rayUpLeft = new Ray2D(Left_Leg.position + offset, Vector2.down);
+            Ray2D rayUpRight = new Ray2D(Right_Leg.position + offset, Vector2.down);
+
+            RaycastHit2D infoLeft = Physics2D.Raycast(rayUpLeft.origin, Vector2.down, 1.5f, ground);
+            RaycastHit2D infoRight = Physics2D.Raycast(rayUpRight.origin, Vector2.down, 1.5f, ground);
+
+            //Debug.DrawRay(rayUpLeft.origin, Vector2.down, Color.yellow);
+            //Debug.DrawRay(rayUpRight.origin, Vector2.down, Color.yellow);
+
+            if (infoLeft.collider == null && infoRight.collider == null)
             {
-                float offsetX = (PlayerActor.instance.transform.position.x - PlayerActor.instance.Left_Leg.position.x) * 1f *
-            (Mathf.Abs(PlayerActor.instance.rigid.velocity.x) / PlayerActor.instance.maxRunSpeed); //往身体方向挪一点，速度越大越远
-                Vector3 offset = new Vector3(offsetX, 0.5f, 0);
-                //Debug.Log(offset.x);
-
-                //offset = Vector3.zero;
-                Ray2D rayUpLeft = new Ray2D(PlayerActor.instance.Left_Leg.position + offset, Vector2.down);
-                Ray2D rayUpRight = new Ray2D(PlayerActor.instance.Right_Leg.position + offset, Vector2.down);
-
-                RaycastHit2D infoLeft = Physics2D.Raycast(rayUpLeft.origin, Vector2.down, 1.5f, PlayerActor.instance.ground);
-                RaycastHit2D infoRight = Physics2D.Raycast(rayUpRight.origin, Vector2.down, 1.5f, PlayerActor.instance.ground);
-
-                //Debug.DrawRay(rayUpLeft.origin, Vector2.down, Color.yellow);
-                //Debug.DrawRay(rayUpRight.origin, Vector2.down, Color.yellow);
-
-                if (infoLeft.collider == null && infoRight.collider == null)
-                {
-                    Level_2_Manager.instance.isDown = true;
-                }
+                Level_2_Manager.instance.isDown = true;
             }
+            
         }
     }
 }

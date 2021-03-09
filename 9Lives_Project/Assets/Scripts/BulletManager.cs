@@ -11,10 +11,13 @@ public class BulletManager : BaseManager<BulletManager>
     public BulletManager()
     {
         MonoManager.GetInstance().AddUpdateListener(Update);
-        for (int i = 0; i < 21; ++i) //20 bullets in a poll
+        for (int i = 0; i < 21; ++i) //20 bullets in a pool
         {
             PoolManager.GetInstance().GetObject("Bullet/Bullet_1",
-                (res => { PoolManager.GetInstance().PushObject("Bullet/Bullet_1", res); }));
+                (res => { 
+                    PoolManager.GetInstance().PushObject("Bullet/Bullet_1", res);
+
+                }));
 
         }
     }
@@ -24,9 +27,11 @@ public class BulletManager : BaseManager<BulletManager>
     {
         for (int i = bulletList.Count - 1; i >= 0; --i)
         {
-            if (bulletList[i].isOutOfScreen)
+            if (bulletList[i].isOutOfScreen || bulletList[i].isHitting)
             {
-                Debug.Log("检测了超出屏幕！");
+                
+                bulletList[i].isOutOfScreen = false;
+                bulletList[i].isHitting = false;
                 PoolManager.GetInstance().PushObject("Bullet/Bullet_1", bulletList[i].gameObject);
                 bulletList.RemoveAt(i);
             }
@@ -45,9 +50,11 @@ public class BulletManager : BaseManager<BulletManager>
         PoolManager.GetInstance().GetObject("Bullet/Bullet_1", (bullet) =>
         {
             Bullet blt =  bullet.GetComponent<Bullet>();
+            bulletList.Add(blt);
             blt.startPoint = startPoint;
             blt.direction = direction.normalized;
             blt.speed = speed;
+            blt.needToShoot = true;
         });
     }
 }

@@ -17,4 +17,5 @@ public enum ActorStateType
     Run,
     Jump,
     Hang,
+    Hurted,
 }
