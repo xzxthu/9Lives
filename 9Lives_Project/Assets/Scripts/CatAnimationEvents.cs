@@ -8,9 +8,9 @@ public class CatAnimationEvents : MonoBehaviour
 
     public void ResetHunging()
     {
-        //controller.isHunging = false;
+
         Level_2_Manager.instance.isHanging = false;
-        //Debug.Log("Event!");
+
 
     }
 

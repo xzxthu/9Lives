@@ -4,24 +4,17 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    [HideInInspector]public  AudioSource audioSrc;
-    public  AudioClip walking;
-    public  AudioClip running;
-    public  AudioClip sewer;
-    public  AudioClip jump;
-
-    private bool isWalking;
-    private bool isRunning;
-    private bool isJumping;
-    private bool isPlaying;
-    private bool needToStop;
-
+    public Transform sewerPosition;
+    public Transform streetPosition;
+    public Transform mallPosition;
     public Animator anim;
+
+    private bool isPlayingRun = false;
 
     public static SoundManager instance;
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
         if (instance != null)
         {
             Destroy(this.gameObject);
@@ -35,95 +28,40 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        audioSrc = GetComponent<AudioSource>();
-        audioSrc.PlayOneShot(sewer);
-
+        MusicManager.GetInstance().PlaySE("1_Sewer", true, sewerPosition);
+        MusicManager.GetInstance().PlaySE("2_Street", true, streetPosition);
+        MusicManager.GetInstance().PlaySE("3_Mall", true, mallPosition);
     }
 
     private void FixedUpdate()
     {
-
-        if(anim.GetBool("isWalking"))
+        if(anim.GetBool("isWalking") || anim.GetBool("isRunning"))
         {
-            isWalking = true;
-
-        }
-        if(anim.GetBool("isRunning"))
-        {
-            isRunning = true;
-        }
-        
-        if(isJumping)
-        {
-            if(!audioSrc.isPlaying)
+            if(!isPlayingRun)
             {
-                isJumping = false;
+                isPlayingRun = true;
+                MusicManager.GetInstance().PlayBGM("Walk1", true);
             }
-        }
-
-        if (isPlaying)
-        {
-            if (needToStop)
-            {
-                if(!isJumping)
-                {
-                    audioSrc.Stop();
-                    needToStop = false;
-                    isPlaying = false;
-                }
-                
-                
-            }
+            
         }
         else
         {
-            if (isRunning)
-            {
-                audioSrc.clip = running;
-                audioSrc.Play();
-                audioSrc.loop = true;
-                isPlaying = true;
-            }
-            if (isWalking)
-            {
-                audioSrc.clip = walking;
-                audioSrc.Play();
-                audioSrc.loop = true;
-                isPlaying = true;
-            }
-            
-            
+            isPlayingRun = false;
+            MusicManager.GetInstance().StopBGM("Walk1");
         }
-    }
 
-    public void PlayRunSound()
-    {
-        needToStop = true;
-        isRunning = true;
-    }
-
-    public void PlayJumpSound()
-    {
-        isJumping = true;
-        audioSrc.Stop();
-        audioSrc.PlayOneShot(jump);
-        //Invoke("ResetJump", 1.2f);
-    }
-
-    public void StopSound()
-    {
-
-        needToStop = true; 
-
-        isRunning = false;
-        isWalking = false;
-        isJumping = false;
         
+
     }
 
-    private void ResetJump()
+    private void Update()
     {
-        isJumping = false;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            MusicManager.GetInstance().PlayBGM("Jump1");
+        }
+
     }
+
 
 }

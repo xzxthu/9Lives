@@ -55,33 +55,42 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CharacterControl\ActorManager.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Base\Pool\Pool.cs" />
+    <Compile Include="Assets\Scripts\Base\Event\INotificationCenter.cs" />
     <Compile Include="Assets\Scripts\GroundOneWay.cs" />
+    <Compile Include="Assets\Scripts\Base\Observer\Observer.cs" />
     <Compile Include="Assets\Scripts\Level_2_Manager.cs" />
     <Compile Include="Assets\Scripts\Tests\IKTest.cs" />
+    <Compile Include="Assets\Scripts\CharacterControl\Actor.cs" />
     <Compile Include="Assets\Scripts\RoofTop.cs" />
     <Compile Include="Assets\Scripts\Skin.cs" />
+    <Compile Include="Assets\Scripts\Base\Mono\MonoManager.cs" />
+    <Compile Include="Assets\Scripts\Base\BaseManager.cs" />
     <Compile Include="Assets\Scripts\Prototype\ButtonControl.cs" />
+    <Compile Include="Assets\Scripts\CharacterControl\ActorState.cs" />
     <Compile Include="Assets\Scripts\Prototype\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\CharacterControl\ActionStates\IdleState.cs" />
+    <Compile Include="Assets\Scripts\Base\UI\BasePanel.cs" />
     <Compile Include="Assets\Scripts\EffectAnimating.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\CatAnimationEvents.cs" />
+    <Compile Include="Assets\Scripts\Base\Mono\MonoController.cs" />
     <Compile Include="Assets\Scripts\FootIK.cs" />
     <Compile Include="Assets\Scripts\Prototype\CameraController.cs" />
+    <Compile Include="Assets\Scripts\CharacterControl\PlayerActor.cs" />
     <Compile Include="Assets\Scripts\Prototype\GroundController.cs" />
     <Compile Include="Assets\Scripts\CatMoveController.cs" />
-    <Compile Include="Assets\Scripts\Prototype\CatController.cs" />
-    <Compile Include="Assets\Scripts\Base\BaseManager.cs" />
-    <Compile Include="Assets\Scripts\Base\Event\INotificationCenter.cs" />
-    <Compile Include="Assets\Scripts\Base\Mono\MonoManager.cs" />
-    <Compile Include="Assets\Scripts\Base\Mono\MonoController.cs" />
-    <Compile Include="Assets\Scripts\Base\Observer\Observer.cs" />
-    <Compile Include="Assets\Scripts\Base\Pool\Pool.cs" />
     <Compile Include="Assets\Scripts\Base\Pool\PoolManager.cs" />
-    <Compile Include="Assets\Scripts\Base\Res\ResManager.cs" />
-    <Compile Include="Assets\Scripts\Base\UI\BasePanel.cs" />
-    <Compile Include="Assets\Scripts\Base\UI\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Prototype\CatController.cs" />
     <Compile Include="Assets\Scripts\BulletManager.cs" />
-    <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Base\UI\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Base\Res\ResManager.cs" />
+    <Compile Include="Assets\Scripts\CharacterControl\ActionStates\RunState.cs" />
+    <Compile Include="Assets\Scripts\CharacterControl\ActionStates\JumpState.cs" />
+    <Compile Include="Assets\Scripts\CharacterControl\ActionStates\HangState.cs" />
+    <Compile Include="Assets\Scripts\Base\Music\MusicManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

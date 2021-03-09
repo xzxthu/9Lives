@@ -38,7 +38,6 @@ public class ResManager : BaseManager<ResManager>
         }
         else
         {
-            Debug.Log("request.asset.name" + request.asset.name);
             callback(request.asset as T);
             
         }

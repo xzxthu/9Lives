@@ -120,7 +120,7 @@ public class CatMoveController : MonoBehaviour
             }
             else//无输入减速（急停）
             {
-                SoundManager.instance.StopSound();
+                ////SoundManager.instance.StopSound();
 
                 //Debug.Log("no input");
 
@@ -246,24 +246,24 @@ public class CatMoveController : MonoBehaviour
             }
 
             if (isGround && Input.GetKeyDown(KeyCode.Space))
-        {
-            rigid.velocity = Vector2.up * jumpForce;
-            jumpTimer = jumpHeightTime;
+            {
+                rigid.velocity = Vector2.up * jumpForce;
+                jumpTimer = jumpHeightTime;
 
-            if (moveInput == 0)
-            {
-                anim.SetBool("isJumping", true);
-                anim.SetBool("isJumpingHoriz", false);
-                anim.SetBool("isWalking", false);
-                anim.SetBool("isRunning", false);
+                if (moveInput == 0)
+                {
+                    anim.SetBool("isJumping", true);
+                    anim.SetBool("isJumpingHoriz", false);
+                    anim.SetBool("isWalking", false);
+                    anim.SetBool("isRunning", false);
+                }
+                else
+                {
+                    //isHoriz = true;
+                    //anim.SetBool("isJumping", false);
+                    //anim.SetBool("isJumpingHoriz", true);
+                }
             }
-            else
-            {
-                //isHoriz = true;
-                //anim.SetBool("isJumping", false);
-                //anim.SetBool("isJumpingHoriz", true);
-            }
-        }
 
 
         if (jumpTimer > 0)//起跳长按更高
@@ -319,7 +319,7 @@ public class CatMoveController : MonoBehaviour
         if (isGround && Input.GetKeyDown(KeyCode.Space))
         {
 
-            SoundManager.instance.PlayJumpSound();
+            //SoundManager.instance.PlayJumpSound();
 
             rigid.velocity = Vector2.up * jumpForce;
             jumpTimer = jumpHeightTime;
