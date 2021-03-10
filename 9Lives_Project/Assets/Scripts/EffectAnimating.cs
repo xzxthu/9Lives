@@ -5,13 +5,11 @@ using UnityEngine.UI;
 
 public class EffectAnimating : MonoBehaviour
 {
-    [Header("Image Settings")]
-    [SerializeField]
-    Texture[] Images;
+    public bool playOneTime = false;
 
-    [SerializeField]
-    [Tooltip("Animation speed in FPS")]
-    [Range(0, 60f)]
+    [SerializeField] Texture[] Images;
+
+    [SerializeField, Tooltip("Animation speed in FPS"), Range(0, 60f)] 
     float AnimationSpeed = 3f;
 
     RawImage ImageScript;
@@ -38,6 +36,10 @@ public class EffectAnimating : MonoBehaviour
                 AnimIndex = (AnimIndex + 1) % Images.Length;
                 ImageScript.texture = Images[AnimIndex];
                 AnimTimer = 0;
+                if(AnimIndex==Images.Length && playOneTime)
+                {
+                    gameObject.SetActive(false);
+                }
             }
         }
     }

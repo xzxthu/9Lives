@@ -15,7 +15,7 @@ public class RunState : ActorState
 
     public override void Enter(params object[] param)
     {
-        //Debug.Log("RunState Enter");
+        Debug.Log("RunState Enter");
         _actor = param[0] as Actor;
         if (_actor != null)
         {
@@ -35,7 +35,7 @@ public class RunState : ActorState
         CalculateTurning();
         PlayerActor.instance.UpdateInActor();
         PlayAniamtion();
-        PlayerActor.instance.CheckAutoDown();
+        //PlayerActor.instance.CheckAutoDown();
 
         if (Level_2_Manager.instance.isHurted)
         {
@@ -86,7 +86,19 @@ public class RunState : ActorState
 
     private void CalculateSpeed()
     {
-        float maxSpeed = Input.GetKey(KeyCode.LeftShift) ? PlayerActor.instance.maxWalkSpeed : PlayerActor.instance.maxRunSpeed;
+        float maxSpeed;
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            maxSpeed = PlayerActor.instance.maxWalkSpeed;
+            PlayerActor.instance.needIK = true;
+        }
+        else
+        {
+            maxSpeed = PlayerActor.instance.maxRunSpeed;
+            PlayerActor.instance.needIK = false;
+        }
+
 
         if (PlayerActor.instance.speed < maxSpeed)
         {

@@ -29,6 +29,8 @@ public class IdleState : ActorState
             PlayerActor.instance.anim.SetBool("isRunning", false);
 
         }
+
+        PlayerActor.instance.needIK = true;
     }
 
     public override void FixedUpdate()
@@ -36,8 +38,8 @@ public class IdleState : ActorState
         Decelerate();
         PlayerActor.instance.UpdateInActor();
         
-        PlayAnimation();
-        PlayerActor.instance.CheckAutoDown();
+        
+        
 
         if(Level_2_Manager.instance.isHurted)
         {
@@ -58,14 +60,17 @@ public class IdleState : ActorState
     }
     public override void Update()
     {
+        PlayAnimation();
         CheckJump();
+        PlayerActor.instance.CheckAutoDown();
     }
 
 
     public override void Exit()
     {
         _actor = null;
-        // add animation control here
+
+        PlayerActor.instance.needIK = false;
 
         //Debug.Log("IdleState Exit");
     }

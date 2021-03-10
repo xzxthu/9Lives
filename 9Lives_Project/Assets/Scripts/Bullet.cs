@@ -39,7 +39,7 @@ public class Bullet : MonoBehaviour
         }
 
         float distance = Vector3.Distance(transform.position, startPoint);
-        if(distance>10)
+        if(distance>20)
         {
             isOutOfScreen = true;
             render.enabled = false; //防止再开的时候闪现
@@ -50,13 +50,14 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        Debug.Log("Bullet hit " + collision.gameObject.tag);
         if (collision.gameObject.tag == "Player")
         {
             Level_2_Manager.instance.isHurted = true;
             Level_2_Manager.instance.hurtDir = direction.normalized;
             Level_2_Manager.instance.hurtForce = hurtForce;
             Level_2_Manager.instance.hurtTime = hurtTime;
+            Level_2_Manager.instance.isDown = true;//掉下去
 
             isHitting = true; //pool回收
             render.enabled = false;

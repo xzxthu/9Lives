@@ -9,85 +9,47 @@ public class FootIK : MonoBehaviour
 
     public Transform Left_Leg;
     public Transform Right_Leg;
-    public Transform Left_BackLeg;
-    public Transform Right_BackLeg;
 
-    public Transform Left_Leg_Target;
-    public Transform Right_Leg_Target;
-    public Transform Left_BackLeg_Target;
-    public Transform Right_BackLeg_Target;
-    public Transform Left_Leg_Mid_Target;
-    public Transform Right_Leg_Mid_Target;
-    public Transform Left_BackLeg_Mid_Target;
-    public Transform Right_BackLeg_Mid_Target;
-
-    public float feetCheckRadius;
-    public Vector2 raycastDistance;
-    [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private float Yoffset = 0f;
-    public bool showSolverDebug = true;
-
-    private float left_leg_MoveY, right_leg_MoveY;
-
+    private Vector2 checkPoint;
+    private float roadHight;
+    private Animator anim;
 
     private void Start()
     {
+        anim = GetComponentInChildren<Animator>();
     }
-
 
     private void Update()
     {
-        if (!enableFootIK) return;
-
-        CheckFootGround(Left_Leg, Left_Leg_Target, ref left_leg_MoveY);
-        CheckFootGround(Right_Leg, Right_Leg_Target, ref right_leg_MoveY);
-
-        MoveMidHeight();
-
-
-    }
-
-
-    private void CheckFootGround(Transform foot,Transform foot_Target, ref float footMoveY)
-    {
-
-        if (Physics2D.OverlapCircle(foot.position, feetCheckRadius, groundLayer)) //脚沾地了
+        if(PlayerActor.instance.needIK)
         {
-            FootPositionSolver(foot,foot_Target, ref footMoveY); //射线检测
+            FootPositionSolver();
+        }
+        else
+        {
+            anim.SetFloat("Blend", 0.5f);
         }
     }
 
-
-    private void MoveMidHeight()
+    public void FootPositionSolver()
     {
-        if (left_leg_MoveY == 0 && right_leg_MoveY == 0)
+        checkPoint = new Vector2( ((Left_Leg.position + Right_Leg.position)/2).x, transform.position.y + 0.4f); // 前脚中间往上0.4
+
+        Ray2D ray = new Ray2D(checkPoint , Vector2.down);
+
+        Debug.DrawRay(ray.origin, ray.direction, Color.yellow);
+
+        RaycastHit2D info = Physics2D.Raycast(ray.origin, ray.direction);
+
+        if (info.collider != null)
         {
-            return;
+            if (info.collider.CompareTag("Ground"))
+            {
+                //Debug.Log(info.point.y);
+                roadHight = Mathf.Clamp01((info.point.y - transform.position.y + 0.22f)/0.44f);
+                anim.SetFloat("Blend", roadHight);
+            }
         }
-
-        Left_Leg_Mid_Target.position = new Vector3(Left_Leg_Mid_Target.position.x, Left_Leg_Mid_Target.position.y + left_leg_MoveY, Left_Leg_Mid_Target.position.z);
-        Right_Leg_Mid_Target.position = new Vector3(Right_Leg_Mid_Target.position.x, Right_Leg_Mid_Target.position.y + left_leg_MoveY, Right_Leg_Mid_Target.position.z);
-
-    }
-
-    private void FootPositionSolver(Transform foot, Transform foot_Target, ref float footMoveY)
-    {
-        //射线检测
-        RaycastHit footOutHit;
-
-        if (showSolverDebug)
-        {
-            Debug.DrawLine(foot.position + Vector3.up * (raycastDistance.x), foot.position + Vector3.down * (raycastDistance.y), Color.yellow);
-        }
-
-        if (Physics.Raycast(foot.position + Vector3.up * (raycastDistance.x), Vector3.down * (raycastDistance.y), out footOutHit,  groundLayer))
-        {
-            footMoveY = footOutHit.point.y - foot.position.y;
-            foot_Target.position = new Vector3(foot_Target.position.x, foot_Target.position.y + footMoveY, foot_Target.position.z);
-
-            return;
-        }
-        footMoveY = 0;
     }
 
 

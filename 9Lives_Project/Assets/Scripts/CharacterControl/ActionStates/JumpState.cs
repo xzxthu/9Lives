@@ -183,8 +183,8 @@ public class JumpState : ActorState
         if ((PlayerActor.instance.isLeftHandCatch || PlayerActor.instance.isRightHandCatch)
             && PlayerActor.instance.rigid.velocity.y < -0.1f) // 手够地面
         {
-            //检测点向下挪动0.2，防止检测到身体
-            Ray2D ray = new Ray2D(PlayerActor.instance.transform.position + Vector3.down * 0.2f, PlayerActor.instance.rigid.velocity);
+            //检测点向下挪动0.1，防止检测到站立碰撞点 + Vector3.down * 0.1f
+            Ray2D ray = new Ray2D(PlayerActor.instance.transform.position + Vector3.down * 0.05f, PlayerActor.instance.rigid.velocity);
 
             Debug.DrawRay(ray.origin, ray.direction, Color.yellow);
 
@@ -192,20 +192,30 @@ public class JumpState : ActorState
 
             if (info.collider != null)
             {
+                Debug.Log("手抓的检测tag " + info.collider.tag);
+                Debug.Log("手抓的检测name " + info.collider.gameObject.name);
                 if (info.collider.CompareTag("Ground"))
                 {
                     if (
-                        info.collider.gameObject.transform.position.y > (PlayerActor.instance.Left_Leg.position.y + PlayerActor.instance.Right_Leg.position.y) / 2 - 0.5f &&
-                        info.collider.gameObject.transform.position.y < (PlayerActor.instance.Left_Leg.position.y + PlayerActor.instance.Right_Leg.position.y) / 2 + 0.5f
+                        info.point.y > (PlayerActor.instance.Left_Leg.position.y + PlayerActor.instance.Right_Leg.position.y) / 2 - 0.5f &&
+                        info.point.y < (PlayerActor.instance.Left_Leg.position.y + PlayerActor.instance.Right_Leg.position.y) / 2 + 0.5f
                         )
                     {
                         return false;
                     }
+                    else
+                    {
+                        Debug.Log("身体超出范围: 测试点y，腿y");
+                        Debug.Log(info.point.y);
+                        Debug.Log((PlayerActor.instance.Left_Leg.position.y + PlayerActor.instance.Right_Leg.position.y) / 2);
+                        return true;
+                    }
 
+                    
                 }
             }
 
-            return true;
+            
         }
 
         return false;

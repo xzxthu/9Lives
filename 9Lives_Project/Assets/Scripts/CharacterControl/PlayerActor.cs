@@ -41,6 +41,7 @@ public class PlayerActor : Actor
     [HideInInspector] public bool isJumpClimbSuccess = false;
     [HideInInspector] public bool isHoriz = false;
     [HideInInspector] public bool isPressSpace = false;
+    [HideInInspector] public bool needIK = false;
 
     // references of components
     [HideInInspector] public Animator anim;
@@ -136,7 +137,8 @@ public class PlayerActor : Actor
 
     public void CheckAutoDown()
     {
-        if (!isLeftHandCatch && !isRightHandCatch && isGround && rigid.velocity.y == 0 ) //平的时候手出地面范围了，无输入的时候不判定
+        if (!isLeftHandCatch && !isRightHandCatch && isGround && rigid.velocity.y == 0 && moveInput==0 &&
+            !CheckJumpAnimation()) //平的时候手出地面范围了，无输入的时候不判定,垂直起跳降落不判定
         {
 
             float offsetX = (transform.position.x - Left_Leg.position.x) * 
@@ -156,9 +158,26 @@ public class PlayerActor : Actor
 
             if (infoLeft.collider == null && infoRight.collider == null)
             {
+                Debug.Log("检测到手超出范围，自动下落");
                 Level_2_Manager.instance.isDown = true;
             }
             
         }
+    }
+
+    private bool CheckJumpAnimation() //检测是否现在是垂直起跳的姿态
+    {
+        try
+        {
+            string animString = anim.GetCurrentAnimatorClipInfo(0)[0].clip.name;
+            if (animString == "Test_2_Cat@JumingUp") return true;
+        }
+        catch
+        { }
+        
+        //Debug.Log(animString);
+        
+
+        return false;
     }
 }

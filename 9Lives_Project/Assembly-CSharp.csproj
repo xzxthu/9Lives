@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\IdleState.cs" />
     <Compile Include="Assets\Scripts\Base\UI\BasePanel.cs" />
     <Compile Include="Assets\Scripts\EffectAnimating.cs" />
+    <Compile Include="Assets\Scripts\CharacterControl\ActionStates\HurtedState.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\CatAnimationEvents.cs" />
     <Compile Include="Assets\Scripts\Base\Mono\MonoController.cs" />
@@ -91,7 +92,9 @@
     <Compile Include="Assets\Scripts\BulletManager.cs" />
     <Compile Include="Assets\Scripts\Base\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Base\Res\ResManager.cs" />
-    <Compile Include="Assets\Scripts\CharacterControl\ActionStates\HurtedState.cs" />
+    <Compile Include="Assets\Scripts\Projectile.cs" />
+    <Compile Include="Assets\Scripts\ProjectileManager.cs" />
+    <Compile Include="Assets\Scripts\Trap.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

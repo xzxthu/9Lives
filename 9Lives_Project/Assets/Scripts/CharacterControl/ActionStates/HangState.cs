@@ -19,24 +19,26 @@ public class HangState : ActorState
         _actor = param[0] as Actor;
         if (_actor != null)
         {
+            
+            if (Mathf.Abs(PlayerActor.instance.rigid.velocity.x) > PlayerActor.instance.maxRunSpeed * 0.5f) //是否播放吊着的摇晃
+            {
+                PlayerActor.instance.anim.SetBool("isHangingHoriz", true);
+                Debug.Log("挂着摇晃");
+            }
+            else
+            {
+                PlayerActor.instance.anim.SetBool("isHangingHoriz", false);
+                Debug.Log("不挂着摇晃" + PlayerActor.instance.rigid.velocity.x);
+            }
 
-            MoveWhenHang();
+            PlayerActor.instance.anim.SetTrigger("HangingTrigger");
 
             PlayerActor.instance.anim.SetBool("isJumping", false);
             PlayerActor.instance.anim.SetBool("isJumpingHoriz", false);
             PlayerActor.instance.anim.SetBool("isDowning", false);
             PlayerActor.instance.isHoriz = false;
-            if (Mathf.Abs(PlayerActor.instance.rigid.velocity.x) > PlayerActor.instance.maxRunSpeed * 0.75) //是否播放吊着的摇晃
-            {
-                PlayerActor.instance.anim.SetBool("isHangingHoriz", true);
-            }
-            else
-            {
-                PlayerActor.instance.anim.SetBool("isHangingHoriz", false);
-            }
 
-            PlayerActor.instance.anim.SetTrigger("HangingTrigger");
-
+            MoveWhenHang();
         }
 
 
@@ -115,7 +117,8 @@ public class HangState : ActorState
 
             }
 
-            notKeepDropping *= 0.4f;
+            //notKeepDropping *= 0.4f;
+            notKeepDropping = notKeepDropping > 0 ? 0.5f : -0.5f;
         }
         else //横着挂住
         {
@@ -149,7 +152,8 @@ public class HangState : ActorState
 
             }
 
-            moveOffetY = 0.6f;
+            //moveOffetY = 0.6f;
+            notKeepDropping = notKeepDropping > 0 ? 1f : -1f;
         }
 
         Vector3 moveOffet = new Vector3(notKeepDropping * 0.4f, moveOffetY, 0); //横向和向上移动一点
