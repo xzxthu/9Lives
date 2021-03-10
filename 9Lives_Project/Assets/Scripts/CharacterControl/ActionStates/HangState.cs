@@ -15,7 +15,7 @@ public class HangState : ActorState
 
     public override void Enter(params object[] param)
     {
-        //Debug.Log("HangState Enter");
+        Debug.Log("HangState Enter");
         _actor = param[0] as Actor;
         if (_actor != null)
         {
@@ -44,13 +44,15 @@ public class HangState : ActorState
 
     public override void FixedUpdate()
     {
+        PlayerActor.instance.UpdateInActor();
+
         if (Level_2_Manager.instance.isHurted)
         {
             PlayerActor.instance.TransState(ActorStateType.Hurted);
             return;
         }
 
-        if (!Level_2_Manager.instance.isHanging)
+        if (!Level_2_Manager.instance.isHanging)//|| (!PlayerActor.instance.isLeftHandCatch&& !PlayerActor.instance.isRightHandCatch)
         {
             PlayerActor.instance.TransState(ActorStateType.Idle);
             return;
@@ -82,7 +84,7 @@ public class HangState : ActorState
 
         if (notKeepDropping > -0.3f) //垂直挂的时候添加横向位移
         {
-
+            Debug.Log("垂直挂住");
             Ray2D rayUpLeft = new Ray2D(PlayerActor.instance.Left_Leg.position + Vector3.up * 0.2f, Vector2.down);
             Ray2D rayUpRight = new Ray2D(PlayerActor.instance.Right_Leg.position + Vector3.up * 0.2f, Vector2.down);
 

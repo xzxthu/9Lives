@@ -16,7 +16,7 @@ public class IdleState : ActorState
 
     public override void Enter(params object[] param)
     {
-        //Debug.Log("IdleState Enter");
+        Debug.Log("IdleState Enter");
         _actor = param[0] as Actor;
         if (_actor != null)
         {

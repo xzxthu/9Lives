@@ -15,7 +15,7 @@ public class JumpState : ActorState
 
     public override void Enter(params object[] param)
     {
-        //Debug.Log("JumpState Enter");
+        Debug.Log("JumpState Enter");
         _actor = param[0] as Actor;
         if (_actor != null)
         {
@@ -38,7 +38,14 @@ public class JumpState : ActorState
             return;
         }
 
-        if (PlayerActor.instance.isGround)
+        if (PlayerActor.instance.isGround && Mathf.Approximately(PlayerActor.instance.rigid.velocity.y, 0) && 
+            !Mathf.Approximately(PlayerActor.instance.moveInput, 0))
+        {
+            PlayerActor.instance.TransState(ActorStateType.Run);
+            return;
+        }
+
+        if (PlayerActor.instance.isGround && Mathf.Approximately( PlayerActor.instance.rigid.velocity.y,0))
         {
             PlayerActor.instance.TransState(ActorStateType.Idle);
             return;
@@ -67,10 +74,11 @@ public class JumpState : ActorState
     private void CalculateSpeed()
     {
 
-        if (PlayerActor.instance.moveInput * PlayerActor.instance.recordMoveInput < 0)
+        if (PlayerActor.instance.moveInput * PlayerActor.instance.recordMoveInput < -0.1f) //turning
         {
+            Debug.Log("空中转身");
             PlayerActor.instance.isTurnAround = true;
-            PlayerActor.instance.rigid.velocity = new Vector2(-PlayerActor.instance.rigid.velocity.x, PlayerActor.instance.rigid.velocity.y);
+            PlayerActor.instance.rigid.velocity = new Vector2(-PlayerActor.instance.rigid.velocity.x/2, PlayerActor.instance.rigid.velocity.y);
         }
         else
         {
@@ -116,8 +124,8 @@ public class JumpState : ActorState
 
 
             PlayerActor.instance.rigid.velocity =
-                new Vector2(((PlayerActor.instance.rigid.velocity.x>0)? 1f:-1f) * PlayerActor.instance.speed,
-                PlayerActor.instance.rigid.velocity.y);
+                new Vector2(((PlayerActor.instance.rigid.velocity.x>0.1f)? 1f:-1f) * PlayerActor.instance.speed,
+                PlayerActor.instance.rigid.velocity.y); //不用判断会变成0
         }
     }
 
@@ -151,24 +159,7 @@ public class JumpState : ActorState
         }
 
 
-        if ((PlayerActor.instance.anim.GetBool("isJumping") || PlayerActor.instance.anim.GetBool("isJumpingHoriz") || 
-            PlayerActor.instance.anim.GetBool("isDowning")) && PlayerActor.instance.rigid.velocity.y == 0) //结束动画,跳的过程中碰到地块则不变
-        {
-            //Debug.Log(rigid.velocity.y);
-            if (PlayerActor.instance.rigid.velocity.y < PlayerActor.instance.speedForHighLandding) //控制是否大落地(至少要2级台阶)
-            {
-                PlayerActor.instance.anim.SetBool("isLandingFromHigh", true);
-            }
-            else
-            {
-                PlayerActor.instance.anim.SetBool("isLandingFromHigh", false);
-            }
-            PlayerActor.instance.anim.SetBool("isJumping", false);
-            PlayerActor.instance.anim.SetBool("isJumpingHoriz", false);
-            PlayerActor.instance.anim.SetBool("isDowning", false);
-            PlayerActor.instance.isHoriz = false;
-
-        }
+        
 
         
     }
@@ -177,7 +168,8 @@ public class JumpState : ActorState
     {
         if (PlayerActor.instance.jumpTimer > 0)//起跳长按更高
         {
-            PlayerActor.instance.rigid.velocity = Vector2.up * PlayerActor.instance.jumpForce;
+            PlayerActor.instance.rigid.velocity = 
+                new Vector2(PlayerActor.instance.rigid.velocity.x, PlayerActor.instance.jumpForce);
             PlayerActor.instance.jumpTimer -= Time.deltaTime;
             if (Input.GetKeyUp(KeyCode.Space))
             {
@@ -189,17 +181,17 @@ public class JumpState : ActorState
     private bool CheckAutoLand()
     {
         if ((PlayerActor.instance.isLeftHandCatch || PlayerActor.instance.isRightHandCatch)
-            && PlayerActor.instance.rigid.velocity.y < 0) // 手够地面
+            && PlayerActor.instance.rigid.velocity.y < -0.1f) // 手够地面
         {
+            //检测点向下挪动0.2，防止检测到身体
+            Ray2D ray = new Ray2D(PlayerActor.instance.transform.position + Vector3.down * 0.2f, PlayerActor.instance.rigid.velocity);
 
-            Ray2D ray = new Ray2D(PlayerActor.instance.transform.position, PlayerActor.instance.rigid.velocity);
-
-            //Debug.DrawRay(ray.origin, ray.direction, Color.yellow);
+            Debug.DrawRay(ray.origin, ray.direction, Color.yellow);
 
             RaycastHit2D info = Physics2D.Raycast(ray.origin, ray.direction);
 
             if (info.collider != null)
-            {//如果发生了碰撞
+            {
                 if (info.collider.CompareTag("Ground"))
                 {
                     if (
@@ -209,6 +201,7 @@ public class JumpState : ActorState
                     {
                         return false;
                     }
+
                 }
             }
 

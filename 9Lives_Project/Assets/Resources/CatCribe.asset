@@ -16,27 +16,330 @@ MonoBehaviour:
   - m_Name: Head
     m_Hash: 130111906
     m_CategoryList:
-    - m_Name: normal
-      m_Hash: 562391268
+    - m_Name: test_normal
+      m_Hash: -1235456054
       m_Sprite: {fileID: -949044775008268934, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
-    - m_Name: cribe
-      m_Hash: -191627574
+    - m_Name: test_cribe
+      m_Hash: -28485439
       m_Sprite: {fileID: -2888302156374218814, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
-  - m_Name: Left_BackLeg_2
-    m_Hash: 1971265160
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: 8980794257873299787, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: 4886475599400792265, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Left Ear
+    m_Hash: 82799394
     m_CategoryList:
-    - m_Name: normal
-      m_Hash: 562391268
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: 2723369902186513000, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: 2668960025799862907, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: 6794223456622603383, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: 7673541151656035026, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Right Ear
+    m_Hash: -949758594
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: -4145679833225883617, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: -1759040064741305875, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: -7002613979383621099, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: -5241596952449812400, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Body
+    m_Hash: 2073732236
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: -8575605037533002999, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: 6925277259905597703, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: -2312097659363511843, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: 1082389783493980348, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Left Leg 1
+    m_Hash: 1624135877
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: 7568463440501321674, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: -8357961620365565954, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: 8865051061019831589, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: 5595034507448829723, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Left Leg 2
+    m_Hash: -104396417
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: -6859798860988748002, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: 4914303409135064640, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: -2474348541193373671, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: 4095793541652857207, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Left Leg3
+    m_Hash: -184409770
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: -9197334519708431519, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: 4944666006271298047, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: -1557219345674553576, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: 2544428974071044497, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Left Leg 4
+    m_Hash: 279227466
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: 5941583014328492489, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: -4065998952969583130, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: -5276971833707589457, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: -6973012047003438457, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Right Leg 1
+    m_Hash: 1511593882
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: 4890667982122654003, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: -870093649359640577, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: -3903179414359969988, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: -8952290789009390010, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Right Leg 2
+    m_Hash: -1022343648
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: -7334676965009645799, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: 5339490054419985004, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: 5028276324017698646, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: -5084523083156948685, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Right Leg 3
+    m_Hash: -1273530698
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: -466952318208733165, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: 5223127909718557603, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: 9202039183255845882, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: -5110595325358893545, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: RIght Leg 4
+    m_Hash: 1697571013
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: -6582406372781726654, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: -4940127595982337602, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: -8193874896839163705, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: -5094523530340596295, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Pelvis
+    m_Hash: -1339949736
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: -4311062768375984261, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: -5280052536957935648, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: 1393847679766152618, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: 3852142361923304128, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Left BackLeg 1
+    m_Hash: 1133769758
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: -5061868361023917099, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: 4025482727173735012, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: 8876252063414794468, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: -5846987387669983074, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Left BackLeg 2
+    m_Hash: -627399260
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
       m_Sprite: {fileID: -3644518901104392646, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
-    - m_Name: cribe
-      m_Hash: -191627574
+    - m_Name: test_cribe
+      m_Hash: -28485439
       m_Sprite: {fileID: 6771577981738860009, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
-  - m_Name: Right_BackLeg_1
-    m_Hash: 212537425
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: 2097791686675898941, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: -9180622987625899026, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Left BackLeg 3
+    m_Hash: -1382181582
     m_CategoryList:
-    - m_Name: normal
-      m_Hash: 562391268
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: -5623950737824481162, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: -2007939671776887946, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: -1298243227201140630, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: 6092395355561629927, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Left BackLeg 4
+    m_Hash: 871956625
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: -5277793241624689336, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: 1854697615233169214, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: 4736791551178124258, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: 8055976610251722742, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Right BackLeg 1
+    m_Hash: -1555125379
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: -4481244120823363113, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: 5966782043852266788, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: -8146415176738783906, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: 1950959261138318716, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Right BackLeg 2
+    m_Hash: 977795783
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
       m_Sprite: {fileID: 6150680283784803884, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
-    - m_Name: cribe
-      m_Hash: -191627574
+    - m_Name: test_cribe
+      m_Hash: -28485439
       m_Sprite: {fileID: -6610868630363298811, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: -6795356621718412486, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: 2465303627396064685, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Right BackLeg 3
+    m_Hash: 1296091729
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: 7041726038246573555, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: -5758776073791329846, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: -1548936690982481307, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: -7436671253625976430, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Right BackLeg 4
+    m_Hash: -752590862
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: -2369783628200303964, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: 5130606565612772636, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: 6242110396506098719, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: -2651577017748561733, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}
+  - m_Name: Tail
+    m_Hash: -603645085
+    m_CategoryList:
+    - m_Name: test_normal
+      m_Hash: -1235456054
+      m_Sprite: {fileID: 1862404206434703384, guid: 1abd75ed45c22134c8f64b3d9dca1a09, type: 3}
+    - m_Name: test_cribe
+      m_Hash: -28485439
+      m_Sprite: {fileID: 581558007320632522, guid: cd3c195a7f75dbf478e7e864a8a6612e, type: 3}
+    - m_Name: fluffy_normal
+      m_Hash: 101370498
+      m_Sprite: {fileID: -3477633472254421633, guid: 4786156825c711a4597e0bc8501a918c, type: 3}
+    - m_Name: fluffy_cribe
+      m_Hash: 2037396155
+      m_Sprite: {fileID: -652397808751427713, guid: 6c65e0aa0ba1fe8419180c742a1c9eba, type: 3}

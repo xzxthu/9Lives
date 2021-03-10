@@ -23,7 +23,7 @@ public class RunState : ActorState
             PlayerActor.instance.anim.SetBool("isJumpingHoriz", false);
             PlayerActor.instance.anim.SetBool("isDowning", false);
 
-
+            PlayAniamtion();
         }
 
 

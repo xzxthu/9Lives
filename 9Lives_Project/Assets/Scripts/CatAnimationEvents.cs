@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CatAnimationEvents : MonoBehaviour
 {
-    public CatMoveController controller;
+    //public CatMoveController controller;
 
     public void ResetHunging()
     {

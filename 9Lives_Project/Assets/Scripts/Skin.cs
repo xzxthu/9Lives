@@ -15,7 +15,10 @@ public class Skin : MonoBehaviour
         foreach(var resolver in FindObjectsOfType<SpriteResolver>())
         {
             spriteResolvers.Add(resolver);
+            resolver.SetCategoryAndLabel(resolver.GetCategory(), "fluffy_normal");
         }
+
+
         anim = GetComponent<Animator>();
     }
 
@@ -23,11 +26,11 @@ public class Skin : MonoBehaviour
     {
         if(Level_2_Manager.instance.isHanging||anim.GetBool("isJumping"))
         {
-            headResolver.SetCategoryAndLabel(headResolver.GetCategory(),"cribe");
+            headResolver.SetCategoryAndLabel(headResolver.GetCategory(), "fluffy_cribe");
         }
         else
         {
-            headResolver.SetCategoryAndLabel(headResolver.GetCategory(), "normal");
+            headResolver.SetCategoryAndLabel(headResolver.GetCategory(), "fluffy_normal");
         }
     }
 }
