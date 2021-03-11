@@ -122,10 +122,12 @@ public class JumpState : ActorState
                 PlayerActor.instance.recordMoveInput = 0;
             }
 
+            float direction = PlayerActor.instance.rigid.velocity.x > 0.1f ? 1f:-1f;
 
             PlayerActor.instance.rigid.velocity =
-                new Vector2(((PlayerActor.instance.rigid.velocity.x>0.1f)? 1f:-1f) * PlayerActor.instance.speed,
-                PlayerActor.instance.rigid.velocity.y); //不用判断会变成0
+                new Vector2(((PlayerActor.instance.moveInput==0)? direction: PlayerActor.instance.moveInput)
+                *  PlayerActor.instance.speed,
+                PlayerActor.instance.rigid.velocity.y); //不用判断会变成0,无输入时用rigid运动方向
         }
     }
 
