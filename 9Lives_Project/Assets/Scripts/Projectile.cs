@@ -44,11 +44,11 @@ public class Projectile : MonoBehaviour
                 break;
             case ProjectileType.surprise:
                 {
-                    if(isSurprise)
+                    TrackPlayer();
+                    if (isSurprise)
                     {
                         isSurprise = false;
                         gameObject.GetComponent<SpriteRenderer>().enabled = true;
-                        TrackPlayer();
                         anim.SetTrigger("QuickShootTrigger");
                     }
                 }
@@ -73,7 +73,7 @@ public class Projectile : MonoBehaviour
 
     private void TrackPlayer()
     {
-        Vector3 v = GameObject.Find("CatController").transform.position - transform.position;
+        Vector3 v = GameObject.Find("HurtArea").transform.position - transform.position;
         v.z = 0;
         rotateAngel = Vector3.SignedAngle(Vector3.right, v, Vector3.forward);
         Debug.Log(rotateAngel);
