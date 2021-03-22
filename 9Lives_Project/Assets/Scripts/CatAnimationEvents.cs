@@ -9,7 +9,7 @@ public class CatAnimationEvents : MonoBehaviour
     public void ResetHunging()
     {
 
-        Level_2_Manager.instance.isHanging = false;
+        PlayerActor.instance.isHanging = false;
 
 
     }

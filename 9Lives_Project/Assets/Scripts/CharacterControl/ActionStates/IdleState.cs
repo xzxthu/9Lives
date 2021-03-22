@@ -41,9 +41,15 @@ public class IdleState : ActorState
         
         
 
-        if(Level_2_Manager.instance.isHurted)
+        if (PlayerActor.instance.isHurted)
         {
             PlayerActor.instance.TransState(ActorStateType.Hurted);
+            return;
+        }
+
+        if (PlayerActor.instance.isSlipping)
+        {
+            PlayerActor.instance.TransState(ActorStateType.Slip);
             return;
         }
 
@@ -113,7 +119,7 @@ public class IdleState : ActorState
             PlayerActor.instance.anim.SetBool("isJumping", false);
             PlayerActor.instance.anim.SetBool("isJumpingHoriz", false);
             PlayerActor.instance.anim.SetBool("isDowning", false);
-            PlayerActor.instance.isHoriz = false;
+            PlayerActor.instance.isJumpHoriz = false;
 
         }
     }

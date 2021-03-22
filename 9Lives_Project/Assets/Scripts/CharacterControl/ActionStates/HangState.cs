@@ -36,7 +36,7 @@ public class HangState : ActorState
             PlayerActor.instance.anim.SetBool("isJumping", false);
             PlayerActor.instance.anim.SetBool("isJumpingHoriz", false);
             PlayerActor.instance.anim.SetBool("isDowning", false);
-            PlayerActor.instance.isHoriz = false;
+            PlayerActor.instance.isJumpHoriz = false;
 
             MoveWhenHang();
         }
@@ -48,13 +48,13 @@ public class HangState : ActorState
     {
         PlayerActor.instance.UpdateInActor();
 
-        if (Level_2_Manager.instance.isHurted)
+        if (PlayerActor.instance.isHurted)
         {
             PlayerActor.instance.TransState(ActorStateType.Hurted);
             return;
         }
 
-        if (!Level_2_Manager.instance.isHanging)//|| (!PlayerActor.instance.isLeftHandCatch&& !PlayerActor.instance.isRightHandCatch)
+        if (!PlayerActor.instance.isHanging)//|| (!PlayerActor.instance.isLeftHandCatch&& !PlayerActor.instance.isRightHandCatch)
         {
             PlayerActor.instance.TransState(ActorStateType.Idle);
             return;
@@ -70,7 +70,7 @@ public class HangState : ActorState
     {
         _actor = null;
         // add animation control here
-        Level_2_Manager.instance.isHanging = false;
+        PlayerActor.instance.isHanging = false;
         //Debug.Log("HangState Exit");
     }
 

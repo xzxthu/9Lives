@@ -10,12 +10,16 @@ public class PlayerActor : Actor
     public float accelerate = 1f;                               //加速 acclecrate of running
     public float decelerateOnGround = 1f;                       //在地面上才横向减速（空中不减速） decelerate on ground
     public float decelerateInAir = 1f;                          //空中减速 decelerate in air
+    public float decelerateWhenSlipping = 1f;                   //打滑减速 decelerate when slips
     public float changeDirectionDecelerate = 2f;                //转向会横向减速 decelerate when turn
     public float speedForHighLandding = -15;                    //大落地动作的下坠速度 velocity for play high-landing animation
     public float jumpForce;
     public float jumpHeightTime;
+    public LayerMask ground;
+    public LayerMask banana;
 
     // references and pamameters for feet's methods
+    [Header("Cat's Feet")]
     public Transform feetPos;
     public float feetCheckRadius;
     public Transform Left_Leg;
@@ -23,7 +27,7 @@ public class PlayerActor : Actor
     public float handCheckRadius;
     public Transform Left_BackLeg;
     public Transform Right_BackLeg;
-    public LayerMask ground;
+    
 
     #region private pamameters
     // private pamameters
@@ -39,9 +43,12 @@ public class PlayerActor : Actor
     [HideInInspector] public bool isRightHandCatch = false;
     [HideInInspector] public bool isTurnAround = false;
     [HideInInspector] public bool isJumpClimbSuccess = false;
-    [HideInInspector] public bool isHoriz = false;
+    [HideInInspector] public bool isJumpHoriz = false;
     [HideInInspector] public bool isPressSpace = false;
     [HideInInspector] public bool needIK = false;
+    [HideInInspector] public bool isHurted;
+    [HideInInspector] public bool isHanging;
+    [HideInInspector] public bool isSlipping;
 
     // references of components
     [HideInInspector] public Animator anim;
@@ -65,7 +72,7 @@ public class PlayerActor : Actor
         }
         rigid = GetComponent<Rigidbody2D>();
         colli = GetComponent<CapsuleCollider2D>();
-        horizontal = transform.localScale.x;  
+        horizontal = transform.localScale.x;
 
         if (instance != null)
         {
@@ -88,6 +95,7 @@ public class PlayerActor : Actor
         _actorStateDic[ActorStateType.Jump] = new JumpState();
         _actorStateDic[ActorStateType.Hang] = new HangState();
         _actorStateDic[ActorStateType.Hurted] = new HurtedState();
+        _actorStateDic[ActorStateType.Slip] = new SlipState();
     }
 
     protected override void InitCurState()
@@ -107,6 +115,9 @@ public class PlayerActor : Actor
         isGround = Physics2D.OverlapCircle(feetPos.position, feetCheckRadius, ground);
         isLeftHandCatch = Physics2D.OverlapCircle(Left_Leg.position, handCheckRadius, ground);
         isRightHandCatch = Physics2D.OverlapCircle(Right_Leg.position, handCheckRadius, ground);
+        isSlipping = (Physics2D.OverlapCircle(feetPos.position, handCheckRadius, banana)||
+            Physics2D.OverlapCircle(Left_Leg.position, handCheckRadius, banana) ||
+            Physics2D.OverlapCircle(Right_Leg.position, handCheckRadius, banana));
     }
 
     private void MirrorDirection()

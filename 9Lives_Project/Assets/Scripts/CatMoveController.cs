@@ -477,7 +477,7 @@ public class CatMoveController : MonoBehaviour
         }
 
         anim.SetTrigger("HangingTrigger");
-        Level_2_Manager.instance.isHanging = true;
+        PlayerActor.instance.isHanging = true;
         rigid.velocity = Vector2.zero;
 
     }

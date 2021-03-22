@@ -24,7 +24,7 @@ public class Skin : MonoBehaviour
 
     private void Update()
     {
-        if(Level_2_Manager.instance.isHanging||anim.GetBool("isJumping"))
+        if(PlayerActor.instance.isHanging||anim.GetBool("isJumping"))
         {
             headResolver.SetCategoryAndLabel(headResolver.GetCategory(), "fluffy_cribe");
         }

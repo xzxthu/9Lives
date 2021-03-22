@@ -6,9 +6,7 @@ public class Level_2_Manager : MonoBehaviour
 {
     public bool isDown; //角色向下one way
     public int nowGround = 0; //0为没有
-    public bool isHanging;
 
-    public bool isHurted;
     public Vector2 hurtDir = Vector2.left;
     public float hurtForce = 4f;
     public float hurtTime = 0.5f;

@@ -37,9 +37,15 @@ public class RunState : ActorState
         PlayAniamtion();
         //PlayerActor.instance.CheckAutoDown();
 
-        if (Level_2_Manager.instance.isHurted)
+        if (PlayerActor.instance.isHurted)
         {
             PlayerActor.instance.TransState(ActorStateType.Hurted);
+            return;
+        }
+
+        if (PlayerActor.instance.isSlipping)
+        {
+            PlayerActor.instance.TransState(ActorStateType.Slip);
             return;
         }
 

@@ -72,9 +72,11 @@
     <Compile Include="Assets\Scripts\Base\BaseManager.cs" />
     <Compile Include="Assets\Scripts\Prototype\ButtonControl.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActorState.cs" />
+    <Compile Include="Assets\Scripts\ProjectileManager.cs" />
     <Compile Include="Assets\Scripts\Prototype\LevelManager.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\IdleState.cs" />
     <Compile Include="Assets\Scripts\Base\UI\BasePanel.cs" />
+    <Compile Include="Assets\Scripts\Trap.cs" />
     <Compile Include="Assets\Scripts\EffectAnimating.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\HurtedState.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
@@ -82,6 +84,7 @@
     <Compile Include="Assets\Scripts\Base\Mono\MonoController.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\JumpState.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\HangState.cs" />
+    <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\FootIK.cs" />
     <Compile Include="Assets\Scripts\Prototype\CameraController.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\PlayerActor.cs" />
@@ -92,9 +95,8 @@
     <Compile Include="Assets\Scripts\BulletManager.cs" />
     <Compile Include="Assets\Scripts\Base\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Base\Res\ResManager.cs" />
-    <Compile Include="Assets\Scripts\Projectile.cs" />
-    <Compile Include="Assets\Scripts\ProjectileManager.cs" />
-    <Compile Include="Assets\Scripts\Trap.cs" />
+    <Compile Include="Assets\Scripts\CharacterControl\ActionStates\SlipState.cs" />
+    <Compile Include="Assets\Scripts\BananaPeel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

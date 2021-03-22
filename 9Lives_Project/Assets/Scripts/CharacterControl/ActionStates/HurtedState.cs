@@ -26,10 +26,10 @@ public class HurtedState : ActorState
             PlayerActor.instance.anim.SetBool("isJumping", false);
             PlayerActor.instance.anim.SetBool("isJumpingHoriz", false);
             PlayerActor.instance.anim.SetBool("isDowning", false);
-            PlayerActor.instance.isHoriz = false;
+            PlayerActor.instance.isJumpHoriz = false;
             PlayerActor.instance.jumpTimer = 0;
 
-            Level_2_Manager.instance.isHurted = false;
+            PlayerActor.instance.isHurted = false;
 
             timer = Level_2_Manager.instance.hurtTime;
             PlayerActor.instance.anim.SetBool("isHurted", true);

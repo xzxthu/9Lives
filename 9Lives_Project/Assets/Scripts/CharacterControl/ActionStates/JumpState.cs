@@ -32,9 +32,15 @@ public class JumpState : ActorState
         PlayerActor.instance.UpdateInActor();
         PlayAnimation();
 
-        if (Level_2_Manager.instance.isHurted)
+        if (PlayerActor.instance.isHurted)
         {
             PlayerActor.instance.TransState(ActorStateType.Hurted);
+            return;
+        }
+
+        if (PlayerActor.instance.isSlipping)
+        {
+            PlayerActor.instance.TransState(ActorStateType.Slip);
             return;
         }
 
@@ -53,7 +59,7 @@ public class JumpState : ActorState
 
         if (CheckAutoLand())
         {
-            Level_2_Manager.instance.isHanging = true;
+            PlayerActor.instance.isHanging = true;
             PlayerActor.instance.TransState(ActorStateType.Hang);
             return;
         }
@@ -142,9 +148,9 @@ public class JumpState : ActorState
             PlayerActor.instance.anim.SetBool("isDowning", false);
         }
 
-        if (Mathf.Approximately(PlayerActor.instance.moveInput, 0))
+        if (Mathf.Approximately(PlayerActor.instance.rigid.velocity.x, 0) || Input.GetAxis("Vertical") > 0.1f)
         {
-            if ((!PlayerActor.instance.isHoriz || Input.GetAxis("Vertical") > 0.5f) && !PlayerActor.instance.anim.GetBool("isDowning"))  //在空中转过后不再转回,除非按上
+            if ((!PlayerActor.instance.anim.GetBool("isDowning")))  //在空中转过后不再转回,需要加(!PlayerActor.instance.isJumpHoriz) 
             {
                 PlayerActor.instance.anim.SetBool("isJumping", true);
                 PlayerActor.instance.anim.SetBool("isJumpingHoriz", false);
@@ -154,7 +160,7 @@ public class JumpState : ActorState
         }
         else
         {
-            PlayerActor.instance.isHoriz = true;
+            PlayerActor.instance.isJumpHoriz = true;
             PlayerActor.instance.anim.SetBool("isJumping", false);
             PlayerActor.instance.anim.SetBool("isJumpingHoriz", true);
             PlayerActor.instance.anim.SetBool("isDowning", false);

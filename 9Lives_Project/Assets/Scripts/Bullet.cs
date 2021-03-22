@@ -26,10 +26,11 @@ public class Bullet : MonoBehaviour
         isOutOfScreen = false;
         rigid = GetComponent<Rigidbody2D>();
         render = GetComponent<SpriteRenderer>();
-        
+        render.enabled = false;
+
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
 
         if(needToShoot)
@@ -53,7 +54,7 @@ public class Bullet : MonoBehaviour
         Debug.Log("Bullet hit " + collision.gameObject.tag);
         if (collision.gameObject.tag == "Player")
         {
-            Level_2_Manager.instance.isHurted = true;
+            PlayerActor.instance.isHurted = true;
             Level_2_Manager.instance.hurtDir = direction.normalized;
             Level_2_Manager.instance.hurtForce = hurtForce;
             Level_2_Manager.instance.hurtTime = hurtTime;
