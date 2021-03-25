@@ -55,6 +55,7 @@ public class PlayerActor : Actor
     [HideInInspector] public Transform catTransform;
     [HideInInspector] public Rigidbody2D rigid;
     [HideInInspector] public CapsuleCollider2D colli;
+    [HideInInspector] public Skin skin;
 
     // singleton
     public static PlayerActor instance;
@@ -73,6 +74,7 @@ public class PlayerActor : Actor
         rigid = GetComponent<Rigidbody2D>();
         colli = GetComponent<CapsuleCollider2D>();
         horizontal = transform.localScale.x;
+        skin = GetComponentInChildren<Skin>();
 
         if (instance != null)
         {

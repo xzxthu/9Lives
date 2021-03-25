@@ -148,13 +148,13 @@ public class RunState : ActorState
             
             PlayerActor.instance.rigid.velocity = Vector2.up * PlayerActor.instance.jumpForce;
             PlayerActor.instance.jumpTimer = PlayerActor.instance.jumpHeightTime;
-            if (Mathf.Approximately(PlayerActor.instance.moveInput, 0))//直接播垂直跳动画
-            {
-                PlayerActor.instance.anim.SetBool("isJumping", true);
-                PlayerActor.instance.anim.SetBool("isJumpingHoriz", false);
-                PlayerActor.instance.anim.SetBool("isWalking", false);
-                PlayerActor.instance.anim.SetBool("isRunning", false);
-            }
+
+            /*PlayerActor.instance.anim.SetBool("isJumping", false);
+            PlayerActor.instance.anim.SetBool("isJumpingHoriz", true);
+            PlayerActor.instance.anim.SetBool("isWalking", false);
+            PlayerActor.instance.anim.SetBool("isRunning", false);*/
+
+            PlayerActor.instance.isJumpHoriz = true;
         }
     }
 

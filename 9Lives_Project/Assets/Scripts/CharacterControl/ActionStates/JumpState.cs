@@ -73,7 +73,9 @@ public class JumpState : ActorState
     public override void Exit()
     {
         _actor = null;
+        PlayerActor.instance.skin.ChangeNormalFace();
         //Debug.Log("JumpState Exit");
+
 
     }
 
@@ -152,18 +154,25 @@ public class JumpState : ActorState
         {
             if ((!PlayerActor.instance.anim.GetBool("isDowning")))  //在空中转过后不再转回,需要加(!PlayerActor.instance.isJumpHoriz) 
             {
+                Debug.Log("纵跳");
                 PlayerActor.instance.anim.SetBool("isJumping", true);
                 PlayerActor.instance.anim.SetBool("isJumpingHoriz", false);
                 PlayerActor.instance.anim.SetBool("isDowning", false);
+
+                PlayerActor.instance.skin.ChangeCribeFace();
             }
 
         }
         else
         {
+            Debug.Log("横跳");
+            PlayerActor.instance.anim.SetBool("isDowning", false);
             PlayerActor.instance.isJumpHoriz = true;
             PlayerActor.instance.anim.SetBool("isJumping", false);
             PlayerActor.instance.anim.SetBool("isJumpingHoriz", true);
-            PlayerActor.instance.anim.SetBool("isDowning", false);
+            
+
+            PlayerActor.instance.skin.ChangeNormalFace();
         }
 
 

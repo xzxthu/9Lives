@@ -5,12 +5,11 @@ using UnityEngine.Experimental.U2D.Animation;
 
 public class Skin : MonoBehaviour
 {
-    public List<SpriteResolver> spriteResolvers = new List<SpriteResolver>();
-    public SpriteResolver headResolver;
-
-    public SkinState nowSkin;
+    [HideInInspector] public List<SpriteResolver> spriteResolvers = new List<SpriteResolver>();
+    [HideInInspector] public SpriteResolver headResolver;
+    [HideInInspector] public SkinState nowSkin;
     private Dictionary<SkinState, SkinState> cribeSkin = new Dictionary<SkinState, SkinState>();
-
+    public FaceExpression faceExp;
     private Animator anim;
 
 
@@ -26,8 +25,9 @@ public class Skin : MonoBehaviour
 
     private void Update()
     {
-        ChangeCribeFace();
+        //ChangeCribeFace();
     }
+
 
     private void Init()
     {
@@ -47,16 +47,23 @@ public class Skin : MonoBehaviour
         }
     }
 
-    private void ChangeCribeFace()
+    public void ChangeCribeFace()
     {
-        if (PlayerActor.instance.isHanging || anim.GetBool("isJumping"))
+        /*if (PlayerActor.instance.isHanging || anim.GetBool("isJumping"))
         {
             headResolver.SetCategoryAndLabel(headResolver.GetCategory(), cribeSkin[nowSkin].ToString());
         }
         else
         {
             headResolver.SetCategoryAndLabel(headResolver.GetCategory(), nowSkin.ToString());
-        }
+        }*/
+
+        headResolver.SetCategoryAndLabel(headResolver.GetCategory(), cribeSkin[nowSkin].ToString());
+    }
+
+    public void ChangeNormalFace()
+    {
+        headResolver.SetCategoryAndLabel(headResolver.GetCategory(), nowSkin.ToString());
     }
 }
 

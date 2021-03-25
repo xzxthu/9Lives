@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\CharacterControl\Actor.cs" />
     <Compile Include="Assets\Scripts\Base\Music\MusicManager.cs" />
     <Compile Include="Assets\Scripts\RoofTop.cs" />
+    <Compile Include="Assets\Scripts\CharacterControl\ActionStates\SlipState.cs" />
     <Compile Include="Assets\Scripts\Skin.cs" />
     <Compile Include="Assets\Scripts\Base\Mono\MonoManager.cs" />
     <Compile Include="Assets\Scripts\Base\BaseManager.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Scripts\EffectAnimating.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\HurtedState.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\BananaPeel.cs" />
     <Compile Include="Assets\Scripts\CatAnimationEvents.cs" />
     <Compile Include="Assets\Scripts\Base\Mono\MonoController.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\JumpState.cs" />
@@ -95,8 +97,7 @@
     <Compile Include="Assets\Scripts\BulletManager.cs" />
     <Compile Include="Assets\Scripts\Base\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Base\Res\ResManager.cs" />
-    <Compile Include="Assets\Scripts\CharacterControl\ActionStates\SlipState.cs" />
-    <Compile Include="Assets\Scripts\BananaPeel.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\FaceExpression.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -38,9 +38,10 @@ public class HangState : ActorState
             PlayerActor.instance.anim.SetBool("isDowning", false);
             PlayerActor.instance.isJumpHoriz = false;
 
+            PlayerActor.instance.skin.ChangeCribeFace();
+
             MoveWhenHang();
         }
-
 
     }
 
@@ -71,6 +72,7 @@ public class HangState : ActorState
         _actor = null;
         // add animation control here
         PlayerActor.instance.isHanging = false;
+        PlayerActor.instance.skin.ChangeNormalFace();
         //Debug.Log("HangState Exit");
     }
 

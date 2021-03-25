@@ -2185,6 +2185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteResolvers: []
   headResolver: {fileID: 246062728}
+  nowSkin: 0
+  faceExp: {fileID: 11400000, guid: 2b6f580ce4c4ea145a5e620d1273bdd8, type: 2}
 --- !u!114 &246062742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3812,6 +3814,7 @@ MonoBehaviour:
   catTransform: {fileID: 0}
   rigid: {fileID: 0}
   colli: {fileID: 0}
+  skin: {fileID: 0}
 --- !u!1 &1195307151
 GameObject:
   m_ObjectHideFlags: 0
