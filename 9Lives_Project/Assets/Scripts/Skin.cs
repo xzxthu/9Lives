@@ -8,29 +8,62 @@ public class Skin : MonoBehaviour
     public List<SpriteResolver> spriteResolvers = new List<SpriteResolver>();
     public SpriteResolver headResolver;
 
+    public SkinState nowSkin;
+    private Dictionary<SkinState, SkinState> cribeSkin = new Dictionary<SkinState, SkinState>();
+
     private Animator anim;
+
+
 
     private void Start()
     {
-        foreach(var resolver in FindObjectsOfType<SpriteResolver>())
-        {
-            spriteResolvers.Add(resolver);
-            resolver.SetCategoryAndLabel(resolver.GetCategory(), "fluffy_normal");
-        }
+        nowSkin = SkinState.fluffy_normal;
 
-
+        Init();
+        ChangeSkin(nowSkin);
         anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        if(PlayerActor.instance.isHanging||anim.GetBool("isJumping"))
+        ChangeCribeFace();
+    }
+
+    private void Init()
+    {
+        foreach (var resolver in FindObjectsOfType<SpriteResolver>())
         {
-            headResolver.SetCategoryAndLabel(headResolver.GetCategory(), "fluffy_cribe");
+            spriteResolvers.Add(resolver);
+        }
+
+        cribeSkin[SkinState.fluffy_normal] = SkinState.fluffy_cribe;
+    }
+
+    private void ChangeSkin(SkinState newstate)
+    {
+        foreach (var resolver in spriteResolvers)
+        {
+            resolver.SetCategoryAndLabel(resolver.GetCategory(), newstate.ToString());
+        }
+    }
+
+    private void ChangeCribeFace()
+    {
+        if (PlayerActor.instance.isHanging || anim.GetBool("isJumping"))
+        {
+            headResolver.SetCategoryAndLabel(headResolver.GetCategory(), cribeSkin[nowSkin].ToString());
         }
         else
         {
-            headResolver.SetCategoryAndLabel(headResolver.GetCategory(), "fluffy_normal");
+            headResolver.SetCategoryAndLabel(headResolver.GetCategory(), nowSkin.ToString());
         }
     }
+}
+
+
+
+public enum SkinState
+{
+    fluffy_normal,
+    fluffy_cribe,
 }
