@@ -11,6 +11,7 @@ public class PlayerActor : Actor
     public float decelerateOnGround = 1f;                       //在地面上才横向减速（空中不减速） decelerate on ground
     public float decelerateInAir = 1f;                          //空中减速 decelerate in air
     public float decelerateWhenSlipping = 1f;                   //打滑减速 decelerate when slips
+    public float slippingSpeed = 7f;
     public float changeDirectionDecelerate = 2f;                //转向会横向减速 decelerate when turn
     public float speedForHighLandding = -15;                    //大落地动作的下坠速度 velocity for play high-landing animation
     public float jumpForce;
@@ -27,16 +28,21 @@ public class PlayerActor : Actor
     public float handCheckRadius;
     public Transform Left_BackLeg;
     public Transform Right_BackLeg;
-    
+
+    [Header("Hurted Pamameters")]
+    public float hurtForce = 4f;
+    public float hurtTime = 0.5f;
+    [HideInInspector] public Vector2 hurtDir = Vector2.left;
 
     #region private pamameters
     // private pamameters
     [HideInInspector] public float moveInput;
     [HideInInspector] public float recordMoveInput;             
-    [HideInInspector] public float speed = 0f;
+    public float speed = 0f;
     [HideInInspector] public float jumpTimer;
     [HideInInspector] public float acTimer;
     [HideInInspector] public float horizontal;
+
 
     [HideInInspector] public bool isGround;
     [HideInInspector] public bool isLeftHandCatch = false;
@@ -49,6 +55,7 @@ public class PlayerActor : Actor
     [HideInInspector] public bool isHurted;
     [HideInInspector] public bool isHanging;
     [HideInInspector] public bool isSlipping;
+    [HideInInspector] public bool isDown; // Character level from a platform by one way
 
     // references of components
     [HideInInspector] public Animator anim;
@@ -172,7 +179,7 @@ public class PlayerActor : Actor
             if (infoLeft.collider == null && infoRight.collider == null)
             {
                 Debug.Log("检测到手超出范围，自动下落");
-                Level_2_Manager.instance.isDown = true;
+                PlayerActor.instance.isDown = true;
             }
             
         }

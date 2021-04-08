@@ -31,7 +31,7 @@ public class HurtedState : ActorState
 
             PlayerActor.instance.isHurted = false;
 
-            timer = Level_2_Manager.instance.hurtTime;
+            timer = PlayerActor.instance.hurtTime;
             PlayerActor.instance.anim.SetBool("isHurted", true);
             HurtedMove();
         }
@@ -72,7 +72,7 @@ public class HurtedState : ActorState
 
     private void HurtedMove()
     {
-        PlayerActor.instance.rigid.velocity = Level_2_Manager.instance.hurtDir * Level_2_Manager.instance.hurtForce;
+        PlayerActor.instance.rigid.velocity = PlayerActor.instance.hurtDir * PlayerActor.instance.hurtForce;
     }
 
 

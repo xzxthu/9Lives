@@ -55,10 +55,10 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             PlayerActor.instance.isHurted = true;
-            Level_2_Manager.instance.hurtDir = direction.normalized;
-            Level_2_Manager.instance.hurtForce = hurtForce;
-            Level_2_Manager.instance.hurtTime = hurtTime;
-            Level_2_Manager.instance.isDown = true;//掉下去
+            PlayerActor.instance.hurtDir = direction.normalized;
+            PlayerActor.instance.hurtForce = hurtForce;
+            PlayerActor.instance.hurtTime = hurtTime;
+            PlayerActor.instance.isDown = true;//掉下去
 
             isHitting = true; //pool回收
             render.enabled = false;

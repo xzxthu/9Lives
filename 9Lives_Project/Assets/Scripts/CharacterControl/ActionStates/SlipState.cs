@@ -41,6 +41,10 @@ public class SlipState : ActorState
 
             PlayerActor.instance.anim.SetBool("isSlipping", true);
 
+
+            PlayerActor.instance.speed = 
+                PlayerActor.instance.rigid.velocity.x < 0 ? 
+                PlayerActor.instance.slippingSpeed : -PlayerActor.instance.slippingSpeed;
             recordSpeed = PlayerActor.instance.recordMoveInput;
         }
     }
@@ -99,7 +103,7 @@ public class SlipState : ActorState
         PlayerActor.instance.rigid.velocity =
             new Vector2(recordSpeed * PlayerActor.instance.speed,PlayerActor.instance.rigid.velocity.y);
 
-        Debug.Log(PlayerActor.instance.rigid.velocity.x);
+        //Debug.Log(PlayerActor.instance.rigid.velocity.x);
     }
 
     private void CheckJump()

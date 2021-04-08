@@ -65,6 +65,16 @@ public class Skin : MonoBehaviour
     {
         headResolver.SetCategoryAndLabel(headResolver.GetCategory(), nowSkin.ToString());
     }
+
+    public void ChangeFaceExpression(int faceNum)
+    {
+        for(int i =0; i< faceExp.faceExpression.Length;i++)
+        {
+            faceExp.faceExpression[i].SetActive(false);
+        }
+
+        faceExp.faceExpression[faceNum].SetActive(true);
+    }
 }
 
 
@@ -73,4 +83,9 @@ public enum SkinState
 {
     fluffy_normal,
     fluffy_cribe,
+}
+
+public enum FaceState
+{
+    idle = 0 ,
 }

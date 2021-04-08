@@ -66,18 +66,16 @@
     <Compile Include="Assets\Scripts\Tests\IKTest.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\Actor.cs" />
     <Compile Include="Assets\Scripts\Base\Music\MusicManager.cs" />
-    <Compile Include="Assets\Scripts\RoofTop.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\SlipState.cs" />
     <Compile Include="Assets\Scripts\Skin.cs" />
     <Compile Include="Assets\Scripts\Base\Mono\MonoManager.cs" />
     <Compile Include="Assets\Scripts\Base\BaseManager.cs" />
-    <Compile Include="Assets\Scripts\Prototype\ButtonControl.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActorState.cs" />
     <Compile Include="Assets\Scripts\ProjectileManager.cs" />
-    <Compile Include="Assets\Scripts\Prototype\LevelManager.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\IdleState.cs" />
     <Compile Include="Assets\Scripts\Base\UI\BasePanel.cs" />
     <Compile Include="Assets\Scripts\Trap.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\FaceExpression.cs" />
     <Compile Include="Assets\Scripts\EffectAnimating.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\HurtedState.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
@@ -88,16 +86,19 @@
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\HangState.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\FootIK.cs" />
-    <Compile Include="Assets\Scripts\Prototype\CameraController.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\PlayerActor.cs" />
-    <Compile Include="Assets\Scripts\Prototype\GroundController.cs" />
     <Compile Include="Assets\Scripts\CatMoveController.cs" />
     <Compile Include="Assets\Scripts\Base\Pool\PoolManager.cs" />
-    <Compile Include="Assets\Scripts\Prototype\CatController.cs" />
     <Compile Include="Assets\Scripts\BulletManager.cs" />
     <Compile Include="Assets\Scripts\Base\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Base\Res\ResManager.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\FaceExpression.cs" />
+    <Compile Include="Assets\Scripts\Menu\StartMenuButton.cs" />
+    <Compile Include="Assets\Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\StreetCar.cs" />
+    <Compile Include="Assets\Scripts\ItemAnimation.cs" />
+    <Compile Include="Assets\Scripts\Dialog.cs" />
+    <Compile Include="Assets\Scripts\Multilanguage.cs" />
+    <Compile Include="Assets\Scripts\Menu\TypewriterEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

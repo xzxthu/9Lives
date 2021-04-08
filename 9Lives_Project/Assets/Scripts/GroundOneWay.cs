@@ -12,9 +12,9 @@ public class GroundOneWay : MonoBehaviour
     {
         
 
-        if ((Input.GetAxis("Vertical") < -0.1f || Level_2_Manager.instance.isDown) && onStand)//One Way Down
+        if ((Input.GetAxis("Vertical") < -0.1f || PlayerActor.instance.isDown) && onStand)//One Way Down
         {
-            Debug.Log(Level_2_Manager.instance.isDown);
+            Debug.Log(PlayerActor.instance.isDown);
             Debug.Log(Input.GetAxis("Vertical"));
             CloseGround();
             Invoke("RestoreGround", 0.5f);
@@ -44,7 +44,7 @@ public class GroundOneWay : MonoBehaviour
     {
         this.gameObject.layer = LayerMask.NameToLayer("Ground");
         GetComponent<BoxCollider2D>().enabled = true;
-        Level_2_Manager.instance.isDown = false;
+        PlayerActor.instance.isDown = false;
     }
 
     
@@ -63,7 +63,7 @@ public class GroundOneWay : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             isColli = false;
-            Level_2_Manager.instance.isDown = false;
+            PlayerActor.instance.isDown = false;
         }
     }
 }

@@ -500,7 +500,7 @@ public class CatMoveController : MonoBehaviour
 
         if (infoLeft.collider == null && infoRight.collider == null ) 
         {
-            Level_2_Manager.instance.isDown = true;
+            PlayerActor.instance.isDown = true;
             //Debug.Log("Null2");
         }
 
