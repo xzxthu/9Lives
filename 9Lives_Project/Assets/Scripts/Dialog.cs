@@ -10,11 +10,13 @@ public class Dialog : MonoBehaviour
     public RectTransform text;
 
     public string[] dialogs;
+    [HideInInspector] public int nowDiaNum = 0;
 
     private Vector2 originBackgroundScale;
     private Vector2 originTextScale;
 
     private TypewriterEffect typer;
+    private bool isClosed = false;
 
     private void Awake()
     {
@@ -32,5 +34,42 @@ public class Dialog : MonoBehaviour
         typer = GetComponentInChildren<TypewriterEffect>();
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.G))
+        {
+            GoNextText();
+        }
+    }
 
+    public void GoNextText()
+    {
+
+        if(isClosed)
+        {
+            nowDiaNum = 0;
+            background.gameObject.SetActive(true);
+            text.gameObject.SetActive(true);
+            text.GetComponent<Text>().text = dialogs[nowDiaNum];
+            typer.Reset();
+            typer.isActive = true;
+            isClosed = false;
+            return;
+        }
+
+        if(nowDiaNum<dialogs.Length-1)
+        {
+            nowDiaNum++;
+            text.GetComponent<Text>().text = dialogs[nowDiaNum];
+            typer.Reset();
+            typer.isActive = true;
+        }
+        else
+        {
+            nowDiaNum = 0;
+            background.gameObject.SetActive(false);
+            text.gameObject.SetActive(false);
+            isClosed = true;
+        }
+    }
 }

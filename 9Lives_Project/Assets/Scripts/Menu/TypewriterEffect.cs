@@ -69,7 +69,14 @@ public class TypewriterEffect : MonoBehaviour
         myText.text = words;
     }
 
-
+    public void Reset()
+    {
+        
+        words = myText.text;
+        myText.text = "";
+        timer = 0;
+        currentPos = 0;
+    }
 
 
 }

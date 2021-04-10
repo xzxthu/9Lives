@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-
+    public BulletType bulletType = BulletType.flying;
     public float hurtForce = 4f;
     public float hurtTime = 0.5f;
 
@@ -25,8 +25,13 @@ public class Bullet : MonoBehaviour
     {
         isOutOfScreen = false;
         rigid = GetComponent<Rigidbody2D>();
-        render = GetComponent<SpriteRenderer>();
-        render.enabled = false;
+
+        if(bulletType==BulletType.flying)
+        {
+            render = GetComponent<SpriteRenderer>();
+            render.enabled = false;
+        }
+        
 
     }
 
@@ -71,4 +76,10 @@ public class Bullet : MonoBehaviour
         rigid.velocity = direction * speed;
         render.enabled = true;
     }
+}
+
+public enum BulletType
+{
+    flying,
+    drop,
 }
