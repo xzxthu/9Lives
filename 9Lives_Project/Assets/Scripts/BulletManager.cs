@@ -45,7 +45,7 @@ public class BulletManager : BaseManager<BulletManager>
 
     }
 
-    public void ShootBullet(Vector2 startPoint, Vector2 direction, float speed)
+    public void ShootBullet(Vector2 startPoint, Vector2 direction, float speed, BulletType bulletType = BulletType.flying, float gravity = 0f)
     {
         PoolManager.GetInstance().GetObject("Bullet/Bullet_1", (bullet) =>
         {
@@ -54,6 +54,8 @@ public class BulletManager : BaseManager<BulletManager>
             blt.startPoint = startPoint;
             blt.direction = direction.normalized;
             blt.speed = speed;
+            blt.bulletType = bulletType;
+            blt.GetComponent<Rigidbody2D>().gravityScale = gravity;
             blt.needToShoot = true;
         });
     }

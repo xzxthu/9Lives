@@ -8,6 +8,13 @@ public class GroundOneWay : MonoBehaviour
     private bool onStand;
     private bool isColli;
 
+    private SpriteRenderer render;
+
+    private void Start()
+    {
+        render = GetComponent<SpriteRenderer>();
+        render.enabled = false;
+    }
     private void FixedUpdate()
     {
         

@@ -9,7 +9,8 @@ public class Dialog : MonoBehaviour
     public Transform background;
     public RectTransform text;
 
-    public string[] dialogs;
+    public string[] dialogs_EN;
+    public string[] dialogs_JP;
     [HideInInspector] public int nowDiaNum = 0;
 
     private Vector2 originBackgroundScale;
@@ -20,7 +21,7 @@ public class Dialog : MonoBehaviour
 
     private void Awake()
     {
-        text.GetComponent<Text>().text = dialogs[0];
+        ChooseLanguage(0);
     }
 
     private void Start()
@@ -50,17 +51,17 @@ public class Dialog : MonoBehaviour
             nowDiaNum = 0;
             background.gameObject.SetActive(true);
             text.gameObject.SetActive(true);
-            text.GetComponent<Text>().text = dialogs[nowDiaNum];
+            ChooseLanguage(nowDiaNum);
             typer.Reset();
             typer.isActive = true;
             isClosed = false;
             return;
         }
 
-        if(nowDiaNum<dialogs.Length-1)
+        if(nowDiaNum<dialogs_EN.Length-1)
         {
             nowDiaNum++;
-            text.GetComponent<Text>().text = dialogs[nowDiaNum];
+            ChooseLanguage(nowDiaNum);
             typer.Reset();
             typer.isActive = true;
         }
@@ -70,6 +71,19 @@ public class Dialog : MonoBehaviour
             background.gameObject.SetActive(false);
             text.gameObject.SetActive(false);
             isClosed = true;
+        }
+    }
+
+    private void ChooseLanguage(int num)
+    {
+        switch(Multilanguage.instance.language)
+        {
+            case Language.English:
+                text.GetComponent<Text>().text = dialogs_EN[num];
+                break;
+            case Language.Japanese:
+                text.GetComponent<Text>().text = dialogs_JP[num];
+                break;
         }
     }
 }

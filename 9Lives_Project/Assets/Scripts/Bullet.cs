@@ -7,6 +7,10 @@ public class Bullet : MonoBehaviour
     public BulletType bulletType = BulletType.flying;
     public float hurtForce = 4f;
     public float hurtTime = 0.5f;
+    public bool isAutoShoot = false;
+    public Vector2 autoDir;
+    //public Sprite[] sprites;
+    public GameObject[] bulletSkins;
 
     [HideInInspector] public bool isOutOfScreen;
     [HideInInspector] public bool isHitting;
@@ -26,12 +30,23 @@ public class Bullet : MonoBehaviour
         isOutOfScreen = false;
         rigid = GetComponent<Rigidbody2D>();
 
-        if(bulletType==BulletType.flying)
+        for(int i=0;i<bulletSkins.Length;i++)
+        {
+            bulletSkins[i].SetActive(false);
+        }
+
+        //bulletSkins[(int)bulletType].SetActive(false);
+
+        /*try
         {
             render = GetComponent<SpriteRenderer>();
             render.enabled = false;
         }
-        
+        catch
+        {
+
+        }*/
+
 
     }
 
@@ -45,10 +60,11 @@ public class Bullet : MonoBehaviour
         }
 
         float distance = Vector3.Distance(transform.position, startPoint);
-        if(distance>20)
+        if(distance>60)
         {
             isOutOfScreen = true;
-            render.enabled = false; //防止再开的时候闪现
+            //render.enabled = false; //防止再开的时候闪现
+            bulletSkins[(int)bulletType].SetActive(false);
         }
     }
 
@@ -60,13 +76,22 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             PlayerActor.instance.isHurted = true;
-            PlayerActor.instance.hurtDir = direction.normalized;
+            if(isAutoShoot)
+            {
+                PlayerActor.instance.hurtDir = autoDir.normalized;
+            }
+            else
+            {
+                PlayerActor.instance.hurtDir = direction.normalized;
+            }
+            
             PlayerActor.instance.hurtForce = hurtForce;
             PlayerActor.instance.hurtTime = hurtTime;
             PlayerActor.instance.isDown = true;//掉下去
 
             isHitting = true; //pool回收
-            render.enabled = false;
+            //render.enabled = false;
+            bulletSkins[(int)bulletType].SetActive(false);
         }
     }
 
@@ -74,12 +99,18 @@ public class Bullet : MonoBehaviour
     {
         transform.position = startPoint;
         rigid.velocity = direction * speed;
-        render.enabled = true;
+        //render.enabled = true;
+        //render.sprite = sprites[(int)bulletType];
+        bulletSkins[(int)bulletType].SetActive(true);
     }
 }
 
 public enum BulletType
 {
-    flying,
-    drop,
+    flying = 0,
+    drop = 1,
+    pizza = 2,
+    brick = 3,
+    takoyaki = 4,
+    bird = 5,
 }

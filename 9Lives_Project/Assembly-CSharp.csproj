@@ -71,10 +71,11 @@
     <Compile Include="Assets\Scripts\Skin.cs" />
     <Compile Include="Assets\Scripts\Dialog.cs" />
     <Compile Include="Assets\Scripts\Base\Mono\MonoManager.cs" />
-    <Compile Include="Assets\Scripts\StreetCar.cs" />
+    <Compile Include="Assets\Scripts\Items\StreetCar.cs" />
     <Compile Include="Assets\Scripts\Base\BaseManager.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActorState.cs" />
     <Compile Include="Assets\Scripts\ProjectileManager.cs" />
+    <Compile Include="Assets\Scripts\Items\AnimationEvents.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\IdleState.cs" />
     <Compile Include="Assets\Scripts\Menu\TypewriterEffect.cs" />
     <Compile Include="Assets\Scripts\Base\UI\BasePanel.cs" />
@@ -83,7 +84,7 @@
     <Compile Include="Assets\Scripts\EffectAnimating.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\HurtedState.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
-    <Compile Include="Assets\Scripts\BananaPeel.cs" />
+    <Compile Include="Assets\Scripts\Items\BananaPeel.cs" />
     <Compile Include="Assets\Scripts\CatAnimationEvents.cs" />
     <Compile Include="Assets\Scripts\Base\Mono\MonoController.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\JumpState.cs" />
@@ -94,13 +95,18 @@
     <Compile Include="Assets\Scripts\FootIK.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\PlayerActor.cs" />
     <Compile Include="Assets\Scripts\CatMoveController.cs" />
+    <Compile Include="Assets\Scripts\Items\Argue.cs" />
     <Compile Include="Assets\Scripts\Base\Pool\PoolManager.cs" />
     <Compile Include="Assets\Scripts\ItemAnimation.cs" />
+    <Compile Include="Assets\Scripts\Items\SignMan.cs" />
+    <Compile Include="Assets\Scripts\Items\Drops.cs" />
     <Compile Include="Assets\Scripts\BulletManager.cs" />
     <Compile Include="Assets\Scripts\Base\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Base\Res\ResManager.cs" />
-    <Compile Include="Assets\Scripts\Drops.cs" />
-    <Compile Include="Assets\Scripts\AnimationEvents.cs" />
+    <Compile Include="Assets\Scripts\Items\Workers.cs" />
+    <Compile Include="Assets\Scripts\Items\Bricks.cs" />
+    <Compile Include="Assets\Scripts\Items\NaughtyGirl.cs" />
+    <Compile Include="Assets\Scripts\Items\Bird.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -4,16 +4,26 @@ using UnityEngine;
 
 public class ItemAnimation : MonoBehaviour
 {
+    [Tooltip("In Test Mode, Every Item Shows Up")]
+    public bool Test = false;
+
     public Vector2[] limits;
     public GameObject[] objects;
 
-    public Transform player;
+    private Transform player;
 
+    private void Start()
+    {
+        player = GameObject.FindWithTag("Player").transform;
+    }
     private void Update()
     {
+        if (Test) return;
+
         for(int i = 0; i<limits.Length; i++)
         {
-            if(limits[i][0] < player.position.y && player.position.y < limits[i][1])
+            if(objects[i].transform.position.y-7 + limits[i].x < player.position.y && 
+                player.position.y < objects[i].transform.position.y + 7 + limits[i].y)
             {
                 objects[i].SetActive(true);
             }
