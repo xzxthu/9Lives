@@ -18,7 +18,7 @@ public class Dialog : MonoBehaviour
 
     private TypewriterEffect typer;
     private bool isClosed = false;
-    private bool readyPlay = false;
+    private bool readyAutoPlay = false;
     private bool loopPlay;
 
     private void Awake()
@@ -44,16 +44,12 @@ public class Dialog : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.G))
+        
+        if(readyAutoPlay)
         {
-            //GoNextText();
-            AutoPlay(false);
-        }
-
-        if(readyPlay)
-        {
-            readyPlay = false;
-            StartCoroutine(PlayLines(GetWordsNumber() * 1f));
+            readyAutoPlay = false;
+            float time = GetWordsNumber() * 0.1f + 3f;
+            StartCoroutine(PlayLines(time));
             
         }
 
@@ -123,7 +119,7 @@ public class Dialog : MonoBehaviour
 
     public void AutoPlay(bool Loop = false)
     {
-        readyPlay = true;
+        readyAutoPlay = true;
         loopPlay = Loop;
 
 
@@ -136,7 +132,7 @@ public class Dialog : MonoBehaviour
         Debug.Log("Play");
         if(!isClosed || loopPlay)
         {
-            readyPlay = true;
+            readyAutoPlay = true;
         }
         
     }

@@ -14,8 +14,6 @@ public class Opening : MonoBehaviour
     {
         catAnimator.SetBool("isOpening", true);
         catFace.SetFaceBool("isClosingEyes", true);
-
-        //dialog.AutoPlay(false);
     }
 
     private void Update()
@@ -31,13 +29,6 @@ public class Opening : MonoBehaviour
         }
     }
 
-    public void StartLightBlink()
-    {
-        for (int i = 0; i < lights.Length; i++)
-        {
-            lights[i].isBlinking = true;
-        }
-    }
 
     public void PlayDialog()
     {

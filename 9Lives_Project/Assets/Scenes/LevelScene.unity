@@ -1393,12 +1393,27 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 3f234f7d7b40840478697a812a38afbb, type: 2}
+    - {fileID: 11400000, guid: 0d7e65df948bf864dbc9b2183607ce1d, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 776578364}
           m_TargetAssemblyTypeName: Opening, Assembly-CSharp
           m_MethodName: TurnOnLights
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 776578364}
+          m_TargetAssemblyTypeName: Opening, Assembly-CSharp
+          m_MethodName: PlayDialog
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4045,31 +4060,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3834783957451164082, guid: 7d9ba6f183fb5ac49b0a30e828860db1, type: 3}
       propertyPath: dialogs_EN.Array.data[0]
-      value: 1
+      value: Hey! Kitten
       objectReference: {fileID: 0}
     - target: {fileID: 3834783957451164082, guid: 7d9ba6f183fb5ac49b0a30e828860db1, type: 3}
       propertyPath: dialogs_EN.Array.data[1]
-      value: 22
+      value: Do you have a wish you want to fulfill??
       objectReference: {fileID: 0}
     - target: {fileID: 3834783957451164082, guid: 7d9ba6f183fb5ac49b0a30e828860db1, type: 3}
       propertyPath: dialogs_EN.Array.data[2]
-      value: 333
+      value: If you climb to the highest point of the city
       objectReference: {fileID: 0}
     - target: {fileID: 3834783957451164082, guid: 7d9ba6f183fb5ac49b0a30e828860db1, type: 3}
       propertyPath: dialogs_EN.Array.data[3]
-      value: 4444
+      value: I will grant you one wish
       objectReference: {fileID: 0}
     - target: {fileID: 3834783957451164082, guid: 7d9ba6f183fb5ac49b0a30e828860db1, type: 3}
       propertyPath: dialogs_EN.Array.data[4]
-      value: 55555
+      value: Waiting for you
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834783957451164082, guid: 7d9ba6f183fb5ac49b0a30e828860db1, type: 3}
+      propertyPath: Scale.x
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3834783957451164083, guid: 7d9ba6f183fb5ac49b0a30e828860db1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4792887
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3834783957451164083, guid: 7d9ba6f183fb5ac49b0a30e828860db1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1865735
+      value: 0.59
       objectReference: {fileID: 0}
     - target: {fileID: 3834783957451164083, guid: 7d9ba6f183fb5ac49b0a30e828860db1, type: 3}
       propertyPath: m_LocalPosition.z
