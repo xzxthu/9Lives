@@ -36,7 +36,7 @@ public class HurtedState : ActorState
             HurtedMove();
         }
 
-
+        PlayerActor.instance.catFace.SetFaceBool("isHurted", true);
     }
 
     public override void FixedUpdate()
@@ -56,6 +56,7 @@ public class HurtedState : ActorState
         PlayerActor.instance.anim.SetBool("isHurted", false);
         PlayerActor.instance.speed = Mathf.Abs(PlayerActor.instance.rigid.velocity.x);
         //Debug.Log("HurtedState Exit");
+        PlayerActor.instance.catFace.SetFaceBool("isHurted", false);
     }
 
     private void WaitForExit()

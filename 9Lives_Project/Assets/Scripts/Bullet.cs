@@ -47,10 +47,9 @@ public class Bullet : MonoBehaviour
 
         }*/
 
-
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
 
         if(needToShoot)
@@ -59,12 +58,16 @@ public class Bullet : MonoBehaviour
             Shoot();
         }
 
+        if (isAutoShoot) return;
+
         float distance = Vector3.Distance(transform.position, startPoint);
         if(distance>60)
         {
             isOutOfScreen = true;
             //render.enabled = false; //防止再开的时候闪现
+            //Debug.Log((int)bulletType);
             bulletSkins[(int)bulletType].SetActive(false);
+            
         }
     }
 
@@ -98,6 +101,7 @@ public class Bullet : MonoBehaviour
     private void Shoot()
     {
         transform.position = startPoint;
+        //Debug.Log("startPoiont" + startPoint);
         rigid.velocity = direction * speed;
         //render.enabled = true;
         //render.sprite = sprites[(int)bulletType];

@@ -44,9 +44,10 @@ public class NaughtyGirl : MonoBehaviour
         else
         {
             timer = 0;
-            timeToShoot = Random.Range(1, 15) / 10 * timeIntervel;
+            timeToShoot = ((float)Random.Range(5, 15) / 10f) * timeIntervel;
             dir = (rigid.velocity.normalized+Vector2.up).normalized;
-            BulletManager.GetInstance().ShootBullet(transform.position, dir, 9f, BulletType.takoyaki, 3f);
+            //Debug.Log(gameObject.transform.position);
+            BulletManager.GetInstance().ShootBullet(gameObject.transform.position, dir, 9f, BulletType.takoyaki, 3f);
         }
         
 

@@ -18,14 +18,17 @@ public class Dialog : MonoBehaviour
 
     private TypewriterEffect typer;
     private bool isClosed = false;
+    private bool readyPlay = false;
+    private bool loopPlay;
 
     private void Awake()
     {
-        ChooseLanguage(0);
+        
     }
 
     private void Start()
     {
+        ChooseLanguage(0);
         background.localScale = new Vector3(background.localScale.x * Scale[0], background.localScale.y * Scale[1] ,1);
         text.sizeDelta = new Vector2(text.sizeDelta[0] * Scale[0], text.sizeDelta[1] * Scale[1]);
 
@@ -33,14 +36,27 @@ public class Dialog : MonoBehaviour
         originTextScale = text.sizeDelta;
 
         typer = GetComponentInChildren<TypewriterEffect>();
+
+        background.gameObject.SetActive(false);
+        text.gameObject.SetActive(false);
+        isClosed = true;
     }
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.G))
         {
-            GoNextText();
+            //GoNextText();
+            AutoPlay(false);
         }
+
+        if(readyPlay)
+        {
+            readyPlay = false;
+            StartCoroutine(PlayLines(GetWordsNumber() * 1f));
+            
+        }
+
     }
 
     public void GoNextText()
@@ -50,6 +66,7 @@ public class Dialog : MonoBehaviour
         {
             nowDiaNum = 0;
             background.gameObject.SetActive(true);
+            background.parent.GetComponent<Animator>().SetTrigger("In");
             text.gameObject.SetActive(true);
             ChooseLanguage(nowDiaNum);
             typer.Reset();
@@ -64,11 +81,13 @@ public class Dialog : MonoBehaviour
             ChooseLanguage(nowDiaNum);
             typer.Reset();
             typer.isActive = true;
+            background.parent.GetComponent<Animator>().SetTrigger("In");
         }
         else
         {
             nowDiaNum = 0;
-            background.gameObject.SetActive(false);
+            background.parent.GetComponent<Animator>().SetTrigger("Out");
+            //background.gameObject.SetActive(false);
             text.gameObject.SetActive(false);
             isClosed = true;
         }
@@ -85,5 +104,40 @@ public class Dialog : MonoBehaviour
                 text.GetComponent<Text>().text = dialogs_JP[num];
                 break;
         }
+    }
+
+    private int GetWordsNumber()
+    {
+        switch (Multilanguage.instance.language)
+        {
+            case Language.English:
+                return dialogs_EN[nowDiaNum].Length;
+                break;
+            case Language.Japanese:
+                return dialogs_JP[nowDiaNum].Length;;
+                break;
+            default:
+                return 0;
+        }
+    }
+
+    public void AutoPlay(bool Loop = false)
+    {
+        readyPlay = true;
+        loopPlay = Loop;
+
+
+    }
+
+    private IEnumerator PlayLines(float time)
+    {
+        yield return new WaitForSeconds(time);
+        GoNextText();
+        Debug.Log("Play");
+        if(!isClosed || loopPlay)
+        {
+            readyPlay = true;
+        }
+        
     }
 }

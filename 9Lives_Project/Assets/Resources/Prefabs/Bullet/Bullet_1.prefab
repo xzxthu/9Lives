@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4190058851033997437
 Transform:
   m_ObjectHideFlags: 0
@@ -188,6 +188,8 @@ MonoBehaviour:
   bulletType: 0
   hurtForce: 4
   hurtTime: 0.5
+  isAutoShoot: 0
+  autoDir: {x: 0, y: 0}
   bulletSkins:
   - {fileID: 9146610822792959911}
   - {fileID: 9146610822792959911}

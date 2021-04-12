@@ -41,6 +41,8 @@ public class HangState : ActorState
             PlayerActor.instance.skin.ChangeCribeFace();
 
             MoveWhenHang();
+
+            PlayerActor.instance.catFace.SetFaceBool("isCribing", true);
         }
 
     }
@@ -73,7 +75,9 @@ public class HangState : ActorState
         // add animation control here
         PlayerActor.instance.isHanging = false;
         PlayerActor.instance.skin.ChangeNormalFace();
+        PlayerActor.instance.catFace.SetFaceBool("isCribing", false);
         //Debug.Log("HangState Exit");
+
     }
 
     private void MoveWhenHang()

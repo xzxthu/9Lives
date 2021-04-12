@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    [HideInInspector] public bool dontMove = true;
+
+
     public static LevelManager instance;
 
     private void Awake()

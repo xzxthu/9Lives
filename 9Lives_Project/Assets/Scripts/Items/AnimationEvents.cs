@@ -14,4 +14,9 @@ public class AnimationEvents : MonoBehaviour
         Vector3 gunPort = GetComponentInChildren<Transform>().position;
         BulletManager.GetInstance().ShootBullet(gunPort, Vector3.right, 12f, BulletType.pizza);
     }
+
+    public void DialogParent_CloseBackground()
+    {
+        GetComponentInChildren<Transform>().gameObject.SetActive(false);
+    }
 }

@@ -24,7 +24,7 @@ public class Bricks : MonoBehaviour
         else
         {
             timer = 0;
-            timeToShoot = Random.Range(1, 15) / 10 * timeIntervel;
+            timeToShoot = ((float)Random.Range(5, 15) / 10f) * timeIntervel;
             Vector2 gunPort = new Vector2(Random.Range(-7,7),transform.position.y);
             BulletManager.GetInstance().ShootBullet(gunPort, Vector3.down, 20f, BulletType.brick);
         }

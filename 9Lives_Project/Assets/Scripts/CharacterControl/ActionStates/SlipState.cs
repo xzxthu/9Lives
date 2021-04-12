@@ -47,6 +47,8 @@ public class SlipState : ActorState
                 PlayerActor.instance.slippingSpeed : -PlayerActor.instance.slippingSpeed;
             recordSpeed = PlayerActor.instance.recordMoveInput;
         }
+
+        PlayerActor.instance.catFace.SetFaceBool("isClosingEyes", true);
     }
 
 
@@ -85,6 +87,7 @@ public class SlipState : ActorState
         _actor = null;
         PlayerActor.instance.anim.SetBool("isSlipping", false);
         //Debug.Log("IdleState Exit");
+        PlayerActor.instance.catFace.SetFaceBool("isClosingEyes", false);
     }
 
 

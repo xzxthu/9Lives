@@ -31,15 +31,17 @@ public class IdleState : ActorState
         }
 
         PlayerActor.instance.needIK = true;
+        //PlayerActor.instance.catFace.SetFaceBool("isRunning", false);
+        //PlayerActor.instance.catFace.SetFaceBool("isRunning", false);
+
     }
 
     public override void FixedUpdate()
     {
+        if (LevelManager.instance.dontMove) return;
+
         Decelerate();
         PlayerActor.instance.UpdateInActor();
-        
-        
-        
 
         if (PlayerActor.instance.isHurted)
         {
@@ -66,6 +68,8 @@ public class IdleState : ActorState
     }
     public override void Update()
     {
+        if (LevelManager.instance.dontMove) return;
+
         PlayAnimation();
         CheckJump();
         PlayerActor.instance.CheckAutoDown();

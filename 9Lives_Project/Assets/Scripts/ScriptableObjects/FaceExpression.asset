@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1feca497cd5d51547b15d0fa76a0d2e4, type: 3}
   m_Name: FaceExpression
   m_EditorClassIdentifier: 
-  faceExpression: []
+  faceExpression:
+  - {fileID: 0}

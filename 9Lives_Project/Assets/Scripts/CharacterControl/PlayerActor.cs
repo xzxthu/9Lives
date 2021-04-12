@@ -19,6 +19,9 @@ public class PlayerActor : Actor
     public LayerMask ground;
     public LayerMask banana;
 
+    [Header("Cat's Face")]
+    public CatFace catFace;
+
     // references and pamameters for feet's methods
     [Header("Cat's Feet")]
     public Transform feetPos;
@@ -118,6 +121,8 @@ public class PlayerActor : Actor
 
     public void UpdateInActor()
     {
+        
+        
         moveInput = Input.GetAxisRaw("Horizontal");
         MirrorDirection();
         CalculateFeetPoint();

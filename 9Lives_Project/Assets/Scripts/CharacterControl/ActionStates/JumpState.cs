@@ -23,7 +23,7 @@ public class JumpState : ActorState
             PlayerActor.instance.anim.SetBool("isRunning", false);
         }
 
-
+        PlayerActor.instance.catFace.SetFaceBool("isCribing", true);
     }
 
     public override void FixedUpdate()
@@ -75,7 +75,7 @@ public class JumpState : ActorState
         _actor = null;
         PlayerActor.instance.skin.ChangeNormalFace();
         //Debug.Log("JumpState Exit");
-
+        PlayerActor.instance.catFace.SetFaceBool("isCribing", false) ;
 
     }
 
@@ -144,6 +144,9 @@ public class JumpState : ActorState
         if (!PlayerActor.instance.anim.GetBool("isJumping") && !PlayerActor.instance.anim.GetBool("isJumpingHoriz"))//没有任何输入的情况下的向下动画
         {
             PlayerActor.instance.anim.SetBool("isDowning", true);
+
+            PlayerActor.instance.catFace.SetFaceBool("isCribing", false);
+            PlayerActor.instance.catFace.SetFaceBool("isRunning", true);
         }
         else
         {
@@ -160,6 +163,9 @@ public class JumpState : ActorState
                 PlayerActor.instance.anim.SetBool("isDowning", false);
 
                 PlayerActor.instance.skin.ChangeCribeFace();
+
+                PlayerActor.instance.catFace.SetFaceBool("isCribing", true);
+                PlayerActor.instance.catFace.SetFaceBool("isRunning", false);
             }
 
         }
@@ -173,6 +179,9 @@ public class JumpState : ActorState
             
 
             PlayerActor.instance.skin.ChangeNormalFace();
+
+            PlayerActor.instance.catFace.SetFaceBool("isCribing", false);
+            PlayerActor.instance.catFace.SetFaceBool("isRunning", true);
         }
 
 

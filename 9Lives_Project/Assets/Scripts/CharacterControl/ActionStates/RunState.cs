@@ -26,7 +26,7 @@ public class RunState : ActorState
             PlayAniamtion();
         }
 
-
+        PlayerActor.instance.catFace.SetFaceBool("isRunning", true);
     }
 
     public override void FixedUpdate()
@@ -71,7 +71,7 @@ public class RunState : ActorState
     {
         _actor = null;
         //Debug.Log("RunState Exit");
-
+        PlayerActor.instance.catFace.SetFaceBool("isRunning", false);
     }
 
     private void CalculateTurning()
