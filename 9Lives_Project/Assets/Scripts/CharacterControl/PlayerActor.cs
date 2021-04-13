@@ -148,11 +148,16 @@ public class PlayerActor : Actor
 
     private void CalculateFeetPoint()
     {
+        float direction = transform.localScale.x > 0 ? -1 : 1;
         float updateFeetX = (Left_BackLeg.position.x + Right_BackLeg.position.x) * 0.5f;
         feetPos.position = new Vector3(updateFeetX, feetPos.position.y, feetPos.position.z); //根据后脚位置更新
         if(isGround&&moveInput!=0)
         {
-            colli.offset = new Vector2(-2,1);
+            colli.offset = new Vector2(-2f,1);
+
+            updateFeetX = transform.position.x + direction * 1.5f; //野狼
+            feetPos.position = new Vector3(updateFeetX, feetPos.position.y, feetPos.position.z); //根据后脚位置更新
+
             return;
         }
 

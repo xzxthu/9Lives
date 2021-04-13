@@ -83,8 +83,10 @@
     <Compile Include="Assets\Scripts\Base\UI\BasePanel.cs" />
     <Compile Include="Assets\Scripts\Trap.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\FaceExpression.cs" />
+    <Compile Include="Assets\Scripts\Platform.cs" />
     <Compile Include="Assets\Scripts\EffectAnimating.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\HurtedState.cs" />
+    <Compile Include="Assets\Scripts\Items\Thief.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Items\BananaPeel.cs" />
     <Compile Include="Assets\Scripts\CatAnimationEvents.cs" />
@@ -111,8 +113,7 @@
     <Compile Include="Assets\Scripts\Base\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Base\Res\ResManager.cs" />
     <Compile Include="Assets\Scripts\Items\Father.cs" />
-    <Compile Include="Assets\Scripts\Items\Thief.cs" />
-    <Compile Include="Assets\Scripts\Platform.cs" />
+    <Compile Include="Assets\Scripts\Bulge.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

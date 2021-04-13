@@ -76,6 +76,7 @@ public class JumpState : ActorState
         PlayerActor.instance.skin.ChangeNormalFace();
         //Debug.Log("JumpState Exit");
         PlayerActor.instance.catFace.SetFaceBool("isCribing", false) ;
+        PlayerActor.instance.catFace.SetFaceBool("isRunning", false);
 
     }
 
@@ -210,7 +211,8 @@ public class JumpState : ActorState
             && PlayerActor.instance.rigid.velocity.y < -0.1f) // 手够地面
         {
             //检测点向下挪动0.1，防止检测到站立碰撞点 + Vector3.down * 0.1f
-            Ray2D ray = new Ray2D(PlayerActor.instance.transform.position + Vector3.down * 0.05f, PlayerActor.instance.rigid.velocity);
+            //Ray2D ray = new Ray2D(PlayerActor.instance.transform.position + Vector3.down * 0.05f, PlayerActor.instance.rigid.velocity);
+            Ray2D ray = new Ray2D(PlayerActor.instance.transform.position + Vector3.down * 0.05f, Vector2.down);
 
             Debug.DrawRay(ray.origin, ray.direction, Color.yellow);
 

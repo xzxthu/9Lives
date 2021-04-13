@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class SignMan : MonoBehaviour
 {
-    public Vector2 ShoutPositionLimit = new Vector2(0,10);
-
-    private Transform playerPos;
     private Animator anim;
 
     private void Start()
     {
-        playerPos = GameObject.FindWithTag("Player").transform;
         anim = GetComponent<Animator>();
     }
 
-    private void Update()
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (playerPos.position.y>ShoutPositionLimit.x && playerPos.position.y<ShoutPositionLimit.y)
+        if(collision.CompareTag("Player"))
         {
             anim.SetBool("isShout", true);
-            
         }
-        else
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
         {
             anim.SetBool("isShout", false);
         }
