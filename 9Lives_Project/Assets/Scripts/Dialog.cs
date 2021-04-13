@@ -13,6 +13,8 @@ public class Dialog : MonoBehaviour
     public string[] dialogs_JP;
     [HideInInspector] public int nowDiaNum = 0;
 
+    [Range(1,10)]public float autoPlaySpeed = 1;
+
     private Vector2 originBackgroundScale;
     private Vector2 originTextScale;
 
@@ -48,7 +50,7 @@ public class Dialog : MonoBehaviour
         if(readyAutoPlay)
         {
             readyAutoPlay = false;
-            float time = GetWordsNumber() * 0.1f + 3f;
+            float time = GetWordsNumber() * 0.1f / autoPlaySpeed + 2f;
             StartCoroutine(PlayLines(time));
             
         }
@@ -127,10 +129,11 @@ public class Dialog : MonoBehaviour
 
     private IEnumerator PlayLines(float time)
     {
-        yield return new WaitForSeconds(time);
+        
         GoNextText();
         Debug.Log("Play");
-        if(!isClosed || loopPlay)
+        yield return new WaitForSeconds(time);
+        if (!isClosed || loopPlay)
         {
             readyAutoPlay = true;
         }

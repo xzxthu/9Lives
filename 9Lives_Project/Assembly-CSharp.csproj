@@ -102,6 +102,7 @@
     <Compile Include="Assets\Scripts\CatMoveController.cs" />
     <Compile Include="Assets\Scripts\Items\Argue.cs" />
     <Compile Include="Assets\Scripts\Base\Pool\PoolManager.cs" />
+    <Compile Include="Assets\Scripts\Items\OpeningLight.cs" />
     <Compile Include="Assets\Scripts\ItemAnimation.cs" />
     <Compile Include="Assets\Scripts\Items\SignMan.cs" />
     <Compile Include="Assets\Scripts\Items\Drops.cs" />
@@ -109,7 +110,9 @@
     <Compile Include="Assets\Scripts\Items\Bricks.cs" />
     <Compile Include="Assets\Scripts\Base\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Base\Res\ResManager.cs" />
-    <Compile Include="Assets\Scripts\Items\OpeningLight.cs" />
+    <Compile Include="Assets\Scripts\Items\Father.cs" />
+    <Compile Include="Assets\Scripts\Items\Thief.cs" />
+    <Compile Include="Assets\Scripts\Platform.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class ItemAnimation : MonoBehaviour
 {
-    [Tooltip("In Test Mode, Every Item Shows Up")]
-    public bool Test = false;
-
+    
     public Vector2[] limits;
     public GameObject[] objects;
 
@@ -18,7 +16,7 @@ public class ItemAnimation : MonoBehaviour
     }
     private void Update()
     {
-        if (Test) return;
+        if (LevelManager.instance.TestMode) return;
 
         for(int i = 0; i<limits.Length; i++)
         {

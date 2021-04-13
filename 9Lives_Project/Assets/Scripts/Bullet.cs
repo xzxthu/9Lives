@@ -117,4 +117,5 @@ public enum BulletType
     brick = 3,
     takoyaki = 4,
     bird = 5,
+    underwear = 6,
 }

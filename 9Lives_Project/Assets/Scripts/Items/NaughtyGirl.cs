@@ -13,7 +13,7 @@ public class NaughtyGirl : MonoBehaviour
     private bool needToShoot;
 
     private Rigidbody2D rigid;
-    private bool isRight = true;
+    [HideInInspector] public bool turned = false;
 
     private Vector2 dir;
     private void Start()
@@ -29,11 +29,13 @@ public class NaughtyGirl : MonoBehaviour
         {
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             rigid.velocity = Vector2.right * speed * (-1);
+            turned = true;
         }
         else if(transform.position.x < -turnLimit)
         {
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             rigid.velocity = Vector2.right * speed;
+            turned = true;
         }
 
 

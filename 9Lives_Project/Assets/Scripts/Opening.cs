@@ -14,6 +14,14 @@ public class Opening : MonoBehaviour
     {
         catAnimator.SetBool("isOpening", true);
         catFace.SetFaceBool("isClosingEyes", true);
+
+        if (LevelManager.instance.TestMode)
+        {
+            catAnimator.SetTrigger("wakeUpTrigger");
+            EndingOfOpening();
+            catFace.SetFaceBool("isClosingEyes", false);
+
+        }
     }
 
     private void Update()
@@ -29,12 +37,31 @@ public class Opening : MonoBehaviour
         }
     }
 
+    private void TurnOffLights()
+    {
+        for (int i = 0; i < lights.Length; i++)
+        {
+            lights[i].isEnding = true;
+        }
+    }
 
     public void PlayDialog()
     {
         dialog.AutoPlay(false);
     }
 
-    
+    public void ChangeCatPos()
+    {
+        catAnimator.SetTrigger("wakeUpTrigger");
+        catFace.SetFaceBool("isClosingEyes", false);
+        catFace.SetFaceBool("isLookingUp", true);
+    }
+
+    public void EndingOfOpening()
+    {
+        LevelManager.instance.dontMove = false;
+        catAnimator.SetBool("isOpening", false);
+        TurnOffLights();
+    }
 
 }

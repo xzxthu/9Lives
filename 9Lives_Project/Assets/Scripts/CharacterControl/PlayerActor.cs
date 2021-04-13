@@ -40,7 +40,7 @@ public class PlayerActor : Actor
     #region private pamameters
     // private pamameters
     [HideInInspector] public float moveInput;
-    [HideInInspector] public float recordMoveInput;             
+     public float recordMoveInput;             
     public float speed = 0f;
     [HideInInspector] public float jumpTimer;
     [HideInInspector] public float acTimer;

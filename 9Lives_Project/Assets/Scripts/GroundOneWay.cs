@@ -8,16 +8,9 @@ public class GroundOneWay : MonoBehaviour
     private bool onStand;
     private bool isColli;
 
-    private SpriteRenderer render;
-
-    private void Start()
-    {
-        render = GetComponent<SpriteRenderer>();
-        render.enabled = false;
-    }
+    
     private void FixedUpdate()
     {
-        
 
         if ((Input.GetAxis("Vertical") < -0.1f || PlayerActor.instance.isDown) && onStand)//One Way Down
         {

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    public bool TestMode = false;
+
     [HideInInspector] public bool dontMove = true;
 
 

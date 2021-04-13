@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SlipState : ActorState
 {
-    private float recordSpeed;
+    private float direction;
 
     private Actor _actor;
     public override ActorStateType StateType
@@ -22,11 +22,11 @@ public class SlipState : ActorState
         _actor = param[0] as Actor;
         if (_actor != null)
         {
-            if(Mathf.Approximately( PlayerActor.instance.rigid.velocity.x,0))
+            /*if(Mathf.Approximately( PlayerActor.instance.rigid.velocity.x,0))
             {
                 PlayerActor.instance.TransState(ActorStateType.Idle);
                 return;
-            }
+            }*/
 
             PlayerActor.instance.anim.SetBool("isWalking", false);
             PlayerActor.instance.anim.SetBool("isRunning", false);
@@ -42,10 +42,12 @@ public class SlipState : ActorState
             PlayerActor.instance.anim.SetBool("isSlipping", true);
 
 
-            PlayerActor.instance.speed = 
-                PlayerActor.instance.rigid.velocity.x < 0 ? 
-                PlayerActor.instance.slippingSpeed : -PlayerActor.instance.slippingSpeed;
-            recordSpeed = PlayerActor.instance.recordMoveInput;
+            PlayerActor.instance.speed = PlayerActor.instance.slippingSpeed;
+
+            
+            direction = PlayerActor.instance.transform.localScale.x > 0 ? 1f : -1f;
+            PlayerActor.instance.rigid.velocity =
+            new Vector2(direction * PlayerActor.instance.speed, PlayerActor.instance.rigid.velocity.y);
         }
 
         PlayerActor.instance.catFace.SetFaceBool("isClosingEyes", true);
@@ -104,9 +106,8 @@ public class SlipState : ActorState
         }
 
         PlayerActor.instance.rigid.velocity =
-            new Vector2(recordSpeed * PlayerActor.instance.speed,PlayerActor.instance.rigid.velocity.y);
+            new Vector2(direction * PlayerActor.instance.speed,PlayerActor.instance.rigid.velocity.y);
 
-        //Debug.Log(PlayerActor.instance.rigid.velocity.x);
     }
 
     private void CheckJump()

@@ -40,10 +40,9 @@ public class BananaPeel : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Vector2 dir = new Vector2(
-            PlayerActor.instance.rigid.velocity.x < 0 ? 1:-1,
+            PlayerActor.instance.rigid.velocity.x < 0 ? 1f:-1f,
             0.3f
             );
-
         this.gameObject.layer = LayerMask.NameToLayer("IgnorePlayer");
         anim.SetTrigger(BananaTrigger);
         rigid.velocity = dir * speed;

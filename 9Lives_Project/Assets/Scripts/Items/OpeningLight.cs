@@ -13,8 +13,9 @@ public class OpeningLight : MonoBehaviour
     private float add = 1f;
     private SpriteRenderer render;
 
-    public bool isStarted = false;
-    public bool isBlinking = false;
+    [HideInInspector] public bool isStarted = false;
+    [HideInInspector] public bool isBlinking = false;
+    [HideInInspector] public bool isEnding = false;
 
     [SerializeField] private float alpha;
 
@@ -23,6 +24,8 @@ public class OpeningLight : MonoBehaviour
         render = GetComponent<SpriteRenderer>();
         alpha = 0;
         render.color = new Color(render.color.r, render.color.g, render.color.b, alpha);
+
+        
     }
     private void Update()
     {
@@ -34,6 +37,11 @@ public class OpeningLight : MonoBehaviour
         if(isBlinking)
         {
             Blink();
+        }
+
+        if(isEnding)
+        {
+            FadeOut();
         }
     }
 
@@ -64,6 +72,21 @@ public class OpeningLight : MonoBehaviour
             add = 1;
         }
 
+        render.color = new Color(render.color.r, render.color.g, render.color.b, alpha);
+    }
+
+    public void FadeOut()
+    {
+        isBlinking = false;
+
+        if (alpha <=0)
+        {
+            isEnding = false;
+            gameObject.SetActive(false);
+            return;
+        }
+
+        alpha -= Time.deltaTime * startSpeed * 2f;
         render.color = new Color(render.color.r, render.color.g, render.color.b, alpha);
     }
 }
