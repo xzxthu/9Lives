@@ -17,7 +17,8 @@ public class AnimationEvents : MonoBehaviour
 
     public void DialogParent_CloseBackground()
     {
-        GetComponentInChildren<Transform>().gameObject.SetActive(false);
+        gameObject.GetComponentInParent<Dialog>().background.gameObject.SetActive(false);
+        //GetComponentInChildren<Transform>().gameObject.SetActive(false);
     }
 
     public void Thief_Attck()

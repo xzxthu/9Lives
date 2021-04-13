@@ -31,7 +31,10 @@ public class StreetCar : MonoBehaviour
     {
         //transform.position = new Vector3(transform.position.x - speed * dir, transform.position.y, transform.position.z);
         //timer += Time.deltaTime;
-        
+        if(Mathf.Abs(rigid.velocity.x)<0.2f)
+        {
+            rigid.velocity = Vector2.left * speed * dir;
+        }
 
         distance = Vector3.Distance(transform.position, originPos);
         if(distance>killDistance)

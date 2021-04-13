@@ -5,10 +5,12 @@ using UnityEngine;
 public class SignMan : MonoBehaviour
 {
     private Animator anim;
+    private Dialog dialog;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        dialog = GetComponentInChildren<Dialog>();
     }
 
 
@@ -17,6 +19,8 @@ public class SignMan : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             anim.SetBool("isShout", true);
+
+            dialog.AutoPlay(true);
         }
     }
 
@@ -25,6 +29,7 @@ public class SignMan : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             anim.SetBool("isShout", false);
+            dialog.loopPlay = false;
         }
     }
 }

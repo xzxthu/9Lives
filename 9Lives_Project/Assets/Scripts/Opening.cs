@@ -61,6 +61,7 @@ public class Opening : MonoBehaviour
     {
         LevelManager.instance.dontMove = false;
         catAnimator.SetBool("isOpening", false);
+        catFace.SetFaceBool("isLookingUp", false);
         TurnOffLights();
     }
 

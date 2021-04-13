@@ -196,6 +196,9 @@ MonoBehaviour:
   dialogs_EN: []
   dialogs_JP: []
   nowDiaNum: 0
+  autoPlaySpeed: 1
+  typer: {fileID: 3834783957193088243}
+  loopPlay: 0
 --- !u!1 &3834783958172909480
 GameObject:
   m_ObjectHideFlags: 0

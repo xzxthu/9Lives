@@ -18,10 +18,10 @@ public class Dialog : MonoBehaviour
     private Vector2 originBackgroundScale;
     private Vector2 originTextScale;
 
-    private TypewriterEffect typer;
+    public TypewriterEffect typer;
     private bool isClosed = false;
     private bool readyAutoPlay = false;
-    private bool loopPlay;
+    [HideInInspector] public bool loopPlay;
 
     private void Awake()
     {
@@ -30,6 +30,7 @@ public class Dialog : MonoBehaviour
 
     private void Start()
     {
+        readyAutoPlay = false;
         ChooseLanguage(0);
         background.localScale = new Vector3(background.localScale.x * Scale[0], background.localScale.y * Scale[1] ,1);
         text.sizeDelta = new Vector2(text.sizeDelta[0] * Scale[0], text.sizeDelta[1] * Scale[1]);
@@ -37,10 +38,11 @@ public class Dialog : MonoBehaviour
         originBackgroundScale = background.localScale;
         originTextScale = text.sizeDelta;
 
-        typer = GetComponentInChildren<TypewriterEffect>();
+        //typer = GetComponentInChildren<TypewriterEffect>();
+        
 
         background.gameObject.SetActive(false);
-        text.gameObject.SetActive(false);
+        //text.gameObject.SetActive(false);
         isClosed = true;
     }
 
@@ -129,9 +131,8 @@ public class Dialog : MonoBehaviour
 
     private IEnumerator PlayLines(float time)
     {
-        
+        Debug.Log("Play nowDiaNum " + nowDiaNum);
         GoNextText();
-        Debug.Log("Play");
         yield return new WaitForSeconds(time);
         if (!isClosed || loopPlay)
         {
