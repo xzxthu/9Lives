@@ -8843,7 +8843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90da777b2188b4248bfef75f6b34d0fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TestMode: 1
+  TestMode: 0
   dontMove: 1
 --- !u!1001 &2005803180
 PrefabInstance:
