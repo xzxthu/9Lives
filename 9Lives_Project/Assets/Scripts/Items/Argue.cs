@@ -7,6 +7,11 @@ public class Argue : MonoBehaviour
     public Animator woman;
     public Animator man;
 
+    private void Start()
+    {
+        GetComponentInChildren<Dialog>().AutoPlay(true);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))

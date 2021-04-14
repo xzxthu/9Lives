@@ -6,6 +6,7 @@ public class Workers : MonoBehaviour
 {
     public Animator worker_1;
     public Animator worker_2;
+    public Dialog dialog;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,6 +14,7 @@ public class Workers : MonoBehaviour
         {
             worker_1.SetBool("isShout", true);
             worker_2.SetBool("isShout", true);
+            dialog.AutoPlay(true);
         }
     }
 
@@ -22,6 +24,7 @@ public class Workers : MonoBehaviour
         {
             worker_1.SetBool("isShout", false);
             worker_2.SetBool("isShout", false);
+            dialog.loopPlay = false;
         }
     }
 }

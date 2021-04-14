@@ -7,13 +7,30 @@ public class Bird : MonoBehaviour
     public float speed;
     public float turnLimit = 7f;
 
+    [Header("Change Birds Animation")]
+    public bool Play_1;
+    public bool Play_2;
+
     private Rigidbody2D rigid;
     private Bullet bullet;
+    private Animator anim;
+
     private void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
         rigid.velocity = Vector2.left * speed;
         bullet = GetComponent<Bullet>();
+        anim = GetComponent<Animator>();
+        if(Play_1)
+        {
+            anim.SetBool("Play1", true);
+
+        }
+        else if(Play_2)
+        {
+            anim.SetBool("Play1", false);
+            anim.SetBool("Play2", true);
+        }
     }
 
     private void Update()

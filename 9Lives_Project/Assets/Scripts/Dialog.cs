@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class Dialog : MonoBehaviour
 {
+    public bool FromDownToUp = false;
+    //public bool FromRightToLeft = false;
+    public bool AutoPlayDialog = false;
+
     public Vector2 Scale = Vector2.one;
     public Transform background;
     public RectTransform text;
@@ -25,6 +29,9 @@ public class Dialog : MonoBehaviour
 
     private void Awake()
     {
+        if(FromDownToUp)
+            background.parent.GetComponent<Animator>().SetBool("FromDownToUp",true);
+        
         
     }
 
@@ -34,6 +41,16 @@ public class Dialog : MonoBehaviour
         ChooseLanguage(0);
         background.localScale = new Vector3(background.localScale.x * Scale[0], background.localScale.y * Scale[1] ,1);
         text.sizeDelta = new Vector2(text.sizeDelta[0] * Scale[0], text.sizeDelta[1] * Scale[1]);
+        if (!FromDownToUp)
+        {
+            background.localPosition += new Vector3(1f * (Scale[0] - 1), -1f * (Scale[1] - 1));
+            text.localPosition += new Vector3(300f * (Scale[0] - 1), -300f * (Scale[1] - 1));
+        }
+        else
+        {
+            background.localPosition += new Vector3(1f * (Scale[0] - 1), 1f * (Scale[1] - 1));
+            text.localPosition += new Vector3(300f * (Scale[0] - 1), 300f * (Scale[1] - 1));
+        }
 
         originBackgroundScale = background.localScale;
         originTextScale = text.sizeDelta;
@@ -44,6 +61,12 @@ public class Dialog : MonoBehaviour
         background.gameObject.SetActive(false);
         //text.gameObject.SetActive(false);
         isClosed = true;
+
+        if (AutoPlayDialog)
+        {
+            readyAutoPlay = true;
+            loopPlay = true;
+        }
     }
 
     private void Update()
@@ -52,6 +75,7 @@ public class Dialog : MonoBehaviour
         if(readyAutoPlay)
         {
             readyAutoPlay = false;
+            GoNextText();
             float time = GetWordsNumber() * 0.1f / autoPlaySpeed + 2f;
             StartCoroutine(PlayLines(time));
             
@@ -132,7 +156,6 @@ public class Dialog : MonoBehaviour
     private IEnumerator PlayLines(float time)
     {
         Debug.Log("Play nowDiaNum " + nowDiaNum);
-        GoNextText();
         yield return new WaitForSeconds(time);
         if (!isClosed || loopPlay)
         {

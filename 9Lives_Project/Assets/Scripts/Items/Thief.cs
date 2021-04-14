@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Thief : MonoBehaviour
 {
+    private Dialog dialog;
+
     private Animator anim;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        dialog = GetComponent<Dialog>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,6 +19,7 @@ public class Thief : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             anim.SetBool("isAttacking",true);
+            dialog.AutoPlay(true);
         }
     }
 
@@ -24,6 +28,7 @@ public class Thief : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             anim.SetBool("isAttacking", false);
+            dialog.loopPlay = false;
         }
     }
 }
