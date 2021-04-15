@@ -11,7 +11,7 @@ public class Thief : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
-        dialog = GetComponent<Dialog>();
+        dialog = GetComponentInChildren<Dialog>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

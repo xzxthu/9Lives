@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\Opening.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\HangState.cs" />
     <Compile Include="Assets\Scripts\Items\NaughtyGirl.cs" />
+    <Compile Include="Assets\Scripts\Bulge.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\CatFace.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
@@ -113,7 +114,7 @@
     <Compile Include="Assets\Scripts\Base\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Base\Res\ResManager.cs" />
     <Compile Include="Assets\Scripts\Items\Father.cs" />
-    <Compile Include="Assets\Scripts\Bulge.cs" />
+    <Compile Include="Assets\Scripts\Items\Richman.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
