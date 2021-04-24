@@ -9,7 +9,13 @@ public class Richman : MonoBehaviour
 
     private void Start()
     {
-        dialog = GetComponentInChildren<Dialog>();
+        try
+        {
+            dialog = GetComponentInChildren<Dialog>();
+        }
+        catch
+        { }
+
         anim = GetComponent<Animator>();
     }
     private void Update()

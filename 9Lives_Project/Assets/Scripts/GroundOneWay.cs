@@ -14,8 +14,8 @@ public class GroundOneWay : MonoBehaviour
 
         if ((Input.GetAxis("Vertical") < -0.1f || PlayerActor.instance.isDown) && onStand)//One Way Down
         {
-            Debug.Log(PlayerActor.instance.isDown);
-            Debug.Log(Input.GetAxis("Vertical"));
+            //Debug.Log(PlayerActor.instance.isDown);
+            //Debug.Log(Input.GetAxis("Vertical"));
             CloseGround();
             Invoke("RestoreGround", 0.5f);
         }

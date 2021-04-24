@@ -158,7 +158,7 @@ public class JumpState : ActorState
         {
             if ((!PlayerActor.instance.anim.GetBool("isDowning")))  //在空中转过后不再转回,需要加(!PlayerActor.instance.isJumpHoriz) 
             {
-                Debug.Log("纵跳");
+                //Debug.Log("纵跳");
                 PlayerActor.instance.anim.SetBool("isJumping", true);
                 PlayerActor.instance.anim.SetBool("isJumpingHoriz", false);
                 PlayerActor.instance.anim.SetBool("isDowning", false);
@@ -172,7 +172,7 @@ public class JumpState : ActorState
         }
         else
         {
-            Debug.Log("横跳");
+            //Debug.Log("横跳");
             PlayerActor.instance.anim.SetBool("isDowning", false);
             PlayerActor.instance.isJumpHoriz = true;
             PlayerActor.instance.anim.SetBool("isJumping", false);

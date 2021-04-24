@@ -107,6 +107,7 @@
     <Compile Include="Assets\Scripts\Base\Pool\PoolManager.cs" />
     <Compile Include="Assets\Scripts\Items\OpeningLight.cs" />
     <Compile Include="Assets\Scripts\ItemAnimation.cs" />
+    <Compile Include="Assets\Scripts\Items\Richman.cs" />
     <Compile Include="Assets\Scripts\Items\SignMan.cs" />
     <Compile Include="Assets\Scripts\Items\Drops.cs" />
     <Compile Include="Assets\Scripts\BulletManager.cs" />
@@ -114,7 +115,10 @@
     <Compile Include="Assets\Scripts\Base\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Base\Res\ResManager.cs" />
     <Compile Include="Assets\Scripts\Items\Father.cs" />
-    <Compile Include="Assets\Scripts\Items\Richman.cs" />
+    <Compile Include="Assets\Scripts\Items\Wheel.cs" />
+    <Compile Include="Assets\Scripts\Base\UI\SettingPanel.cs" />
+    <Compile Include="Assets\Scripts\Base\UI\TextMultilingual.cs" />
+    <Compile Include="Assets\Scripts\Base\UI\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

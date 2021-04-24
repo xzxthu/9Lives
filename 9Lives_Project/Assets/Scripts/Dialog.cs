@@ -155,7 +155,7 @@ public class Dialog : MonoBehaviour
 
     private IEnumerator PlayLines(float time)
     {
-        Debug.Log("Play nowDiaNum " + nowDiaNum);
+        //Debug.Log("Play nowDiaNum " + nowDiaNum);
         yield return new WaitForSeconds(time);
         if (!isClosed || loopPlay)
         {
