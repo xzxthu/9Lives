@@ -183,25 +183,29 @@ public class PlayerActor : Actor
 
         yield return new WaitForSeconds(0.5f);
 
-        float offsetX = (transform.position.x - Left_Leg.position.x) *
-                (rigid.velocity.x == 0f ? 0f : 1f); //有输入时检测移到后脚
-        Vector3 offset = new Vector3(offsetX, 0.5f, 0);
-        //Debug.Log(offset.x);
-
-        //offset = Vector3.zero;
-        Ray2D rayUpLeft = new Ray2D(Left_Leg.position + offset, Vector2.down);
-        Ray2D rayUpRight = new Ray2D(Right_Leg.position + offset, Vector2.down);
-
-        RaycastHit2D infoLeft = Physics2D.Raycast(rayUpLeft.origin, Vector2.down, 1.5f, ground);
-        RaycastHit2D infoRight = Physics2D.Raycast(rayUpRight.origin, Vector2.down, 1.5f, ground);
-
-        //Debug.DrawRay(rayUpLeft.origin, Vector2.down, Color.yellow);
-        //Debug.DrawRay(rayUpRight.origin, Vector2.down, Color.yellow);
-
-        if (infoLeft.collider == null && infoRight.collider == null)
+        if(!isLeftHandCatch && !isRightHandCatch && isGround && rigid.velocity.y == 0 && 
+            moveInput == 0 &&!CheckJumpAnimation()) //再次检测
         {
-            Debug.Log("检测到手超出范围，自动下落");
-            PlayerActor.instance.isDown = true;
+            float offsetX = (transform.position.x - Left_Leg.position.x) *
+                (rigid.velocity.x == 0f ? 0f : 1f); //有输入时检测移到后脚
+            Vector3 offset = new Vector3(offsetX, 0.5f, 0);
+            //Debug.Log(offset.x);
+
+            //offset = Vector3.zero;
+            Ray2D rayUpLeft = new Ray2D(Left_Leg.position + offset, Vector2.down);
+            Ray2D rayUpRight = new Ray2D(Right_Leg.position + offset, Vector2.down);
+
+            RaycastHit2D infoLeft = Physics2D.Raycast(rayUpLeft.origin, Vector2.down, 1.5f, ground);
+            RaycastHit2D infoRight = Physics2D.Raycast(rayUpRight.origin, Vector2.down, 1.5f, ground);
+
+            //Debug.DrawRay(rayUpLeft.origin, Vector2.down, Color.yellow);
+            //Debug.DrawRay(rayUpRight.origin, Vector2.down, Color.yellow);
+
+            if (infoLeft.collider == null && infoRight.collider == null)
+            {
+                Debug.Log("检测到手超出范围，自动下落");
+                PlayerActor.instance.isDown = true;
+            }
         }
 
         needCheckAutoDown = false;

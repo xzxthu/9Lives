@@ -27,6 +27,8 @@ public class RunState : ActorState
         }
 
         PlayerActor.instance.catFace.SetFaceBool("isRunning", true);
+
+        MusicManager.GetInstance().PlayBGM("Walk1", true);
     }
 
     public override void FixedUpdate()
@@ -72,6 +74,7 @@ public class RunState : ActorState
         _actor = null;
         //Debug.Log("RunState Exit");
         PlayerActor.instance.catFace.SetFaceBool("isRunning", false);
+        MusicManager.GetInstance().StopBGM("Walk1");
     }
 
     private void CalculateTurning()
@@ -155,6 +158,8 @@ public class RunState : ActorState
             PlayerActor.instance.anim.SetBool("isRunning", false);*/
 
             PlayerActor.instance.isJumpHoriz = true;
+
+            MusicManager.GetInstance().PlayBGM("Jump1");
         }
     }
 

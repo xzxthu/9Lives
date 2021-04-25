@@ -141,6 +141,7 @@ public class IdleState : ActorState
                 PlayerActor.instance.anim.SetBool("isJumpingHoriz", false);
                 PlayerActor.instance.anim.SetBool("isWalking", false);
                 PlayerActor.instance.anim.SetBool("isRunning", false);
+                MusicManager.GetInstance().PlayBGM("Jump1");
             }
         }
 

@@ -35,7 +35,7 @@ public class MusicManager : BaseManager<MusicManager>
     {
         for (int i = seList.Count - 1; i >= 0; --i)
         {
-            if (seList[i] != null && !seList[i].isPlaying && seList[i].clip != null) //--
+            if (seList[i] != null && !seList[i].isPlaying && seList[i].clip == null) //seList[i].clip != null
             {
                 PoolManager.GetInstance().PushObject("SE/SE", seList[i].gameObject);
                 seList.RemoveAt(i);
@@ -348,6 +348,7 @@ public class MusicManager : BaseManager<MusicManager>
 
     public void UnPauseAllSeAndBgm()
     {
+
         foreach (AudioSource se in seList)
         {
             if (se != null)

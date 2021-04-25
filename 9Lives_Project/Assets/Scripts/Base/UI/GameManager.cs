@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log(string.Format("{0}场景没有EventSystem", curSceneName));
             }
-            Debug.Log(curSceneName);
 
             UIManager.GetInstance()
                 .ShowPanel<SettingPanel>("SettingPanel", UILayer.TOP, (res) => { res.Show(true); });

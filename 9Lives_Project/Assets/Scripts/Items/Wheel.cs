@@ -20,11 +20,13 @@ public class Wheel : MonoBehaviour
 
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         nowAngle -= speed;
         float new_x = center.position.x + Mathf.Cos((nowAngle) / 180f * Mathf.PI) * radius;
         float new_y = center.position.y + Mathf.Sin((nowAngle) / 180f * Mathf.PI) * radius;
+
+        //GetComponentInChildren<Rigidbody2D>().MovePosition(new Vector3(new_x, new_y, transform.position.z));
 
         transform.position = new Vector3(new_x, new_y, transform.position.z);
 

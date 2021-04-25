@@ -24,6 +24,7 @@ public class JumpState : ActorState
         }
 
         PlayerActor.instance.catFace.SetFaceBool("isCribing", true);
+        
     }
 
     public override void FixedUpdate()

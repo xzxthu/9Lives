@@ -7,9 +7,6 @@ public class SoundManager : MonoBehaviour
     public Transform sewerPosition;
     public Transform streetPosition;
     public Transform mallPosition;
-    public Animator anim;
-
-    private bool isPlayingRun = false;
 
     public static SoundManager instance;
     private void Awake()
@@ -33,35 +30,7 @@ public class SoundManager : MonoBehaviour
         MusicManager.GetInstance().PlaySE("3_Mall", true, mallPosition);
     }
 
-    private void FixedUpdate()
-    {
-        if(anim.GetBool("isWalking") || anim.GetBool("isRunning"))
-        {
-            if(!isPlayingRun)
-            {
-                isPlayingRun = true;
-                MusicManager.GetInstance().PlayBGM("Walk1", true);
-            }
-            
-        }
-        else
-        {
-            isPlayingRun = false;
-            MusicManager.GetInstance().StopBGM("Walk1");
-        }
 
-        
-
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            MusicManager.GetInstance().PlayBGM("Jump1");
-        }
-
-    }
 
 
 }

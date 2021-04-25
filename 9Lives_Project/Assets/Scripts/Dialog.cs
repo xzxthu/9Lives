@@ -37,8 +37,6 @@ public class Dialog : MonoBehaviour
 
     private void Start()
     {
-        readyAutoPlay = false;
-        ChooseLanguage(0);
         background.localScale = new Vector3(background.localScale.x * Scale[0], background.localScale.y * Scale[1] ,1);
         text.sizeDelta = new Vector2(text.sizeDelta[0] * Scale[0], text.sizeDelta[1] * Scale[1]);
         if (!FromDownToUp)
@@ -55,11 +53,9 @@ public class Dialog : MonoBehaviour
         originBackgroundScale = background.localScale;
         originTextScale = text.sizeDelta;
 
-        //typer = GetComponentInChildren<TypewriterEffect>();
-        
-
+        readyAutoPlay = false;
+        ChooseLanguage(0);
         background.gameObject.SetActive(false);
-        //text.gameObject.SetActive(false);
         isClosed = true;
 
         if (AutoPlayDialog)
@@ -92,9 +88,7 @@ public class Dialog : MonoBehaviour
             background.gameObject.SetActive(true);
             background.parent.GetComponent<Animator>().SetTrigger("In");
             text.gameObject.SetActive(true);
-            ChooseLanguage(nowDiaNum);
-            typer.Reset();
-            typer.isActive = true;
+            StartCoroutine(TyperGo());
             isClosed = false;
             return;
         }
@@ -102,9 +96,7 @@ public class Dialog : MonoBehaviour
         if(nowDiaNum<dialogs_EN.Length-1)
         {
             nowDiaNum++;
-            ChooseLanguage(nowDiaNum);
-            typer.Reset();
-            typer.isActive = true;
+            StartCoroutine(TyperGo());
             background.parent.GetComponent<Animator>().SetTrigger("In");
         }
         else
@@ -112,6 +104,7 @@ public class Dialog : MonoBehaviour
             nowDiaNum = 0;
             background.parent.GetComponent<Animator>().SetTrigger("Out");
             //background.gameObject.SetActive(false);
+            typer.Reset();
             text.gameObject.SetActive(false);
             isClosed = true;
         }
@@ -128,6 +121,16 @@ public class Dialog : MonoBehaviour
                 text.GetComponent<Text>().text = dialogs_JP[num];
                 break;
         }
+    }
+
+    private IEnumerator TyperGo() // 0.2s for waiting animation
+    {
+        
+        yield return new WaitForSeconds(0.2f);
+        ChooseLanguage(nowDiaNum);
+        typer.Reset();
+        typer.isActive = true;
+
     }
 
     private int GetWordsNumber()
@@ -157,6 +160,7 @@ public class Dialog : MonoBehaviour
     {
         //Debug.Log("Play nowDiaNum " + nowDiaNum);
         yield return new WaitForSeconds(time);
+        typer.Reset();
         if (!isClosed || loopPlay)
         {
             readyAutoPlay = true;

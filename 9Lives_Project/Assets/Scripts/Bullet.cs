@@ -94,7 +94,11 @@ public class Bullet : MonoBehaviour
 
             isHitting = true; //pool回收
             //render.enabled = false;
-            bulletSkins[(int)bulletType].SetActive(false);
+            try
+            {
+                bulletSkins[(int)bulletType].SetActive(false);
+            }
+            catch { }
         }
     }
 

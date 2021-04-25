@@ -17,7 +17,7 @@ public class TypewriterEffect : MonoBehaviour
     void Start()
     {
         timer = 0;
-        isActive = true;
+        isActive = false;
         charsPerSecond = Mathf.Max(0.001f, charsPerSecond);
         myText = GetComponent<Text>();
         words = myText.text;
