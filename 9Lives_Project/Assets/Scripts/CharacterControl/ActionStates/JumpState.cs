@@ -5,6 +5,8 @@ using UnityEngine;
 public class JumpState : ActorState
 {
     private Actor _actor;
+
+    private bool hasPlayedEffect;
     public override ActorStateType StateType
     {
         get
@@ -24,7 +26,7 @@ public class JumpState : ActorState
         }
 
         PlayerActor.instance.catFace.SetFaceBool("isCribing", true);
-        
+        hasPlayedEffect = false;
     }
 
     public override void FixedUpdate()
@@ -32,6 +34,7 @@ public class JumpState : ActorState
         CalculateSpeed();
         PlayerActor.instance.UpdateInActor();
         PlayAnimation();
+
 
         if (PlayerActor.instance.isHurted)
         {
@@ -48,12 +51,16 @@ public class JumpState : ActorState
         if (PlayerActor.instance.isGround && Mathf.Approximately(PlayerActor.instance.rigid.velocity.y, 0) && 
             !Mathf.Approximately(PlayerActor.instance.moveInput, 0))
         {
+            PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Touchdown_1, true);
             PlayerActor.instance.TransState(ActorStateType.Run);
             return;
         }
 
         if (PlayerActor.instance.isGround && Mathf.Approximately( PlayerActor.instance.rigid.velocity.y,0))
         {
+            if(Mathf.Approximately(PlayerActor.instance.rigid.velocity.x, 0))
+                PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Touchdown_2, true);
+            PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Touchdown_1, true);
             PlayerActor.instance.TransState(ActorStateType.Idle);
             return;
         }
@@ -68,6 +75,7 @@ public class JumpState : ActorState
     public override void Update()
     {
         CheckLongTimeJump();
+        
     }
 
 
@@ -185,11 +193,35 @@ public class JumpState : ActorState
             PlayerActor.instance.catFace.SetFaceBool("isCribing", false);
             PlayerActor.instance.catFace.SetFaceBool("isRunning", true);
         }
+    }
 
+    private void PlayEffect()
+    {
+        if (Mathf.Approximately(PlayerActor.instance.rigid.velocity.x, 0) || Input.GetAxis("Vertical") > 0.1f)
+        {
+            /*if ((!PlayerActor.instance.anim.GetBool("isDowning")))  
+            {
+                //Debug.Log("纵跳");
+                if (!hasPlayedEffect)
+                {
+                    hasPlayedEffect = true;
+                    PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Jump_1, true);
+                    PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Jump_2, true);
+                }
 
-        
+            }*/
 
-        
+        }
+        else
+        {
+            //Debug.Log("横跳");
+
+            if (!hasPlayedEffect)
+            {
+                hasPlayedEffect = true;
+                PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Jump_1, true);
+            }
+        }
     }
 
     private void CheckLongTimeJump()

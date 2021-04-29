@@ -22,6 +22,9 @@ public class PlayerActor : Actor
     [Header("Cat's Face")]
     public CatFace catFace;
 
+    [Header("Cat's Effect")]
+    public CharacterEffect catEffect;
+
     // references and pamameters for feet's methods
     [Header("Cat's Feet")]
     public Transform feetPos;
@@ -82,6 +85,18 @@ public class PlayerActor : Actor
         {
             anim = GetComponentInChildren<Animator>();
         }
+        if(catFace == null)
+        {
+            catFace = GetComponentInChildren<CatFace>();
+            Debug.Log("No Player Face Controller");
+        }
+        if(catEffect == null)
+        {
+            catEffect = GetComponentInChildren<CharacterEffect>();
+            Debug.Log("No Player Effect Controller");
+        }
+
+
         rigid = GetComponent<Rigidbody2D>();
         colli = GetComponent<CapsuleCollider2D>();
         horizontal = transform.localScale.x;

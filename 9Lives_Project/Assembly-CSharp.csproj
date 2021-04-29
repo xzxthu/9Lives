@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Base\Music\MusicManager.cs" />
     <Compile Include="Assets\Scripts\Items\Bird.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\SlipState.cs" />
+    <Compile Include="Assets\Scripts\Items\Wheel.cs" />
     <Compile Include="Assets\Scripts\Multilanguage.cs" />
     <Compile Include="Assets\Scripts\Items\Workers.cs" />
     <Compile Include="Assets\Scripts\Skin.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Scripts\Items\AnimationEvents.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\IdleState.cs" />
     <Compile Include="Assets\Scripts\Menu\TypewriterEffect.cs" />
+    <Compile Include="Assets\Scripts\Base\UI\TextMultilingual.cs" />
     <Compile Include="Assets\Scripts\Base\UI\BasePanel.cs" />
     <Compile Include="Assets\Scripts\Trap.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\FaceExpression.cs" />
@@ -95,6 +97,7 @@
     <Compile Include="Assets\Scripts\Menu\StartMenuButton.cs" />
     <Compile Include="Assets\Scripts\Opening.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\HangState.cs" />
+    <Compile Include="Assets\Scripts\Base\UI\GameManager.cs" />
     <Compile Include="Assets\Scripts\Items\NaughtyGirl.cs" />
     <Compile Include="Assets\Scripts\Bulge.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
@@ -105,6 +108,7 @@
     <Compile Include="Assets\Scripts\CatMoveController.cs" />
     <Compile Include="Assets\Scripts\Items\Argue.cs" />
     <Compile Include="Assets\Scripts\Base\Pool\PoolManager.cs" />
+    <Compile Include="Assets\Scripts\Base\UI\SettingPanel.cs" />
     <Compile Include="Assets\Scripts\Items\OpeningLight.cs" />
     <Compile Include="Assets\Scripts\ItemAnimation.cs" />
     <Compile Include="Assets\Scripts\Items\Richman.cs" />
@@ -115,10 +119,7 @@
     <Compile Include="Assets\Scripts\Base\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Base\Res\ResManager.cs" />
     <Compile Include="Assets\Scripts\Items\Father.cs" />
-    <Compile Include="Assets\Scripts\Items\Wheel.cs" />
-    <Compile Include="Assets\Scripts\Base\UI\SettingPanel.cs" />
-    <Compile Include="Assets\Scripts\Base\UI\TextMultilingual.cs" />
-    <Compile Include="Assets\Scripts\Base\UI\GameManager.cs" />
+    <Compile Include="Assets\Scripts\CharacterEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

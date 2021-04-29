@@ -5,6 +5,9 @@ using UnityEngine;
 public class RunState : ActorState
 {
     private Actor _actor;
+
+    private bool hasPlayedAcc;
+
     public override ActorStateType StateType
     {
         get
@@ -27,8 +30,10 @@ public class RunState : ActorState
         }
 
         PlayerActor.instance.catFace.SetFaceBool("isRunning", true);
-
+        
         MusicManager.GetInstance().PlayBGM("Walk1", true);
+
+        hasPlayedAcc = false;
     }
 
     public override void FixedUpdate()
@@ -67,6 +72,7 @@ public class RunState : ActorState
     public override void Update()
     {
         CheckJump();
+        PlayEffect();
     }
 
     public override void Exit()
@@ -90,6 +96,16 @@ public class RunState : ActorState
         }
 
         PlayerActor.instance.recordMoveInput = PlayerActor.instance.moveInput; //record for calculate turning
+
+    }
+
+    private void PlayEffect()
+    {
+        if(PlayerActor.instance.speed>PlayerActor.instance.maxRunSpeed*0.25f && !hasPlayedAcc)
+        {
+            PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Accelerate, true);
+            hasPlayedAcc = true;
+        }
 
     }
 
@@ -160,6 +176,8 @@ public class RunState : ActorState
             PlayerActor.instance.isJumpHoriz = true;
 
             MusicManager.GetInstance().PlayBGM("Jump1");
+
+            PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Jump_1, true);
         }
     }
 

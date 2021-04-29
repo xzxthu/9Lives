@@ -6,6 +6,10 @@ public class IdleState : ActorState
 {
 
     private Actor _actor;
+    private bool hasPlayDec;
+    private bool needDec;
+    private float timer = 0f;
+
     public override ActorStateType StateType
     {
         get
@@ -20,17 +24,25 @@ public class IdleState : ActorState
         _actor = param[0] as Actor;
         if (_actor != null)
         {
-            if ((Mathf.Abs(PlayerActor.instance.rigid.velocity.x) > PlayerActor.instance.maxRunSpeed * 0.75f) &&
-            PlayerActor.instance.rigid.velocity.y == 0) //奔跑到急停时才播放急停动画
-            {
-                PlayerActor.instance.anim.SetTrigger("RunningStopTrigger");
-            }
+            
             PlayerActor.instance.anim.SetBool("isWalking", false);
             PlayerActor.instance.anim.SetBool("isRunning", false);
 
         }
 
         PlayerActor.instance.needIK = true;
+
+        hasPlayDec = false;
+        timer = 0;
+        if (Mathf.Abs(PlayerActor.instance.rigid.velocity.x) > PlayerActor.instance.maxRunSpeed * 0.85f)
+        {
+            PlayerActor.instance.anim.SetTrigger("RunningStopTrigger");
+            needDec = true;
+        }
+        else
+        {
+            needDec = false;
+        }
         //PlayerActor.instance.catFace.SetFaceBool("isRunning", false);
         //PlayerActor.instance.catFace.SetFaceBool("isRunning", false);
 
@@ -73,6 +85,8 @@ public class IdleState : ActorState
         PlayAnimation();
         CheckJump();
         PlayerActor.instance.CheckAutoDown();
+
+        timer += Time.deltaTime;
     }
 
 
@@ -101,6 +115,13 @@ public class IdleState : ActorState
         PlayerActor.instance.rigid.velocity =
             new Vector2(PlayerActor.instance.recordMoveInput * PlayerActor.instance.speed,
             PlayerActor.instance.rigid.velocity.y);
+
+        if (needDec && !hasPlayDec && timer>0.075f) //奔跑到急停时才播放急停动画,防止往返跑出急停
+        {
+            hasPlayDec = true;
+            
+            PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Decelerate);
+        }
     }
 
     private void PlayAnimation()
@@ -142,6 +163,9 @@ public class IdleState : ActorState
                 PlayerActor.instance.anim.SetBool("isWalking", false);
                 PlayerActor.instance.anim.SetBool("isRunning", false);
                 MusicManager.GetInstance().PlayBGM("Jump1");
+
+                PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Jump_1, true);
+                PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Jump_2, true);
             }
         }
 

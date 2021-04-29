@@ -43,6 +43,8 @@ public class HangState : ActorState
             MoveWhenHang();
 
             PlayerActor.instance.catFace.SetFaceBool("isCribing", true);
+
+            PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Catch);
         }
 
     }
