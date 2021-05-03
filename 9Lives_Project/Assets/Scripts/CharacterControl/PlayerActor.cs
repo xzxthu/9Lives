@@ -63,6 +63,7 @@ public class PlayerActor : Actor
     [HideInInspector] public bool isSlipping;
     [HideInInspector] public bool isDown; // Character level from a platform by one way
     private bool needCheckAutoDown;
+    [HideInInspector] public bool jumpToRun;
 
     // references of components
     [HideInInspector] public Animator anim;

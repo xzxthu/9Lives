@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\CatFace.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\FootIK.cs" />
+    <Compile Include="Assets\Scripts\CharacterEffect.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\PlayerActor.cs" />
     <Compile Include="Assets\Scripts\CatMoveController.cs" />
     <Compile Include="Assets\Scripts\Items\Argue.cs" />
@@ -119,9 +120,14 @@
     <Compile Include="Assets\Scripts\Base\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Base\Res\ResManager.cs" />
     <Compile Include="Assets\Scripts\Items\Father.cs" />
-    <Compile Include="Assets\Scripts\CharacterEffect.cs" />
+    <Compile Include="Assets\Material\CameraBlend.cs" />
+    <Compile Include="Assets\Scripts\LightFlash.cs" />
+    <Compile Include="Assets\Scripts\Items\Crane.cs" />
+    <Compile Include="Assets\Scripts\Items\Foreground.cs" />
+    <Compile Include="Assets\Scripts\Items\RoundTwo.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\Material\BlendMod.shader" />
     <Reference Include="UnityEngine">
       <HintPath>E:\Unity\2020.1.4f\Unity\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

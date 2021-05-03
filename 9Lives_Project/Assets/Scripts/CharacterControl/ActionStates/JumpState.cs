@@ -53,6 +53,7 @@ public class JumpState : ActorState
         {
             PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Touchdown_1, true);
             PlayerActor.instance.TransState(ActorStateType.Run);
+            PlayerActor.instance.jumpToRun = true;
             return;
         }
 

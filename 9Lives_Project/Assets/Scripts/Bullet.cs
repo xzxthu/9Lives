@@ -99,6 +99,13 @@ public class Bullet : MonoBehaviour
                 bulletSkins[(int)bulletType].SetActive(false);
             }
             catch { }
+
+            Vector2 hurtAngle = PlayerActor.instance.transform.position + Vector3.up * 1f - transform.position;
+            float effectAngle = Vector2.Angle(hurtAngle, Vector2.up);
+            if (Vector2.Dot(PlayerActor.instance.hurtDir, Vector2.right) < 0)
+                effectAngle *= -1f;
+            PlayerActor.instance.catEffect.PlayHittedEffect(effectAngle, transform.position);
+
         }
     }
 

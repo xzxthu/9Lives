@@ -6,9 +6,10 @@ public class LevelManager : MonoBehaviour
 {
     public bool TestMode = false;
 
+    public Transform PlayingCamera;
+
+
     [HideInInspector] public bool dontMove = true;
-
-
     public static LevelManager instance;
 
     private void Awake()

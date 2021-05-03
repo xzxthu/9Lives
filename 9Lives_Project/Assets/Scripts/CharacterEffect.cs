@@ -12,6 +12,7 @@ public class CharacterEffect : MonoBehaviour
     public Transform Catch;
     public Transform Touchdown_1;
     public Transform Touchdown_2;
+    public Transform Hitted;
 
     private Transform worldParent;
     private Dictionary<CharacterEffectType, Transform> effectDic = new Dictionary<CharacterEffectType, Transform>();
@@ -68,7 +69,12 @@ public class CharacterEffect : MonoBehaviour
         effectDic[type].GetComponent<Animator>().SetTrigger(triggerDic[type]); 
     }
 
-
+    public void PlayHittedEffect(float angle, Vector3 pos)
+    {
+        Hitted.position = pos;
+        Hitted.eulerAngles = new Vector3(0, 0, angle);
+        Hitted.GetComponent<Animator>().SetTrigger("Hitted");
+    }
 
     public void ResetPosition(CharacterEffectType type)
     {

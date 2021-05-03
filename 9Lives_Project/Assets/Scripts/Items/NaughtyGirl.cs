@@ -38,6 +38,7 @@ public class NaughtyGirl : MonoBehaviour
             turned = true;
         }
 
+        if (!needToShoot) return;
 
         if (timer < timeToShoot)
         {
@@ -54,5 +55,22 @@ public class NaughtyGirl : MonoBehaviour
         
 
         
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            needToShoot = true;
+        }
+    }
+
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            needToShoot = false;
+        }
     }
 }

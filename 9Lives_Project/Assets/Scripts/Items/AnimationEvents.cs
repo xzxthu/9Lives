@@ -13,8 +13,10 @@ public class AnimationEvents : MonoBehaviour
 
     public void Argue_Shoot()
     {
+        
         Vector3 gunPort = GetComponentInChildren<Transform>().position;
         BulletManager.GetInstance().ShootBullet(gunPort, Vector3.right, 12f, BulletType.pizza);
+        transform.parent.GetComponent<Argue>().PauseShoot();
     }
 
     public void DialogParent_CloseBackground()

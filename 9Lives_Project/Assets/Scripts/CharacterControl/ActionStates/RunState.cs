@@ -81,6 +81,7 @@ public class RunState : ActorState
         //Debug.Log("RunState Exit");
         PlayerActor.instance.catFace.SetFaceBool("isRunning", false);
         MusicManager.GetInstance().StopBGM("Walk1");
+        PlayerActor.instance.jumpToRun = false;
     }
 
     private void CalculateTurning()
@@ -101,7 +102,8 @@ public class RunState : ActorState
 
     private void PlayEffect()
     {
-        if(PlayerActor.instance.speed>PlayerActor.instance.maxRunSpeed*0.25f && !hasPlayedAcc)
+        if(PlayerActor.instance.speed>PlayerActor.instance.maxRunSpeed*0.25f 
+            && !hasPlayedAcc &&!PlayerActor.instance.jumpToRun)
         {
             PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Accelerate, true);
             hasPlayedAcc = true;

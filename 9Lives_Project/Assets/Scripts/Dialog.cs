@@ -31,8 +31,6 @@ public class Dialog : MonoBehaviour
     {
         if(FromDownToUp)
             background.parent.GetComponent<Animator>().SetBool("FromDownToUp",true);
-        
-        
     }
 
     private void Start()
@@ -161,7 +159,11 @@ public class Dialog : MonoBehaviour
         //Debug.Log("Play nowDiaNum " + nowDiaNum);
         yield return new WaitForSeconds(time);
         typer.Reset();
-        if (!isClosed || loopPlay)
+        if (!isClosed)
+        {
+            readyAutoPlay = true;
+        }
+        else if(loopPlay)
         {
             readyAutoPlay = true;
         }
