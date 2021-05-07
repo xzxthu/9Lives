@@ -51,6 +51,7 @@ public class SlipState : ActorState
         }
 
         PlayerActor.instance.catFace.SetFaceBool("isClosingEyes", true);
+        MusicManager.GetInstance().PlayBGM("CatBanana");
     }
 
 

@@ -66,8 +66,13 @@ public class Bullet : MonoBehaviour
             isOutOfScreen = true;
             //render.enabled = false; //防止再开的时候闪现
             //Debug.Log((int)bulletType);
-            bulletSkins[(int)bulletType].SetActive(false);
-            
+            try
+            {
+                bulletSkins[(int)bulletType].SetActive(false);
+
+            }
+            catch { }
+
         }
     }
 

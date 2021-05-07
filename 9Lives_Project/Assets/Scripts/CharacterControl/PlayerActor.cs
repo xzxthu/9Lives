@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class PlayerActor : Actor
 {
@@ -155,11 +156,11 @@ public class PlayerActor : Actor
     {
         if (moveInput > 0.1f)//左右镜像
         {
-            transform.localScale = new Vector3(horizontal, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
         if (moveInput < -0.1f)
         {
-            transform.localScale = new Vector3(-horizontal, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
     }
 

@@ -10,9 +10,12 @@ public class SettingPanel : BasePanel
     private GameObject SettingAudio; // 设置音量
 
     private bool isShowCursor = false; // 是否需要显示鼠标
+    
 
     private void Start()
     {
+        transform.parent.transform.parent.GetComponent<Canvas>().sortingOrder = 1;
+
         SettingAudio = transform.Find("Bg/SettingAudio").gameObject;
         GetControl<Button>("BtnAudio").onClick.AddListener((() =>
         {
@@ -34,10 +37,11 @@ public class SettingPanel : BasePanel
         GetControl<Button>("BtnBack").onClick.AddListener(() => { Hide(); });
         GetControl<Button>("BtnBackToMainMenu").onClick.AddListener((() =>
         {
-
+            Hide();
+            MusicManager.GetInstance().StopAllSeAndBgm();
             SceneManager.LoadScene("StartMenu");
 
-            Hide();
+            
         }));
     }
 
@@ -47,8 +51,8 @@ public class SettingPanel : BasePanel
         isShowCursor = afterHideShowCursor;
         Time.timeScale = 0f;
         MusicManager.GetInstance().PauseAllSeAndBgm();
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
+        //Cursor.lockState = CursorLockMode.Confined;
+        //Cursor.visible = true;
 
         System.GC.Collect();
         GameManager.Instance.isPause = true;
@@ -58,17 +62,18 @@ public class SettingPanel : BasePanel
     {
         if (!isShowCursor)
         {
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = false;
+            //Cursor.lockState = CursorLockMode.Confined;
+            //Cursor.visible = false;
         }
 
         // 使下次打开时，默认是音量设置界面
-        SettingAudio.SetActive(true);
+        //SettingAudio.SetActive(true);
 
-        gameObject.SetActive(false);
         Time.timeScale = 1.0f;
         MusicManager.GetInstance().UnPauseAllSeAndBgm();
         GameManager.Instance.isPause = false;
+        gameObject.SetActive(false);
+
     }
 
 

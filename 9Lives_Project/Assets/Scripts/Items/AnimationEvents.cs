@@ -28,7 +28,7 @@ public class AnimationEvents : MonoBehaviour
     public void Thief_Attck()
     {
         Vector3 gunPort = GetComponentInChildren<Transform>().position;
-        Vector3 dir = (GameObject.FindWithTag("Player").transform.position + Vector3.up * 0.4f - gunPort).normalized;
+        Vector3 dir = (GameObject.FindWithTag("Player").transform.position + Vector3.up * 0.2f - gunPort).normalized;
         BulletManager.GetInstance().ShootBullet(gunPort, dir, 12f, BulletType.underwear);
     }
 

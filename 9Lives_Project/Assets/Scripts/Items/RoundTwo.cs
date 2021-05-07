@@ -5,6 +5,7 @@ using UnityEngine;
 public class RoundTwo : MonoBehaviour
 {
     public bool needToCloseInRoundTwo = false;
+    public bool CheckOnHigh = false;
     public float ShowUpDistance = 10f;
 
     private Transform Camera;
@@ -27,18 +28,21 @@ public class RoundTwo : MonoBehaviour
         if (LevelManager.instance.TestMode)
             return;
 
-        if ( Camera.position.y > transform.position.y + 7.5f)
+        if ( Camera.position.y > transform.position.y + 3f)
         {
             hasReached = true;
         }
 
-        if(hasReached && Camera.position.y < transform.position.y - ShowUpDistance)
+        if(hasReached &&
+            ((!CheckOnHigh && Camera.position.y < transform.position.y - ShowUpDistance) ||
+            (CheckOnHigh && Camera.position.y > transform.position.y + ShowUpDistance)))
         {
             hasFallDown = true;
 
             if (needToCloseInRoundTwo)
             {
-                render.enabled = false;
+                //render.enabled = false;
+                gameObject.SetActive(false);
                 return;
             }
 

@@ -166,6 +166,8 @@ public class IdleState : ActorState
 
                 PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Jump_1, true);
                 PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Jump_2, true);
+
+                PlayerActor.instance.catFace.SetFaceBool("isCribing", true);
             }
         }
 

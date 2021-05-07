@@ -1,0 +1,586 @@
+fileFormatVersion: 2
+guid: ac4a89f03b2084742bdd3daa1c71d76c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2375554059442904727
+    second: rebuilding2_0
+  - first:
+      213: 3226937935473881525
+    second: rebuilding2_1
+  - first:
+      213: 2841884496562306696
+    second: rebuilding2_2
+  - first:
+      213: -1912070874666797612
+    second: rebuilding2_3
+  - first:
+      213: 6427912706287093880
+    second: rebuilding2_4
+  - first:
+      213: -6260631086262717723
+    second: rebuilding2_5
+  - first:
+      213: -1264099683103309914
+    second: rebuilding2_6
+  - first:
+      213: -6400279784426410972
+    second: rebuilding2_7
+  - first:
+      213: -789583052963124903
+    second: rebuilding2_8
+  - first:
+      213: -959124175343873880
+    second: rebuilding2_9
+  - first:
+      213: 5497310242998289288
+    second: rebuilding2_10
+  - first:
+      213: 1500841327249730683
+    second: rebuilding2_11
+  - first:
+      213: 1698967516512141488
+    second: rebuilding2_12
+  - first:
+      213: -2881252696278335132
+    second: rebuilding2_13
+  - first:
+      213: -4743603340028446464
+    second: rebuilding2_14
+  - first:
+      213: -5761003092890520907
+    second: rebuilding2_15
+  - first:
+      213: 6410273588536159050
+    second: rebuilding2_16
+  - first:
+      213: -2818074386147987871
+    second: rebuilding2_17
+  - first:
+      213: 5639112617350802707
+    second: rebuilding2_18
+  - first:
+      213: -1104546549951092068
+    second: rebuilding2_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rebuilding2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9612b2e4b26580fd0800000000000000
+      internalID: -2375554059442904727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_1
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1372c84f268cc20800000000000000
+      internalID: 3226937935473881525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_2
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e394684e6607720800000000000000
+      internalID: 2841884496562306696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_3
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d57d1a8ba5f675e0800000000000000
+      internalID: -1912070874666797612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_4
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8784671cc88843950800000000000000
+      internalID: 6427912706287093880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_5
+      rect:
+        serializedVersion: 2
+        x: 3320
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2fa818235cd19a0800000000000000
+      internalID: -6260631086262717723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_6
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af71f32904057ee0800000000000000
+      internalID: -1264099683103309914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_7
+      rect:
+        serializedVersion: 2
+        x: 4648
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c662a3273ad27a0800000000000000
+      internalID: -6400279784426410972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_8
+      rect:
+        serializedVersion: 2
+        x: 5312
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 959e67f8566da05f0800000000000000
+      internalID: -789583052963124903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_9
+      rect:
+        serializedVersion: 2
+        x: 5976
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a09329e4a180b2f0800000000000000
+      internalID: -959124175343873880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 883870e3a8e5a4c40800000000000000
+      internalID: 5497310242998289288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_11
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c22fe3c3f04d410800000000000000
+      internalID: 1500841327249730683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_12
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b042aa64f1f39710800000000000000
+      internalID: 1698967516512141488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_13
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461813230fbb308d0800000000000000
+      internalID: -2881252696278335132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_14
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0097f3a15e55b2eb0800000000000000
+      internalID: -4743603340028446464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_15
+      rect:
+        serializedVersion: 2
+        x: 3320
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2755ac53ecc00b0800000000000000
+      internalID: -5761003092890520907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_16
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b24cd9dddd5f850800000000000000
+      internalID: 6410273588536159050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_17
+      rect:
+        serializedVersion: 2
+        x: 4648
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ea50fc64034e8d0800000000000000
+      internalID: -2818074386147987871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_18
+      rect:
+        serializedVersion: 2
+        x: 5312
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d2e955c07224e40800000000000000
+      internalID: 5639112617350802707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rebuilding2_19
+      rect:
+        serializedVersion: 2
+        x: 5976
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a2844d3ccdba0f0800000000000000
+      internalID: -1104546549951092068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

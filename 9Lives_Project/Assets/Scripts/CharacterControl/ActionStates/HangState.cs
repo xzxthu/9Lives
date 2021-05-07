@@ -45,6 +45,8 @@ public class HangState : ActorState
             PlayerActor.instance.catFace.SetFaceBool("isCribing", true);
 
             PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Catch);
+
+            MusicManager.GetInstance().PlayBGM("CatLedge");
         }
 
     }

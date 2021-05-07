@@ -7,12 +7,12 @@ public class EffectAnimating : MonoBehaviour
 {
     public bool playOneTime = false;
 
-    [SerializeField] Texture[] Images;
+    [SerializeField] Sprite[] Images;
 
     [SerializeField, Tooltip("Animation speed in FPS"), Range(0, 60f)] 
     float AnimationSpeed = 3f;
 
-    RawImage ImageScript;
+    Image ImageScript;
     float AnimTimer;
     int AnimIndex = 0;
     float AnimFrameTime;
@@ -20,8 +20,8 @@ public class EffectAnimating : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ImageScript = GetComponent<RawImage>();
-        ImageScript.texture = Images[0];
+        ImageScript = GetComponent<Image>();
+        ImageScript.sprite = Images[0];
         AnimFrameTime = 1.0f / AnimationSpeed;
     }
 
@@ -34,7 +34,7 @@ public class EffectAnimating : MonoBehaviour
             if (AnimTimer >= AnimFrameTime)
             {
                 AnimIndex = (AnimIndex + 1) % Images.Length;
-                ImageScript.texture = Images[AnimIndex];
+                ImageScript.sprite = Images[AnimIndex];
                 AnimTimer = 0;
                 if(AnimIndex==Images.Length && playOneTime)
                 {

@@ -33,7 +33,7 @@ public class UIManager : BaseManager<UIManager>
     {
         GameObject obj = ResManager.GetInstance().Load<GameObject>("Prefabs/UI/Canvas");
         Transform canvas = obj.transform;
-        GameObject.DontDestroyOnLoad(obj);
+        GameObject.DontDestroyOnLoad(obj);//**
 
         bot = canvas.Find("Bot");
         mid = canvas.Find("Mid");

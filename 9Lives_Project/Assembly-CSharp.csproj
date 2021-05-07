@@ -56,9 +56,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CharacterControl\ActorManager.cs" />
+    <Compile Include="Assets\Scripts\Items\Crane.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Base\Pool\Pool.cs" />
     <Compile Include="Assets\Scripts\Base\Event\INotificationCenter.cs" />
+    <Compile Include="Assets\Scripts\CameraControl.cs" />
     <Compile Include="Assets\Scripts\GroundOneWay.cs" />
     <Compile Include="Assets\Scripts\Base\Observer\Observer.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\RunState.cs" />
@@ -67,6 +69,7 @@
     <Compile Include="Assets\Scripts\CharacterControl\Actor.cs" />
     <Compile Include="Assets\Scripts\Base\Music\MusicManager.cs" />
     <Compile Include="Assets\Scripts\Items\Bird.cs" />
+    <Compile Include="Assets\Material\CameraBlend.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\SlipState.cs" />
     <Compile Include="Assets\Scripts\Items\Wheel.cs" />
     <Compile Include="Assets\Scripts\Multilanguage.cs" />
@@ -90,13 +93,16 @@
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\HurtedState.cs" />
     <Compile Include="Assets\Scripts\Items\Thief.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\LightFlash.cs" />
     <Compile Include="Assets\Scripts\Items\BananaPeel.cs" />
     <Compile Include="Assets\Scripts\CatAnimationEvents.cs" />
     <Compile Include="Assets\Scripts\Base\Mono\MonoController.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\JumpState.cs" />
+    <Compile Include="Assets\Scripts\Items\RoundTwo.cs" />
     <Compile Include="Assets\Scripts\Menu\StartMenuButton.cs" />
     <Compile Include="Assets\Scripts\Opening.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\ActionStates\HangState.cs" />
+    <Compile Include="Assets\Scripts\Ending.cs" />
     <Compile Include="Assets\Scripts\Base\UI\GameManager.cs" />
     <Compile Include="Assets\Scripts\Items\NaughtyGirl.cs" />
     <Compile Include="Assets\Scripts\Bulge.cs" />
@@ -105,6 +111,7 @@
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\FootIK.cs" />
     <Compile Include="Assets\Scripts\CharacterEffect.cs" />
+    <Compile Include="Assets\Scripts\Items\Foreground.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\PlayerActor.cs" />
     <Compile Include="Assets\Scripts\CatMoveController.cs" />
     <Compile Include="Assets\Scripts\Items\Argue.cs" />
@@ -120,11 +127,10 @@
     <Compile Include="Assets\Scripts\Base\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Base\Res\ResManager.cs" />
     <Compile Include="Assets\Scripts\Items\Father.cs" />
-    <Compile Include="Assets\Material\CameraBlend.cs" />
-    <Compile Include="Assets\Scripts\LightFlash.cs" />
-    <Compile Include="Assets\Scripts\Items\Crane.cs" />
-    <Compile Include="Assets\Scripts\Items\Foreground.cs" />
-    <Compile Include="Assets\Scripts\Items\RoundTwo.cs" />
+    <Compile Include="Assets\Scripts\HoverUIButtonPlaySound.cs" />
+    <Compile Include="Assets\Scripts\MouseOn.cs" />
+    <Compile Include="Assets\Scripts\Credits.cs" />
+    <Compile Include="Assets\Scripts\StartMenu.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Material\BlendMod.shader" />

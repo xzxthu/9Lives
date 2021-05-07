@@ -1,0 +1,2266 @@
+fileFormatVersion: 2
+guid: a75da2513433c81409ee5a70d0095ca3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1236324063339368978
+    second: sunrise_sky_0
+  - first:
+      213: -3777115355552585147
+    second: sunrise_sky_1
+  - first:
+      213: 3262842901057154810
+    second: sunrise_sky_2
+  - first:
+      213: -6269252803944589729
+    second: sunrise_sky_3
+  - first:
+      213: -8445199138779413793
+    second: sunrise_sky_4
+  - first:
+      213: 496602033870590693
+    second: sunrise_sky_5
+  - first:
+      213: 1426904884892234228
+    second: sunrise_sky_6
+  - first:
+      213: 8709566242869003930
+    second: sunrise_sky_7
+  - first:
+      213: 6252206320633434396
+    second: sunrise_sky_8
+  - first:
+      213: 5767400562295096769
+    second: sunrise_sky_9
+  - first:
+      213: 7510670602113235852
+    second: sunrise_sky_10
+  - first:
+      213: 452698963708980035
+    second: sunrise_sky_11
+  - first:
+      213: -1611391853416733677
+    second: sunrise_sky_12
+  - first:
+      213: 200901017813983475
+    second: sunrise_sky_13
+  - first:
+      213: -3157705866637380606
+    second: sunrise_sky_14
+  - first:
+      213: -3254671724759112999
+    second: sunrise_sky_15
+  - first:
+      213: 3098745563059112641
+    second: sunrise_sky_16
+  - first:
+      213: 8601223694909895772
+    second: sunrise_sky_17
+  - first:
+      213: -3663183193659293827
+    second: sunrise_sky_18
+  - first:
+      213: -3883547161957199336
+    second: sunrise_sky_19
+  - first:
+      213: 2028020166647358207
+    second: sunrise_sky_20
+  - first:
+      213: -3559877894127988706
+    second: sunrise_sky_21
+  - first:
+      213: 9065201710396419231
+    second: sunrise_sky_22
+  - first:
+      213: -9109123079134979521
+    second: sunrise_sky_23
+  - first:
+      213: 4405700104052765509
+    second: sunrise_sky_24
+  - first:
+      213: -1794161077259118372
+    second: sunrise_sky_25
+  - first:
+      213: 8802560413752858923
+    second: sunrise_sky_26
+  - first:
+      213: 5337334485912260992
+    second: sunrise_sky_27
+  - first:
+      213: 4335453514124057607
+    second: sunrise_sky_28
+  - first:
+      213: 2984132070299968727
+    second: sunrise_sky_29
+  - first:
+      213: -5079781945006378254
+    second: sunrise_sky_30
+  - first:
+      213: -3071955224757471474
+    second: sunrise_sky_31
+  - first:
+      213: 6140651332108486077
+    second: sunrise_sky_32
+  - first:
+      213: 5167764766707258014
+    second: sunrise_sky_33
+  - first:
+      213: -698397955049308405
+    second: sunrise_sky_34
+  - first:
+      213: -5971031093053378917
+    second: sunrise_sky_35
+  - first:
+      213: -4228997677640563321
+    second: sunrise_sky_36
+  - first:
+      213: 8452512141829756552
+    second: sunrise_sky_37
+  - first:
+      213: 7748437685128749012
+    second: sunrise_sky_38
+  - first:
+      213: -83078567236237640
+    second: sunrise_sky_39
+  - first:
+      213: 1859751686232221841
+    second: sunrise_sky_40
+  - first:
+      213: -2518087237296883370
+    second: sunrise_sky_41
+  - first:
+      213: 1281875190953650759
+    second: sunrise_sky_42
+  - first:
+      213: 7626926440703813097
+    second: sunrise_sky_43
+  - first:
+      213: 8940379777878884764
+    second: sunrise_sky_44
+  - first:
+      213: 2329710793236289427
+    second: sunrise_sky_45
+  - first:
+      213: -6010276217649564993
+    second: sunrise_sky_46
+  - first:
+      213: 4180054961852748630
+    second: sunrise_sky_47
+  - first:
+      213: -8834978333420795877
+    second: sunrise_sky_48
+  - first:
+      213: 951690897363338776
+    second: sunrise_sky_49
+  - first:
+      213: 6391904726253383968
+    second: sunrise_sky_50
+  - first:
+      213: 2113144913308043947
+    second: sunrise_sky_51
+  - first:
+      213: -2179650677346755661
+    second: sunrise_sky_52
+  - first:
+      213: -7179423051195105986
+    second: sunrise_sky_53
+  - first:
+      213: 2916881354885713846
+    second: sunrise_sky_54
+  - first:
+      213: 6712180297438847711
+    second: sunrise_sky_55
+  - first:
+      213: -1204455650200701300
+    second: sunrise_sky_56
+  - first:
+      213: 59620914458753937
+    second: sunrise_sky_57
+  - first:
+      213: 8111546177349832294
+    second: sunrise_sky_58
+  - first:
+      213: -6393483359742173554
+    second: sunrise_sky_59
+  - first:
+      213: 1780176235801181166
+    second: sunrise_sky_60
+  - first:
+      213: -1950610714007939884
+    second: sunrise_sky_61
+  - first:
+      213: 617160751608458935
+    second: sunrise_sky_62
+  - first:
+      213: -786669441116536799
+    second: sunrise_sky_63
+  - first:
+      213: -4564609683140980144
+    second: sunrise_sky_64
+  - first:
+      213: -8861079411022367167
+    second: sunrise_sky_65
+  - first:
+      213: -4024988618076581517
+    second: sunrise_sky_66
+  - first:
+      213: 2744663185842473724
+    second: sunrise_sky_67
+  - first:
+      213: -2879917174087028020
+    second: sunrise_sky_68
+  - first:
+      213: 6047807946489116970
+    second: sunrise_sky_69
+  - first:
+      213: 6987421641164005398
+    second: sunrise_sky_70
+  - first:
+      213: 7765281181261016862
+    second: sunrise_sky_71
+  - first:
+      213: 524589893633421145
+    second: sunrise_sky_72
+  - first:
+      213: -4636411271544833791
+    second: sunrise_sky_73
+  - first:
+      213: 8909670103192246239
+    second: sunrise_sky_74
+  - first:
+      213: 53380788911286332
+    second: sunrise_sky_75
+  - first:
+      213: 7114776704280497852
+    second: sunrise_sky_76
+  - first:
+      213: 1540063596085263165
+    second: sunrise_sky_77
+  - first:
+      213: 8884869724196608632
+    second: sunrise_sky_78
+  - first:
+      213: -6973005603481767947
+    second: sunrise_sky_79
+  - first:
+      213: -6671130437895712091
+    second: sunrise_sky_80
+  - first:
+      213: -3042129588759091728
+    second: sunrise_sky_81
+  - first:
+      213: 4329370417958852546
+    second: sunrise_sky_82
+  - first:
+      213: 71496693795836024
+    second: sunrise_sky_83
+  - first:
+      213: -5724912644536332818
+    second: sunrise_sky_84
+  - first:
+      213: 8875381279984219537
+    second: sunrise_sky_85
+  - first:
+      213: 5137178040722018016
+    second: sunrise_sky_86
+  - first:
+      213: 3668730145478099607
+    second: sunrise_sky_87
+  - first:
+      213: -4123868066285561632
+    second: sunrise_sky_88
+  - first:
+      213: 7659110876735859040
+    second: sunrise_sky_89
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sunrise_sky_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9152
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2125c9e6f2e482110800000000000000
+      internalID: 1236324063339368978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_1
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 9152
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a6d9c989df49bc0800000000000000
+      internalID: -3777115355552585147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_2
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 9152
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afeaa6bc452f74d20800000000000000
+      internalID: 3262842901057154810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_3
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 9152
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f56d2cd6ac32ff8a0800000000000000
+      internalID: -6269252803944589729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_4
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 9152
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd24e9bb020acca80800000000000000
+      internalID: -8445199138779413793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_5
+      rect:
+        serializedVersion: 2
+        x: 3320
+        y: 9152
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2d79f2be844e600800000000000000
+      internalID: 496602033870590693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_6
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 9152
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f17548ce626dc310800000000000000
+      internalID: 1426904884892234228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_7
+      rect:
+        serializedVersion: 2
+        x: 4648
+        y: 9152
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96c0f54a589ed870800000000000000
+      internalID: 8709566242869003930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_8
+      rect:
+        serializedVersion: 2
+        x: 5312
+        y: 9152
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11dec3e58c44c650800000000000000
+      internalID: 6252206320633434396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_9
+      rect:
+        serializedVersion: 2
+        x: 5976
+        y: 9152
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5ccf0214ce90050800000000000000
+      internalID: 5767400562295096769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8008
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8bbdef8e134b3860800000000000000
+      internalID: 7510670602113235852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_11
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 8008
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34baf0a1f4f484600800000000000000
+      internalID: 452698963708980035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_12
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 8008
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314232795af23a9e0800000000000000
+      internalID: -1611391853416733677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_13
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 8008
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f021d9496eb9c200800000000000000
+      internalID: 200901017813983475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_14
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 8008
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20479e99e339d24d0800000000000000
+      internalID: -3157705866637380606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_15
+      rect:
+        serializedVersion: 2
+        x: 3320
+        y: 8008
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2a9317f4515d2d0800000000000000
+      internalID: -3254671724759112999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_16
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 8008
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cac477fba4f00b20800000000000000
+      internalID: 3098745563059112641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_17
+      rect:
+        serializedVersion: 2
+        x: 4648
+        y: 8008
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54f6c8116fad5770800000000000000
+      internalID: 8601223694909895772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_18
+      rect:
+        serializedVersion: 2
+        x: 5312
+        y: 8008
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fb1c23b42c92dc0800000000000000
+      internalID: -3663183193659293827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_19
+      rect:
+        serializedVersion: 2
+        x: 5976
+        y: 8008
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812901f9e6eda1ac0800000000000000
+      internalID: -3883547161957199336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6864
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff2285eb899f42c10800000000000000
+      internalID: 2028020166647358207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_21
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 6864
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e105cb49ae5c89ec0800000000000000
+      internalID: -3559877894127988706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_22
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 6864
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c21751de01ecd70800000000000000
+      internalID: 9065201710396419231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_23
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 6864
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ad8dc52d4e59180800000000000000
+      internalID: -9109123079134979521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_24
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 6864
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54377f8f6e0342d30800000000000000
+      internalID: 4405700104052765509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_25
+      rect:
+        serializedVersion: 2
+        x: 3320
+        y: 6864
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd85320910cd917e0800000000000000
+      internalID: -1794161077259118372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_26
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 6864
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2997afee0af82a70800000000000000
+      internalID: 8802560413752858923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_27
+      rect:
+        serializedVersion: 2
+        x: 4648
+        y: 6864
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0811e30cf65021a40800000000000000
+      internalID: 5337334485912260992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_28
+      rect:
+        serializedVersion: 2
+        x: 5312
+        y: 6864
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c55993000aa2c30800000000000000
+      internalID: 4335453514124057607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_29
+      rect:
+        serializedVersion: 2
+        x: 5976
+        y: 6864
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4a41dae44c96920800000000000000
+      internalID: 2984132070299968727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5720
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2b37f1c3df089b0800000000000000
+      internalID: -5079781945006378254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_31
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 5720
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07fc6ebff83e55d0800000000000000
+      internalID: -3071955224757471474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_32
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 5720
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db50bdb1ad9f73550800000000000000
+      internalID: 6140651332108486077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_33
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 5720
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e929d52eca697b740800000000000000
+      internalID: 5167764766707258014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_34
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 5720
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f3d6992cace46f0800000000000000
+      internalID: -698397955049308405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_35
+      rect:
+        serializedVersion: 2
+        x: 3320
+        y: 5720
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9eadb35bd2a22da0800000000000000
+      internalID: -5971031093053378917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_36
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 5720
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7854844b4059f45c0800000000000000
+      internalID: -4228997677640563321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_37
+      rect:
+        serializedVersion: 2
+        x: 4648
+        y: 5720
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8865079720b5d4570800000000000000
+      internalID: 8452512141829756552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_38
+      rect:
+        serializedVersion: 2
+        x: 5312
+        y: 5720
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df595a850bf78b60800000000000000
+      internalID: 7748437685128749012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_39
+      rect:
+        serializedVersion: 2
+        x: 5976
+        y: 5720
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b68f67bb78d8def0800000000000000
+      internalID: -83078567236237640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4576
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1982e442e4a2fc910800000000000000
+      internalID: 1859751686232221841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_41
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 4576
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6597973cff4fd0dd0800000000000000
+      internalID: -2518087237296883370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_42
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 4576
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74aad2bc1b22ac110800000000000000
+      internalID: 1281875190953650759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_43
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 4576
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e56f2a403948d960800000000000000
+      internalID: 7626926440703813097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_44
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 4576
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c918e813a0c921c70800000000000000
+      internalID: 8940379777878884764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_45
+      rect:
+        serializedVersion: 2
+        x: 3320
+        y: 4576
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3971e348f9bc45020800000000000000
+      internalID: 2329710793236289427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_46
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 4576
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb2f405bf95379ca0800000000000000
+      internalID: -6010276217649564993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_47
+      rect:
+        serializedVersion: 2
+        x: 4648
+        y: 4576
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65397d647d9820a30800000000000000
+      internalID: 4180054961852748630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_48
+      rect:
+        serializedVersion: 2
+        x: 5312
+        y: 4576
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b184e26f30ad36580800000000000000
+      internalID: -8834978333420795877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_49
+      rect:
+        serializedVersion: 2
+        x: 5976
+        y: 4576
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816805134d5153d00800000000000000
+      internalID: 951690897363338776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3432
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02139769b7b94b850800000000000000
+      internalID: 6391904726253383968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_51
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 3432
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa46ac4a16635d10800000000000000
+      internalID: 2113144913308043947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_52
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 3432
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb9e4ad14350c1e0800000000000000
+      internalID: -2179650677346755661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_53
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 3432
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3db34de5c09d5c90800000000000000
+      internalID: -7179423051195105986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_54
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 3432
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf4ce15328da7820800000000000000
+      internalID: 2916881354885713846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_55
+      rect:
+        serializedVersion: 2
+        x: 3320
+        y: 3432
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2e739fa64762d50800000000000000
+      internalID: 6712180297438847711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_56
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 3432
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c863316b7f9e84fe0800000000000000
+      internalID: -1204455650200701300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_57
+      rect:
+        serializedVersion: 2
+        x: 4648
+        y: 3432
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b7f73e7e0d3d000800000000000000
+      internalID: 59620914458753937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_58
+      rect:
+        serializedVersion: 2
+        x: 5312
+        y: 3432
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e4d108540029070800000000000000
+      internalID: 8111546177349832294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_59
+      rect:
+        serializedVersion: 2
+        x: 5976
+        y: 3432
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e523922c8c547a0800000000000000
+      internalID: -6393483359742173554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2288
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb758ccad474b810800000000000000
+      internalID: 1780176235801181166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_61
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 2288
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d45c70f3e90ee4e0800000000000000
+      internalID: -1950610714007939884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_62
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 2288
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be6fe80f68909800800000000000000
+      internalID: 617160751608458935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_63
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 2288
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120089eaf403515f0800000000000000
+      internalID: -786669441116536799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_64
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 2288
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 052d2127daf37a0c0800000000000000
+      internalID: -4564609683140980144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_65
+      rect:
+        serializedVersion: 2
+        x: 3320
+        y: 2288
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146fb73493f170580800000000000000
+      internalID: -8861079411022367167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_66
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 2288
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3711e8a5d2e5428c0800000000000000
+      internalID: -4024988618076581517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_67
+      rect:
+        serializedVersion: 2
+        x: 4648
+        y: 2288
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa8b3c20a0071620800000000000000
+      internalID: 2744663185842473724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_68
+      rect:
+        serializedVersion: 2
+        x: 5312
+        y: 2288
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2feffa69a7808d0800000000000000
+      internalID: -2879917174087028020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_69
+      rect:
+        serializedVersion: 2
+        x: 5976
+        y: 2288
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a29b440e8412ee350800000000000000
+      internalID: 6047807946489116970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 610257136fe48f060800000000000000
+      internalID: 6987421641164005398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_71
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1fa6169712d3cb60800000000000000
+      internalID: 7765281181261016862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_72
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95fa7c69ab7b74700800000000000000
+      internalID: 524589893633421145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_73
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109f3f6638828afb0800000000000000
+      internalID: -4636411271544833791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_74
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd711bed0c185ab70800000000000000
+      internalID: 8909670103192246239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_75
+      rect:
+        serializedVersion: 2
+        x: 3320
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3823e07b85adb000800000000000000
+      internalID: 53380788911286332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_76
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe0dd287b3ccb260800000000000000
+      internalID: 7114776704280497852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_77
+      rect:
+        serializedVersion: 2
+        x: 4648
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b3c285ea76f5510800000000000000
+      internalID: 1540063596085263165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_78
+      rect:
+        serializedVersion: 2
+        x: 5312
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a9c5aa0f56d4b70800000000000000
+      internalID: 8884869724196608632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_79
+      rect:
+        serializedVersion: 2
+        x: 5976
+        y: 1144
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff29a32958ea3f90800000000000000
+      internalID: -6973005603481767947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a21eee36326b63a0800000000000000
+      internalID: -6671130437895712091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_81
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f52f45c14f28c5d0800000000000000
+      internalID: -3042129588759091728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_82
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c795870573051c30800000000000000
+      internalID: 4329370417958852546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_83
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 870d05c3dd10ef000800000000000000
+      internalID: 71496693795836024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_84
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed054c18460d80b0800000000000000
+      internalID: -5724912644536332818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_85
+      rect:
+        serializedVersion: 2
+        x: 3320
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1957c971040bb2b70800000000000000
+      internalID: 8875381279984219537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_86
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee4c29c53cea4740800000000000000
+      internalID: 5137178040722018016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_87
+      rect:
+        serializedVersion: 2
+        x: 4648
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7924df921a2f9e230800000000000000
+      internalID: 3668730145478099607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_88
+      rect:
+        serializedVersion: 2
+        x: 5312
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8d878c7d315c6c0800000000000000
+      internalID: -4123868066285561632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunrise_sky_89
+      rect:
+        serializedVersion: 2
+        x: 5976
+        y: 0
+        width: 664
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069eb2f33c0aa4a60800000000000000
+      internalID: 7659110876735859040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

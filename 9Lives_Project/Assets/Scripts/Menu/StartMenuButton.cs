@@ -8,6 +8,7 @@ public class StartMenuButton : MonoBehaviour
     public void EnterLevel(string nameOfLevel)
     {
         SceneManager.LoadScene(nameOfLevel);
+        MusicManager.GetInstance().StopAllSeAndBgm();
     }
 
     public void QuitGame()

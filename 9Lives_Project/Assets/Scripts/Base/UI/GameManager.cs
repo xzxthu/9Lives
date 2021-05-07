@@ -27,9 +27,15 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        curSceneName = SceneManager.GetActiveScene().name;
+
         if (Input.GetKeyDown(KeyCode.Escape) && !LevelManager.instance.TestMode)
         {
-            curSceneName = SceneManager.GetActiveScene().name;
+            if(curSceneName.Equals("StartMenu")|| curSceneName.Equals("Credits"))
+            {
+                Debug.Log("In start menu");
+                return;
+            }
 
             // EventSystem不存在的话
             if (!GameObject.Find("EventSystem"))

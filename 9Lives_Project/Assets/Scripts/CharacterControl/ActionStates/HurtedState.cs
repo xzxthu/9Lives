@@ -37,6 +37,8 @@ public class HurtedState : ActorState
         }
 
         PlayerActor.instance.catFace.SetFaceBool("isHurted", true);
+        MusicManager.GetInstance().PlayBGM("CatHit");
+        LevelManager.instance.gameObject.GetComponent<CameraControl>().ShakeCamera(3f,0.5f);
     }
 
     public override void FixedUpdate()

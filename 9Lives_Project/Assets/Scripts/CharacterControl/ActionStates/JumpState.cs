@@ -25,7 +25,7 @@ public class JumpState : ActorState
             PlayerActor.instance.anim.SetBool("isRunning", false);
         }
 
-        PlayerActor.instance.catFace.SetFaceBool("isCribing", true);
+        
         hasPlayedEffect = false;
     }
 
@@ -63,6 +63,7 @@ public class JumpState : ActorState
                 PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Touchdown_2, true);
             PlayerActor.instance.catEffect.PlayCharacterEffect(CharacterEffectType.Touchdown_1, true);
             PlayerActor.instance.TransState(ActorStateType.Idle);
+            MusicManager.GetInstance().PlayBGM("CatLand");
             return;
         }
 
